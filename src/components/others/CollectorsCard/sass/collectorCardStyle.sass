@@ -1,0 +1,102 @@
+@import '../../../../variaveisDeEstilo/variaveisDeEstilo'
+
+.CollectorCard
+    display: grid
+    // flex-direction: row
+    align-items: center
+    // justify-content: flex-start
+    // gap: 3vw
+    padding: 1vw 0 1vw 2vw 
+    border-bottom: $gray solid 1px
+    
+    p
+        font-family: $font-1
+        
+    .cardImgContainer
+        // width: 3vw
+        aspect-ratio: 1/1
+        display: flex
+        justify-content: center
+        align-items: center
+        overflow: hidden
+        border-radius: 100%
+
+        img
+            display: flex
+            width: 100%
+            transition: ease .2s
+            &:hover
+                scale: 1.1
+
+    span
+
+        h4
+            
+            font-family: $font-1
+            margin-bottom: 4%
+        p
+            font-family: $font-2
+            color: $pink
+
+
+@media ( max-width: 440px )
+    .CollectorCard
+        width: fit-content
+        grid-template-areas: "number number image data data data"
+        padding: 4vw
+        gap: 6vw
+        p
+            font-size: $size-text-tablet
+            grid-area: number
+        .cardImgContainer
+            grid-area: image
+            width: clamp(0px , 15vw, 3rem)
+        span
+            grid-area: data
+            h4
+                font-size: calc($size-text-phone * 1.2)
+            p
+                font-size: calc($size-text-phone * 1.5)
+
+
+@media ( min-width: 440px ) and ( max-width: 840px)
+    .CollectorCard
+        width: fit-content
+        min-width: 60%
+        grid-template-areas: "number number image data data data"
+        padding: 4vw 
+        gap: 4vw
+        p
+            font-size: $size-text-tablet
+            grid-area: number
+        .cardImgContainer
+            grid-area: image
+            width: clamp(0px , 15vw, 5rem)
+        span
+            grid-area: data
+            // padding: 0 3vw
+            h4
+                font-size: calc($size-text-phone * 1.2)
+            p
+                font-size: calc($size-text-phone * 1.5)
+
+
+@media ( min-width: 841px )
+    .CollectorCard
+        width: 100%
+        grid-template-areas: "number number image data data data"
+        padding: 2vw 4vw
+        gap: 1vw
+        p
+            font-size: calc($size-text-laptop/3)
+            grid-area: number
+        .cardImgContainer
+            grid-area: image
+            width: 3vw
+
+        span
+            grid-area: data
+            h4
+                font-size: calc($size-text-laptop/3)
+            p
+                font-size: calc($size-text-laptop/3)

@@ -1,0 +1,112 @@
+.CollectorCard {
+  display: grid;
+  align-items: center;
+  padding: 1vw 0 1vw 2vw;
+  border-bottom: #bababa solid 1px;
+}
+.CollectorCard p {
+  font-family: "Michroma", sans-serif;
+}
+.CollectorCard .cardImgContainer {
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.CollectorCard .cardImgContainer img {
+  display: flex;
+  width: 100%;
+  transition: ease 0.2s;
+}
+.CollectorCard .cardImgContainer img:hover {
+  scale: 1.1;
+}
+.CollectorCard span h4 {
+  font-family: "Michroma", sans-serif;
+  margin-bottom: 4%;
+}
+.CollectorCard span p {
+  font-family: "Ubuntu Mono", monospace;
+  color: #cf25d8;
+}
+
+@media (max-width: 440px) {
+  .CollectorCard {
+    width: -moz-fit-content;
+    width: fit-content;
+    grid-template-areas: "number number image data data data";
+    padding: 4vw;
+    gap: 6vw;
+  }
+  .CollectorCard p {
+    font-size: clamp(0.6rem, 3vw, 3rem);
+    grid-area: number;
+  }
+  .CollectorCard .cardImgContainer {
+    grid-area: image;
+    width: clamp(0px, 15vw, 3rem);
+  }
+  .CollectorCard span {
+    grid-area: data;
+  }
+  .CollectorCard span h4 {
+    font-size: calc(clamp(0.4rem, 3vw, 2rem) * 1.2);
+  }
+  .CollectorCard span p {
+    font-size: calc(clamp(0.4rem, 3vw, 2rem) * 1.5);
+  }
+}
+@media (min-width: 440px) and (max-width: 840px) {
+  .CollectorCard {
+    width: -moz-fit-content;
+    width: fit-content;
+    min-width: 60%;
+    grid-template-areas: "number number image data data data";
+    padding: 4vw;
+    gap: 4vw;
+  }
+  .CollectorCard p {
+    font-size: clamp(0.6rem, 3vw, 3rem);
+    grid-area: number;
+  }
+  .CollectorCard .cardImgContainer {
+    grid-area: image;
+    width: clamp(0px, 15vw, 5rem);
+  }
+  .CollectorCard span {
+    grid-area: data;
+  }
+  .CollectorCard span h4 {
+    font-size: calc(clamp(0.4rem, 3vw, 2rem) * 1.2);
+  }
+  .CollectorCard span p {
+    font-size: calc(clamp(0.4rem, 3vw, 2rem) * 1.5);
+  }
+}
+@media (min-width: 841px) {
+  .CollectorCard {
+    width: 100%;
+    grid-template-areas: "number number image data data data";
+    padding: 2vw 4vw;
+    gap: 1vw;
+  }
+  .CollectorCard p {
+    font-size: calc(clamp(0.8rem, 3vw, 3rem) / 3);
+    grid-area: number;
+  }
+  .CollectorCard .cardImgContainer {
+    grid-area: image;
+    width: 3vw;
+  }
+  .CollectorCard span {
+    grid-area: data;
+  }
+  .CollectorCard span h4 {
+    font-size: calc(clamp(0.8rem, 3vw, 3rem) / 3);
+  }
+  .CollectorCard span p {
+    font-size: calc(clamp(0.8rem, 3vw, 3rem) / 3);
+  }
+}/*# sourceMappingURL=collectorCardStyle.css.map */

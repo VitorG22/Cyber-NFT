@@ -1,0 +1,31 @@
+@import "../../../../variaveisDeEstilo/variaveisDeEstilo"
+
+.horizontalBar
+    color: white
+    flex-direction: row
+    background: $pink
+    display: flex
+    align-items: center
+    justify-content: space-around
+    font-family:$font-1
+
+
+@media  (max-width: 440px)
+    .horizontalBar
+        height: 6vh
+        // letter-spacing: .1rem
+        font-size: calc($size-text-laptop * .5)
+        svg
+            width: calc($size-text-laptop * .3) 
+    
+@media  (min-width: 440px) and (max-width: 780px)
+    .horizontalBar
+        height: 8vh
+        letter-spacing: .1rem
+        font-size: clamp(.75rem,1.76vw ,1.5rem)
+    
+@media  (min-width: 781px)
+    .horizontalBar
+        height: 8vh
+        letter-spacing: .1rem
+        font-size: clamp(.75rem,1.76vw ,1.5rem)

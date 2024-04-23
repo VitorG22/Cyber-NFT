@@ -1,0 +1,406 @@
+@media (max-width: 440px) {
+  #ArtShowPage {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 1vw;
+    align-items: center;
+  }
+  #ArtShowPage .imgContainer {
+    display: flex;
+    overflow: hidden;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+  }
+  #ArtShowPage .imgContainer img {
+    transition: 0.2s ease;
+    width: 100%;
+    border-radius: 15px;
+  }
+  #ArtShowPage .imgContainer img:hover {
+    scale: 1.15;
+  }
+  #ArtShowPage .imgDataContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+    padding: 1vh 1vw;
+    width: 100%;
+  }
+  #ArtShowPage .imgDataContainer section {
+    display: grid;
+    grid-template-areas: "textTop textTop textTop" "id . ." "collection . cartButton";
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+    padding: 4vw;
+    margin: 0 2vw;
+    border-radius: 20px;
+    background: #cf25d8;
+  }
+  #ArtShowPage .imgDataContainer section .CartCardTop {
+    grid-area: textTop;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #ffffff;
+  }
+  #ArtShowPage .imgDataContainer section .CartCardTop h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: calc(clamp(0.4rem, 3vw, 2rem) * 2);
+    font-weight: 300;
+  }
+  #ArtShowPage .imgDataContainer section span p {
+    color: rgba(255, 255, 255, 0.5960784314);
+    font-family: "Ubuntu Mono", monospace;
+    font-size: clamp(0.4rem, 3vw, 2rem);
+    font-style: italic;
+  }
+  #ArtShowPage .imgDataContainer section span h5 {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    font-size: clamp(0.4rem, 3vw, 2rem);
+    margin-left: 1rem;
+  }
+  #ArtShowPage .imgDataContainer section .idContainer {
+    grid-area: id;
+  }
+  #ArtShowPage .imgDataContainer section .collectionInfoContainer {
+    grid-area: collection;
+  }
+  #ArtShowPage .imgDataContainer section .buttonContainer {
+    grid-area: cartButton;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vw;
+  }
+  #ArtShowPage .imgDataContainer section .buttonContainer p {
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    font-size: clamp(0.4rem, 3vw, 2rem);
+    font-weight: 100;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer {
+    margin: 0 2vw;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .CollectionName {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    font-size: clamp(0.4rem, 3vw, 2rem);
+    z-index: 4;
+    display: flex;
+    align-items: end;
+    margin-left: 4.5vw;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .collectionImagesContainer {
+    display: flex;
+    align-items: center;
+    padding: 3vw 4vw;
+    border: solid #ffffff 1px;
+    border-radius: 20px;
+    position: relative;
+    overflow: scroll;
+    gap: 0.3vw;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .collectionImagesContainer .artThumbnail {
+    border-radius: 15px;
+    min-width: 20vw;
+    max-width: 20vw;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .collectionImagesContainer .artThumbnail img {
+    transition: 0.2s;
+    width: 100%;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .collectionImagesContainer .artThumbnail img:hover {
+    scale: 1.15;
+  }
+}
+@media (min-width: 440px) and (max-width: 840px) {
+  #ArtShowPage {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 1vw;
+    align-items: center;
+  }
+  #ArtShowPage .imgContainer {
+    display: flex;
+    overflow: hidden;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+  }
+  #ArtShowPage .imgContainer img {
+    transition: 0.2s ease;
+    width: 100%;
+    border-radius: 15px;
+  }
+  #ArtShowPage .imgContainer img:hover {
+    scale: 1.15;
+  }
+  #ArtShowPage .imgDataContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+    padding: 1vh 1vw;
+    width: 100%;
+  }
+  #ArtShowPage .imgDataContainer section {
+    display: grid;
+    grid-template-areas: "textTop textTop textTop" "id . ." "collection . cartButton";
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+    padding: 4vw;
+    margin: 0 2vw;
+    border-radius: 20px;
+    background: #cf25d8;
+  }
+  #ArtShowPage .imgDataContainer section .CartCardTop {
+    grid-area: textTop;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #ffffff;
+  }
+  #ArtShowPage .imgDataContainer section .CartCardTop h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: calc(clamp(0.6rem, 3vw, 3rem) * 2);
+    font-weight: 300;
+  }
+  #ArtShowPage .imgDataContainer section span p {
+    color: rgba(255, 255, 255, 0.5960784314);
+    font-family: "Ubuntu Mono", monospace;
+    font-size: clamp(0.6rem, 3vw, 3rem);
+    font-style: italic;
+  }
+  #ArtShowPage .imgDataContainer section span h5 {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    font-size: clamp(0.4rem, 3vw, 2rem);
+    margin-left: 1rem;
+  }
+  #ArtShowPage .imgDataContainer section .idContainer {
+    grid-area: id;
+  }
+  #ArtShowPage .imgDataContainer section .collectionInfoContainer {
+    grid-area: collection;
+  }
+  #ArtShowPage .imgDataContainer section .buttonContainer {
+    grid-area: cartButton;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-end;
+    gap: 2vw;
+  }
+  #ArtShowPage .imgDataContainer section .buttonContainer p {
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    font-size: clamp(0.6rem, 3vw, 3rem);
+    font-weight: 100;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer {
+    margin: 0 2vw;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .CollectionName {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    font-size: clamp(0.4rem, 3vw, 2rem);
+    z-index: 4;
+    display: flex;
+    align-items: end;
+    margin-left: 4.5vw;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .collectionImagesContainer {
+    display: flex;
+    align-items: center;
+    padding: 3vw 4vw;
+    border: solid #ffffff 1px;
+    border-radius: 20px;
+    position: relative;
+    overflow: scroll;
+    gap: 0.3vw;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .collectionImagesContainer .artThumbnail {
+    border-radius: 15px;
+    min-width: 20vw;
+    max-width: 20vw;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .collectionImagesContainer .artThumbnail img {
+    transition: 0.2s;
+    width: 100%;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .collectionImagesContainer .artThumbnail img:hover {
+    scale: 1.15;
+  }
+}
+@media (min-width: 841px) {
+  #ArtShowPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 4vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 1vw;
+    align-items: center;
+  }
+  #ArtShowPage .imgContainer {
+    display: flex;
+    overflow: hidden;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+  }
+  #ArtShowPage .imgContainer img {
+    transition: 0.2s;
+    width: 100%;
+    border-radius: 15px;
+  }
+  #ArtShowPage .imgContainer img:hover {
+    scale: 1.15;
+  }
+  #ArtShowPage .imgDataContainer {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+    height: 100vh;
+    gap: 1vh;
+    padding: 1vh 1vw;
+  }
+  #ArtShowPage .imgDataContainer section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+    padding: 2vw;
+    border-radius: 20px;
+    background: #cf25d8;
+  }
+  #ArtShowPage .imgDataContainer section .CartCardTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #ffffff;
+  }
+  #ArtShowPage .imgDataContainer section .CartCardTop h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.8rem, 3vw, 3rem);
+    font-weight: 500;
+  }
+  #ArtShowPage .imgDataContainer section span p {
+    color: rgba(255, 255, 255, 0.5960784314);
+    font-family: "Ubuntu Mono", monospace;
+    font-size: calc(clamp(0.8rem, 3vw, 3rem) / 4);
+    font-style: italic;
+  }
+  #ArtShowPage .imgDataContainer section span h2 {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.8rem, 3vw, 3rem);
+    font-weight: 500;
+  }
+  #ArtShowPage .imgDataContainer section span h5 {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    font-size: calc(clamp(0.8rem, 3vw, 3rem) / 2);
+    margin-left: 1rem;
+  }
+  #ArtShowPage .imgDataContainer section div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vw;
+  }
+  #ArtShowPage .imgDataContainer section div p {
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    font-size: calc(clamp(0.8rem, 3vw, 3rem) / 3);
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .CollectionName {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    z-index: 4;
+    display: flex;
+    align-items: end;
+    padding: 0.1vw 1vw;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .collectionImagesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 40vh;
+    padding: 2vw;
+    border: solid #ffffff 1px;
+    border-radius: 20px;
+    position: relative;
+    overflow: scroll;
+    gap: 0.3vw;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .collectionImagesContainer .artThumbnail {
+    border-radius: 15px;
+    width: 10vw;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .collectionImagesContainer .artThumbnail img {
+    transition: 0.2s;
+    width: 100%;
+  }
+  #ArtShowPage .imgDataContainer .collectionContainer .collectionImagesContainer .artThumbnail img:hover {
+    scale: 1.15;
+  }
+}/*# sourceMappingURL=artShowStyle.css.map */

@@ -1,0 +1,44 @@
+#TopCollectorsPage {
+  margin: 10vh 0;
+}
+#TopCollectorsPage main {
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+}
+#TopCollectorsPage main h2 {
+  font-family: "Michroma", sans-serif;
+  font-size: clamp(0.8rem, 3vw, 3rem);
+  background: linear-gradient(0deg, #bababa, #ffffff);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+#TopCollectorsPage main ul {
+  width: 100%;
+  gap: 1vw;
+}
+
+@media (max-width: 440px) {
+  #TopCollectorsPage main {
+    align-items: center;
+  }
+  #TopCollectorsPage ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 440px) and (max-width: 840px) {
+  #TopCollectorsPage ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 841px) {
+  #TopCollectorsPage ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}/*# sourceMappingURL=topCollectorsStyle.css.map */

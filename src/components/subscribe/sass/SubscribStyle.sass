@@ -1,0 +1,74 @@
+@import '../../../variaveisDeEstilo/variaveisDeEstilo'
+
+
+.subscribSection
+    color: $white
+    background: $pink
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 5vh  
+    padding: 6vh 0
+    h2
+        text-align: center
+        font-family: $font-1
+        // font-size: $size-text-laptop
+    p
+        font-family: $font-3
+        color: $lightGray
+        
+    div
+        background: $white
+        border-radius: 100px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        // width: 33vw
+        input
+            background: none
+            border: none
+            width: 60%
+            height: 100%
+            margin-left: 1vw
+            height: 3rem
+            font-family: $font-3
+            
+
+            &:focus
+                outline: none
+
+
+@media  (max-width: 440px)
+    .subscribSection
+        h2
+            font-size: calc($size-text-phone * 1.3)
+        p 
+            text-align: center
+            width: 80%
+            font-size: calc($size-text-phone * 1.2)
+        div
+            width: 90vw 
+            padding: 0px 3vw 
+    
+@media  (min-width: 440px) and (max-width: 840px)
+    .subscribSection
+        h2
+            font-size: $size-text-laptop
+        p 
+            text-align: center
+            width: 80%
+            font-size: calc($size-text-laptop * .7)
+        div
+            width: 70vw 
+            padding: 2px 2vw
+    
+@media  (min-width: 841px)
+    .subscribSection
+        h2
+            font-size: $size-text-laptop
+        p 
+            font-size: calc($size-text-laptop * .6)
+        div
+            width: 50vw 
+            padding: .5vw  
+

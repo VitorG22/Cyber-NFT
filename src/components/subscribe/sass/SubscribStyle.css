@@ -1,0 +1,77 @@
+.subscribSection {
+  color: #ffffff;
+  background: #cf25d8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+  padding: 6vh 0;
+}
+.subscribSection h2 {
+  text-align: center;
+  font-family: "Michroma", sans-serif;
+}
+.subscribSection p {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.5960784314);
+}
+.subscribSection div {
+  background: #ffffff;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subscribSection div input {
+  background: none;
+  border: none;
+  width: 60%;
+  height: 100%;
+  margin-left: 1vw;
+  height: 3rem;
+  font-family: "Montserrat", sans-serif;
+}
+.subscribSection div input:focus {
+  outline: none;
+}
+
+@media (max-width: 440px) {
+  .subscribSection h2 {
+    font-size: calc(clamp(0.4rem, 3vw, 2rem) * 1.3);
+  }
+  .subscribSection p {
+    text-align: center;
+    width: 80%;
+    font-size: calc(clamp(0.4rem, 3vw, 2rem) * 1.2);
+  }
+  .subscribSection div {
+    width: 90vw;
+    padding: 0px 3vw;
+  }
+}
+@media (min-width: 440px) and (max-width: 840px) {
+  .subscribSection h2 {
+    font-size: clamp(0.8rem, 3vw, 3rem);
+  }
+  .subscribSection p {
+    text-align: center;
+    width: 80%;
+    font-size: calc(clamp(0.8rem, 3vw, 3rem) * 0.7);
+  }
+  .subscribSection div {
+    width: 70vw;
+    padding: 2px 2vw;
+  }
+}
+@media (min-width: 841px) {
+  .subscribSection h2 {
+    font-size: clamp(0.8rem, 3vw, 3rem);
+  }
+  .subscribSection p {
+    font-size: calc(clamp(0.8rem, 3vw, 3rem) * 0.6);
+  }
+  .subscribSection div {
+    width: 50vw;
+    padding: 0.5vw;
+  }
+}/*# sourceMappingURL=SubscribStyle.css.map */

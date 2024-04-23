@@ -1,0 +1,45 @@
+@import '../../../variaveisDeEstilo/variaveisDeEstilo'
+
+
+#TopCollectorsPage
+    margin: 10vh 0
+    main
+        display: flex
+        flex-direction: column
+        gap: 10vh
+            
+        h2
+            font-family: $font-1
+            font-size: $size-text-laptop
+            background: linear-gradient(0deg , $gray, $white)
+            background-clip: text
+            color: transparent
+
+        ul
+            width: 100%
+            // flex-wrap: wrap
+            // justify-content: center
+            gap: 1vw
+
+@media ( max-width: 440px )
+    #TopCollectorsPage
+        main
+            align-items: center
+        ul
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+
+@media ( min-width: 440px ) and ( max-width: 840px)
+    #TopCollectorsPage
+        ul
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+
+@media ( min-width: 841px ) 
+    #TopCollectorsPage
+        ul
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            

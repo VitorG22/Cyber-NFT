@@ -1,0 +1,221 @@
+@import "../../../variaveisDeEstilo/variaveisDeEstilo"
+
+#KnowMore
+    .bgImageContainer
+        position: absolute
+        width: 100vw
+        height: 100%
+        opacity: 40%
+
+        background-image: url('backgrounds/bg3.jpg')
+        background-repeat: no-repeat
+        background-size: cover
+        filter: blur(4px) sepia(100%) brightness(32%) hue-rotate(229deg) saturate(534%) contrast(122%)
+        z-index: -1
+
+.topGradient
+    top: 0
+    width: 100vw
+    height: 15vh
+    position: absolute
+    background: linear-gradient(0deg , transparent, black)
+    z-index: 4
+
+main
+    backdrop-filter: blur(4px)
+    align-items: center
+    height: fit-content
+    padding: 3vh
+    width: 100vw
+    color: white
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 4vh
+    
+
+
+@media (max-width: 440px)
+    #KnowMore
+            .KnowMoreTopTexts
+                font-family: $font-1
+                width: 100%
+                display: flex
+                flex-direction: column
+                align-items: center
+                padding: 2rem
+                gap: .5rem
+
+                h2
+                    background-image: linear-gradient(0deg , #717171 , #ffffff)
+                    background-clip: text
+                    color: transparent
+                    width: fit-content
+                    text-align: center
+                    font-size: calc($size-text-laptop * .8)
+                    letter-spacing: .2rem
+                    font-weight: 400
+
+                    // &:nth-child(1)
+                    //     align-self: flex-end
+                    // &:nth-child(2)
+                    //     align-self: flex-start
+                    // &:nth-child(3)
+                    // transform: translateX(25%)
+            
+            section
+
+                &:nth-child(2)
+                    display: flex
+
+                    flex-direction: column
+                    gap: 3vh
+                    align-items: center 
+                    h4
+                        font-weight: bold
+                        font-family: $font-3
+                        font-weight: 400
+                        justify-self: end
+                        font-size: calc( $size-text-laptop*.7)
+
+                    article
+                        width: 60%
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        place-self: center
+                        gap: 4vh
+                        text-align: center
+                        
+                        p
+                            font-size: calc( $size-text-laptop*.8)
+                            font-weight: 100
+                            color: $lightGray
+                            font-family: $font-3
+                            line-height: 1.3rem
+
+                        .buttonsContainer
+                            display: flex
+                            align-items: center
+    
+@media  (min-width: 440px) and (max-width: 840px)
+    #KnowMore
+        .KnowMoreTopTexts
+            font-family: $font-1
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding: 2rem
+            gap: .5rem
+
+            h2
+                background-image: linear-gradient(0deg , #717171 , #ffffff)
+                background-clip: text
+                color: transparent
+                width: fit-content
+                text-align: center
+                font-size: calc($size-text-laptop * 1.2)
+                letter-spacing: .2rem
+                font-weight: 400
+
+                // &:nth-child(1)
+                //     align-self: flex-end
+                // &:nth-child(2)
+                //     align-self: flex-start
+                // &:nth-child(3)
+                // transform: translateX(25%)
+        
+        section
+
+            &:nth-child(2)
+                display: grid
+                grid-template-columns: 1fr 2fr 
+                flex-direction: row
+
+                h4
+                    font-weight: bold
+                    font-family: $font-3
+                    font-weight: 400
+                    justify-self: end
+                    font-size: calc( $size-text-laptop*.7)
+
+                article
+                    width: 60%
+                    display: flex
+                    flex-direction: column
+                    place-self: center
+                    gap: 4vh
+
+                    p
+                        font-size: calc( $size-text-laptop*.8)
+                        font-weight: 100
+                        color: $lightGray
+                        font-family: $font-3
+                        line-height: 1.3rem
+
+                    .buttonsContainer
+                        display: flex
+                        align-items: center
+
+
+
+@media  (min-width: 841px)
+    #KnowMore
+        .KnowMoreTopTexts
+            font-family: $font-1
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding: 2rem
+            gap: .5rem
+
+            h2
+                background-image: linear-gradient(0deg , #717171 , #ffffff)
+                background-clip: text
+                color: transparent
+                width: fit-content
+                font-size: clamp(1.5rem,3.36vw ,3rem)
+                letter-spacing: .2rem
+                font-weight: 400
+
+                &:nth-child(1)
+                    align-self: flex-end
+                &:nth-child(2)
+                    align-self: flex-start
+                &:nth-child(3)
+                    // transform: translateX(25%)
+        
+        section
+
+            &:nth-child(2)
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr
+                flex-direction: row
+
+                h4
+                    font-weight: bold
+                    font-family: $font-3
+
+                    justify-self: end
+                    font-size: clamp(.5rem,1.5vw,1rem)
+
+                article
+                    width: 60%
+                    display: flex
+                    flex-direction: column
+                    place-self: center
+                    gap: 4vh
+
+                    p
+                        font-size: clamp(.5rem,1.5vw,1rem)
+                        font-weight: 100
+                        color: $lightGray
+                        font-family: $font-3
+                        line-height: 1.3rem
+
+                    .buttonsContainer
+                        display: flex
+                        align-items: center

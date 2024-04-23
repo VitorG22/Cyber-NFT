@@ -1,0 +1,71 @@
+@import '../../../../variaveisDeEstilo/variaveisDeEstilo' 
+
+.navBar
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        top: 0
+        width: 100vw
+        z-index: 5
+        background: transparent
+        border: $white 1px solid
+        border-top: none
+
+        div
+            width: fit-content
+            svg
+                fill: $white
+                &:hover
+                    fill: $lightGray    
+
+        ul
+            list-style: none
+            display: flex
+            flex-direction: row
+            gap: 1vw
+            li
+                a        
+                    color: $white
+                    text-decoration: none
+                    font-family: $font-3
+                    padding: .5vw 1vw
+                    border-radius: 15px
+                    &:hover
+                        color: $pink
+                    
+                .active
+                    color: $pink
+
+@media (max-width: 440px)
+    .navBar
+        padding:  2vw 3vw
+        border-radius: 0 0 8px 8px  
+
+        svg
+            width: 2.5vw
+        a
+            font-size: calc($size-text-laptop/1.7)
+
+
+@media  (min-width: 440px) and (max-width: 780px)
+    .navBar
+        padding:  2vw 2vw
+        border-radius: 0 0 15px 15px  
+
+        svg
+            width: 2.5vw
+        a
+            font-size: calc($size-text-laptop/1.3)
+
+
+
+@media  (min-width: 781px)
+    .navBar
+        padding:  1vw 2vw
+        border-radius: 0 0 15px 15px  
+
+        svg
+            width: 1.2vw
+        
+

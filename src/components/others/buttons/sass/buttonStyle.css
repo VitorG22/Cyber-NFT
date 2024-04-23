@@ -1,0 +1,161 @@
+button {
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.bg-pink {
+  background-color: #cf25d8;
+  color: white;
+}
+
+.bg-transparent {
+  background-color: transparent;
+  color: white;
+}
+.bg-transparent:active {
+  background-color: white;
+  color: black;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.border-white {
+  border: solid white 1px;
+}
+
+.padding {
+  padding: 0 2rem;
+}
+
+.text-pink {
+  color: #cf25d8;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.gap-1 {
+  gap: 10px;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-100 {
+  font-weight: 100;
+}
+
+.text-400 {
+  font-weight: 400;
+}
+
+.text-300 {
+  font-weight: 500;
+}
+
+@media (max-width: 440px) {
+  .button1 {
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
+    padding-left: clamp(0px, 4vw, 3rem);
+    padding-right: clamp(0px, 4vw, 3rem);
+    border-radius: 50px;
+  }
+  .button2 {
+    aspect-ratio: 1/1;
+    width: calc(1rem + 5vw);
+    border-radius: 50px;
+    border: none;
+  }
+  .font-1 {
+    font-size: clamp(0.2rem, 4vw, 1rem);
+  }
+  .font-2 {
+    font-size: clam(0.3rem, 2.6vw, 1.2rem);
+  }
+  .font-3 {
+    font-size: clam(0.4rem, 4.8vw, 1.6rem);
+  }
+  .font-4 {
+    font-size: clam(0.5rem, 6vw, 2rem);
+  }
+  .font-5 {
+    font-size: clam(0.6rem, 7.2vw, 2.4rem);
+  }
+}
+@media (min-width: 440px) and (max-width: 840px) {
+  .button1 {
+    padding-top: 1.2vw;
+    padding-bottom: 1.2vw;
+    padding-left: clamp(0px, 2vw, 2rem);
+    padding-right: clamp(0px, 2vw, 2rem);
+    border-radius: 50px;
+  }
+  .button2 {
+    aspect-ratio: 1/1;
+    width: calc(1rem + 2.4vw);
+    border-radius: 50px;
+    border: none;
+  }
+  .font-1 {
+    font-size: clamp(0.2rem, 2.4vw, 0.8rem);
+  }
+  .font-2 {
+    font-size: clam(0.3rem, 2.6vw, 1.2rem);
+  }
+  .font-3 {
+    font-size: clam(0.4rem, 4.8vw, 1.6rem);
+  }
+  .font-4 {
+    font-size: clam(0.5rem, 6vw, 2rem);
+  }
+  .font-5 {
+    font-size: clam(0.6rem, 7.2vw, 2.4rem);
+  }
+}
+@media (min-width: 841px) {
+  .button1 {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left: clamp(0px, 2vw, 2rem);
+    padding-right: clamp(0px, 2vw, 2rem);
+    border-radius: 30px;
+  }
+  .button2 {
+    aspect-ratio: 1/1;
+    min-width: 3rem;
+    border-radius: 50px;
+    border: none;
+  }
+  .font-1 {
+    font-size: 1rem;
+  }
+  .font-2 {
+    font-size: 1.5rem;
+  }
+  .font-3 {
+    font-size: 2rem;
+  }
+  .font-4 {
+    font-size: 2.5rem;
+  }
+  .font-5 {
+    font-size: 3rem;
+  }
+}/*# sourceMappingURL=buttonStyle.css.map */

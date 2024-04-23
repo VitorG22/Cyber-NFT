@@ -1,0 +1,97 @@
+@import '../../../variaveisDeEstilo/variaveisDeEstilo'
+
+.footerSection
+    display: flex
+    flex-direction: column
+    color: white
+    margin-top: 5vh
+    gap: 4vh
+
+    section
+        color: $white
+        display: flex
+        justify-content: flex-end
+        flex-direction: row
+        gap: 4vw
+        margin-right: 2vw
+
+        ul
+            font-family: $font-3
+            list-style: none
+            display: flex
+            flex-direction: column
+            gap: 1vh
+            font-weight: bold
+            text-align: end
+            
+            li
+                p
+                    font-weight: 600
+                a
+                    background: none
+                    color: $gray
+                    border: none
+                    font-weight: 100
+                    text-decoration: none
+                    &:hover
+                        color: $white
+                        cursor: pointer
+
+    footer
+        padding: 2vh 4vw
+        border-top: $pink solid 1px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        ul
+            display: flex
+            flex-direction: row
+            gap: 4vw
+            list-style: none
+            font-family: $font-3
+            color: $gray
+
+            button
+                background: none
+                color: $gray
+                border: none
+                &:hover
+                    color: $white
+                    cursor: pointer
+
+        p
+            color: $gray
+            font-family: $font-3
+            border: none
+            font-size: .8rem
+
+@media ( max-width: 440px )
+    .footerSection
+        section
+            p
+                font-size: calc($size-text-tablet *1.3 )
+            a
+                font-size: $size-text-phone
+        footer
+            p
+                font-size: $size-text-phone
+            
+    
+@media ( min-width: 440px ) and (max-width: 840px)
+    .footerSection
+        section
+            p
+                font-size: calc($size-text-tablet * 1.2)
+            a
+                font-size: $size-text-tablet                    
+                                
+    
+@media ( min-width: 841px )
+    .footerSection
+        section
+            p
+                font-size: calc($size-text-laptop* .3)
+            a
+                font-size: calc($size-text-laptop * .3)
+            

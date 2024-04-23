@@ -1,0 +1,395 @@
+@import '../../../variaveisDeEstilo/variaveisDeEstilo'
+
+
+@media  (max-width: 440px)
+    #ArtShowPage
+        overflow: hidden
+        display: flex
+        flex-direction: column
+        height: fit-content
+        padding: 1vw
+        align-items: center
+
+        .imgContainer
+            display: flex
+            overflow: hidden
+            justify-self: center
+            justify-content: center
+            align-items: center 
+            width: 90%
+            aspect-ratio: 1/1
+            border-radius: 20px
+            img
+                transition: .2s ease
+                width: 100%
+                border-radius: 15px
+                &:hover
+                    scale: 1.15
+
+        .imgDataContainer
+            display: flex
+            flex-direction: column
+            justify-content: center
+            gap: 1vh
+            padding: 1vh 1vw
+            width: 100%
+
+            section
+                display: grid
+                grid-template-areas: "textTop textTop textTop" "id . ." "collection . cartButton" 
+                flex-direction: column
+                align-items: flex-start
+                gap: 2vh
+                padding: 4vw
+                margin: 0 2vw
+                border-radius: 20px
+                background: $pink
+
+                .CartCardTop
+                    grid-area: textTop 
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                    width: 100%
+                    flex-direction: row
+                    justify-content: space-between
+                    align-items: flex-start
+                    color: $white
+                    h2
+                        font-family: $font-3
+                        font-size: calc($size-text-phone * 2)
+                        font-weight: 300
+                span
+                    p
+                        color: $lightGray
+                        font-family: $font-2
+                        font-size: calc($size-text-phone)
+                        font-style: italic
+                    h5
+                        color: $white
+                        font-family: $font-3
+                        font-weight: 200
+                        font-size: $size-text-phone
+                        margin-left: 1rem
+                .idContainer
+                    grid-area: id 
+                .collectionInfoContainer
+                    grid-area: collection 
+
+                .buttonContainer
+                    grid-area: cartButton
+                    display: flex
+                    flex-direction: row-reverse
+                    justify-content: space-between
+                    align-items: center
+                    gap: 2vw
+
+                    p
+                        font-family: $font-3
+                        color: $white
+                        font-size: $size-text-phone
+                        font-weight: 100
+
+            .collectionContainer
+                margin: 0 2vw 
+
+                .CollectionName
+                    color: $white
+                    font-family: $font-3
+                    font-weight: 100
+                    font-size: $size-text-phone
+                    z-index: 4
+                    display: flex
+                    align-items: end  
+                    margin-left: 4.5vw  
+                    
+
+                .collectionImagesContainer
+                    display: flex
+                    // flex-wrap: wrap
+                    align-items: center
+                    padding: 3vw 4vw 
+                    border: solid $white 1px
+                    border-radius: 20px
+                    position: relative
+                    overflow: scroll
+                    gap: .3vw
+                    
+
+
+                    .artThumbnail
+                        border-radius: 15px
+                        min-width: 20vw
+                        max-width: 20vw
+                        overflow: hidden
+                        aspect-ratio: 1/1
+                        // border: solid white 1px
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: center
+                        img
+                            transition: .2s
+                            width: 100%
+                            &:hover
+                                scale: 1.15
+
+
+    
+@media  (min-width: 440px) and (max-width: 840px)
+    #ArtShowPage
+        overflow: hidden
+        display: flex
+        flex-direction: column
+        height: fit-content
+        padding: 1vw
+        align-items: center
+
+        .imgContainer
+            display: flex
+            overflow: hidden
+            justify-self: center
+            justify-content: center
+            align-items: center 
+            width: 90%
+            aspect-ratio: 1/1
+            border-radius: 20px
+            img
+                transition: .2s ease
+                width: 100%
+                border-radius: 15px
+                &:hover
+                    scale: 1.15
+
+        .imgDataContainer
+            display: flex
+            flex-direction: column
+            justify-content: center
+            gap: 1vh
+            padding: 1vh 1vw
+            width: 100%
+
+            section
+                display: grid
+                grid-template-areas: "textTop textTop textTop" "id . ." "collection . cartButton" 
+                flex-direction: column
+                align-items: flex-start
+                gap: 2vh
+                padding: 4vw
+                margin: 0 2vw
+                border-radius: 20px
+                background: $pink
+
+                .CartCardTop
+                    grid-area: textTop 
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                    width: 100%
+                    flex-direction: row
+                    justify-content: space-between
+                    align-items: flex-start
+                    color: $white
+                    h2
+                        font-family: $font-3
+                        font-size: calc($size-text-tablet * 2)
+                        font-weight: 300
+                span
+                    p
+                        color: $lightGray
+                        font-family: $font-2
+                        font-size: calc($size-text-tablet)
+                        font-style: italic
+                    h5
+                        color: $white
+                        font-family: $font-3
+                        font-weight: 200
+                        font-size: $size-text-phone
+                        margin-left: 1rem
+                .idContainer
+                    grid-area: id 
+                .collectionInfoContainer
+                    grid-area: collection 
+
+                .buttonContainer
+                    grid-area: cartButton
+                    display: flex
+                    flex-direction: row-reverse
+                    justify-content: space-between
+                    align-items: center
+                    align-self: flex-end
+                    gap: 2vw
+
+                    p
+                        font-family: $font-3
+                        color: $white
+                        font-size: $size-text-tablet
+                        font-weight: 100
+
+            .collectionContainer
+                margin: 0 2vw 
+
+                .CollectionName
+                    color: $white
+                    font-family: $font-3
+                    font-weight: 100
+                    font-size: $size-text-phone
+                    z-index: 4
+                    display: flex
+                    align-items: end  
+                    margin-left: 4.5vw  
+                    
+
+                .collectionImagesContainer
+                    display: flex
+                    // flex-wrap: wrap
+                    align-items: center
+                    padding: 3vw 4vw 
+                    border: solid $white 1px
+                    border-radius: 20px
+                    position: relative
+                    overflow: scroll
+                    gap: .3vw
+                    
+
+
+                    .artThumbnail
+                        border-radius: 15px
+                        min-width: 20vw
+                        max-width: 20vw
+                        overflow: hidden
+                        aspect-ratio: 1/1
+                        // border: solid white 1px
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: center
+                        img
+                            transition: .2s
+                            width: 100%
+                            &:hover
+                                scale: 1.15
+
+
+    
+@media  (min-width: 841px)
+    #ArtShowPage
+        display: grid
+        grid-template-columns: 1fr 1fr
+        margin-top: 4vh
+        height:  fit-content
+        padding: 1vw
+        align-items: center
+
+        .imgContainer
+            display: flex
+            overflow: hidden
+            justify-self: center
+            justify-content: center
+            align-items: center 
+            width: 80%
+            aspect-ratio: 1/1
+            border-radius: 20px
+            img
+                transition: .2s
+                width: 100%
+                border-radius: 15px
+                &:hover
+                    scale: 1.15
+        .imgDataContainer
+            display: grid
+            flex-direction: column
+            justify-content: center
+            grid-template-rows: 1fr 1fr
+            overflow: hidden
+            height: 100vh
+            gap: 1vh
+            padding: 1vh 1vw
+            section
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                gap: 2vh
+                padding: 2vw
+                border-radius: 20px
+                background: $pink
+
+                .CartCardTop
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                    width: 100%
+                    flex-direction: row
+                    justify-content: space-between
+                    align-items: flex-start
+                    color: $white
+                    h2
+                        font-family: $font-3
+                        font-size: $size-text-laptop
+                        font-weight: 500
+                span
+                    p
+                        color: $lightGray
+                        font-family: $font-2
+                        font-size: calc($size-text-laptop/4)
+                        font-style: italic
+                    h2
+                        color: $white
+                        font-family: $font-3
+                        font-size: $size-text-laptop
+                        font-weight: 500
+                    h5
+                        color: $white
+                        font-family: $font-3
+                        font-weight: 200
+                        font-size: calc($size-text-laptop/2)
+                        margin-left: 1rem
+
+                div
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    align-items: center
+                    gap: 2vw
+
+                    p
+                        font-family: $font-3
+                        color: $white
+                        font-size: calc($size-text-laptop/3)
+
+            .collectionContainer
+                .CollectionName
+                    color: $white
+                    font-family: $font-3
+                    font-weight: 100
+                    z-index: 4
+                    display: flex
+                    align-items: end    
+                    padding: .1vw 1vw 
+
+                .collectionImagesContainer
+                    display: flex
+                    flex-wrap: wrap
+                    align-items: center
+                    height: 40vh
+                    padding: 2vw 
+                    border: solid $white 1px
+                    border-radius: 20px
+                    position: relative
+                    overflow: scroll
+                    gap: .3vw
+                    
+
+
+                    .artThumbnail
+                        border-radius: 15px
+                        width: 10vw
+                        overflow: hidden
+                        aspect-ratio: 1/1
+                        // border: solid white 1px
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: center
+                        img
+                            transition: .2s
+                            width: 100%
+                            &:hover
+                                scale: 1.15
