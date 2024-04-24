@@ -14,9 +14,10 @@ interface INFTCardPage {
     showFilter: boolean
     searchBar: boolean
     filter?: string
+    pathStart?: string
 }
 
-export default function NFTCardPage({ searchBar, imagesCount, title, showFilter, filter = "All" }: INFTCardPage): ReactNode {
+export default function NFTCardPage({ searchBar, imagesCount, title, showFilter, filter = "All", pathStart = '' }: INFTCardPage): ReactNode {
     const [selectedFilter, setSelectedFilter] = useState<string>(filter)
     const [ArtArrayForRender, setArtArrayForRender] = useState<IArtObject[]>([])
     const [searchBarValue, setSearchBarValue] = useState<string>("")
@@ -75,16 +76,7 @@ export default function NFTCardPage({ searchBar, imagesCount, title, showFilter,
                         ArtArrayForRender.map((element: IArtObject): ReactNode => {
                             return (
                                 <Suspense>
-                                    <NFTCard
-                                        ArtName={element.ArtName}
-                                        path={element.path}
-                                        price={element.price}
-                                        id={element.id}
-                                        collectionId={element.collectionId}
-                                        collectionName={element.collectionName}
-                                        filterSearch={element.filterSearch}
-                                        key={element.id}
-                                    />
+                                    <NFTCard id={element.id} pathStart={pathStart} key={element.id}/>
                                 </Suspense>
 
                             )

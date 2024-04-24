@@ -16,7 +16,7 @@ export default function NavBar(): ReactNode {
 
                 {
                     <li>
-                        <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}>
+                        <NavLink to="Home" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}>
                             Home
                         </NavLink>
                     </li>
@@ -24,7 +24,7 @@ export default function NavBar(): ReactNode {
 
                 {
                     <li>
-                        <NavLink to="/MarketPlace" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}>
+                        <NavLink to="MarketPlace" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}>
                             Market Place
                         </NavLink>
                     </li>

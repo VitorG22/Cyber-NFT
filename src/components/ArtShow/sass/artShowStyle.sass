@@ -295,18 +295,18 @@
                 &:hover
                     scale: 1.15
         .imgDataContainer
-            display: grid
+            display: flex
             flex-direction: column
             justify-content: center
-            grid-template-rows: 1fr 1fr
             overflow: hidden
-            height: 100vh
+            height: fit-content
             gap: 1vh
             padding: 1vh 1vw
             section
                 display: flex
                 flex-direction: column
                 align-items: flex-start
+                height: fit-content
                 gap: 2vh
                 padding: 2vw
                 border-radius: 20px
@@ -365,10 +365,11 @@
                     padding: .1vw 1vw 
 
                 .collectionImagesContainer
+                    height: fit-content
+                    max-height: 35vh
                     display: flex
                     flex-wrap: wrap
                     align-items: center
-                    height: 40vh
                     padding: 2vw 
                     border: solid $white 1px
                     border-radius: 20px

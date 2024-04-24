@@ -302,12 +302,12 @@
     scale: 1.15;
   }
   #ArtShowPage .imgDataContainer {
-    display: grid;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    grid-template-rows: 1fr 1fr;
     overflow: hidden;
-    height: 100vh;
+    height: -moz-fit-content;
+    height: fit-content;
     gap: 1vh;
     padding: 1vh 1vw;
   }
@@ -315,6 +315,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    height: -moz-fit-content;
+    height: fit-content;
     gap: 2vh;
     padding: 2vw;
     border-radius: 20px;
@@ -375,10 +377,12 @@
     padding: 0.1vw 1vw;
   }
   #ArtShowPage .imgDataContainer .collectionContainer .collectionImagesContainer {
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: 35vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    height: 40vh;
     padding: 2vw;
     border: solid #ffffff 1px;
     border-radius: 20px;

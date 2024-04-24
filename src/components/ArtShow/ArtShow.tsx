@@ -22,7 +22,7 @@ export default function ({ id }: { id: string }): ReactNode {
         <>
             <section id="ArtShowPage">
                 <section className="imgContainer">
-                    <img src={`/${selectedArt?.path}`} />
+                    <img src={`../${selectedArt?.path}`} />
                 </section>
                 <div className="imgDataContainer">
                     {collectionSelected && 
@@ -43,7 +43,7 @@ export default function ({ id }: { id: string }): ReactNode {
                     <section>
                         <div className="CartCardTop">
                             <h2>{selectedArt?.ArtName}</h2>
-                            <CollectorCard id={'AA004'} showRankPosition={false} showMoneyValue={false} key={"AA004"} />
+                            <CollectorCard id={'AA004'} showRankPosition={false} showMoneyValue={false} key={"AA004"} pathStart="../"/>
                         </div>
                         <span className='idContainer'>
                             <p>Id:</p>
@@ -64,7 +64,7 @@ export default function ({ id }: { id: string }): ReactNode {
                     </section>
                 </div>
             </section>
-            <NFTCardPage title="More like this" searchBar={false} showFilter={false} filter={selectedArt?.filterSearch[1]} />
+            <NFTCardPage title="More like this" searchBar={false} showFilter={false} filter={selectedArt?.filterSearch[1]} pathStart="../" />
         </>
     )
 }

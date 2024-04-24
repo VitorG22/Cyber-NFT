@@ -9,20 +9,22 @@ import MarketPlace from './routes/MarketPlace.tsx'
 
 export const router = createBrowserRouter([
     {
-        path: '/',
+        path: 'Cyber-NFT/',
+        // path: '/',
         element: <App/>,
         errorElement:<ErrorPage/>,
         children:[
             {
-                path:'/',
+                // path:'/Cyber-NFT',
+                path:'Home',
                 element: <HomePage/>
             },
             {
-                path:'/ArtPreview/:id',
+                path:'ArtPreview/:id',
                 element: <ArtShowPage/>
             },
             {
-                path:'/MarketPlace',
+                path:'MarketPlace',
                 element: <MarketPlace/>
             }
         ]

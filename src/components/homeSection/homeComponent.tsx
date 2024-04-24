@@ -1,5 +1,6 @@
 import { ReactNode, Suspense, lazy } from 'react'
 import './sass/homeStyle.css'
+import { ArtArray } from '../../utils/ArtsArray'
 // import HomeImgComponent from './homeImgComponent'
 const HomeImgComponent = lazy(()=> import('./homeImgComponent'))
 
@@ -20,9 +21,9 @@ export default function HomeComponent(): ReactNode {
                     <section>
                         <ul>
                             <Suspense>
-                                <HomeImgComponent componentClass='HomeImg3' imgPath='images/img3.jpg'></HomeImgComponent>
-                                <HomeImgComponent componentClass='HomeImg2' imgPath='images/img2.jpg'></HomeImgComponent>
-                                <HomeImgComponent componentClass='HomeImg1' imgPath='images/img1.jpg'></HomeImgComponent>
+                                <HomeImgComponent componentClass='HomeImg3' imgPath={`${ArtArray[55].path}`}></HomeImgComponent>
+                                <HomeImgComponent componentClass='HomeImg2' imgPath={`${ArtArray[61].path}`}></HomeImgComponent>
+                                <HomeImgComponent componentClass='HomeImg1' imgPath={`${ArtArray[45].path}`}></HomeImgComponent>
                             </Suspense>
                         </ul>
                     </section>
