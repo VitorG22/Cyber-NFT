@@ -12,7 +12,7 @@ export interface IArtObject {
 export const ArtArray: IArtObject[] = [
     {
         ArtName: 'Art 0',
-        path: 'Home/images/01b949cf38a94001986be93cbaa656b0.jpg',
+        path: 'images/01b949cf38a94001986be93cbaa656b0.jpg',
         price: 0.11, 
         filterSearch:['All', 'AI Models'],
         id: 'AA00', 
@@ -21,7 +21,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 1',
-        path: 'Home/images/02b2912b354b43ee52800c66acfede5c.jpg',
+        path: 'images/02b2912b354b43ee52800c66acfede5c.jpg',
         price: 9.0, 
         filterSearch:['All', 'Photography'],
         id: 'AA01', 
@@ -30,7 +30,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 2',
-        path: 'Home/images/0400841ea421081fcafd81810bbce02f.jpg',
+        path: 'images/0400841ea421081fcafd81810bbce02f.jpg',
         price: 1.33, 
         filterSearch:['All' , 'AI Models'],
         id: 'AA02', 
@@ -39,7 +39,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 3',
-        path: 'Home/images/05950ecb0d6ad4ba3eced47688ee712c.jpg',
+        path: 'images/05950ecb0d6ad4ba3eced47688ee712c.jpg',
         price: 1.22, 
         filterSearch:['All', 'Photography'],
         id: 'AA03', 
@@ -48,7 +48,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 4',
-        path: 'Home/images/11b7ca27b1d4667ec8447f492533054f.jpg',
+        path: 'images/11b7ca27b1d4667ec8447f492533054f.jpg',
         price: 1.33, 
         filterSearch:['All' , 'AI Models'],
         id: 'AA04', 
@@ -57,7 +57,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 5',
-        path: 'Home/images/1abe61cca775de877081b3b40376878e.jpg',
+        path: 'images/1abe61cca775de877081b3b40376878e.jpg',
         price: 1.33, 
         filterSearch:['All', 'Photography'],
         id: 'AA05', 
@@ -66,7 +66,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 6',
-        path: 'Home/images/1ea9fc47bffc9c5449819e72c09e51d0.jpg',
+        path: 'images/1ea9fc47bffc9c5449819e72c09e51d0.jpg',
         price: 0.14, 
         filterSearch:['All', 'Photography'],
         id: 'AA06', 
@@ -75,7 +75,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 7',
-        path: 'Home/images/21968cc0f0115c3bf320fbfedccdae18.jpg',
+        path: 'images/21968cc0f0115c3bf320fbfedccdae18.jpg',
         price: 1.0, 
         filterSearch:['All', 'AI Models'],
         id: 'AA07', 
@@ -84,7 +84,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 8',
-        path: 'Home/images/2a67a239333704a0ccc67716a532613c.jpg',
+        path: 'images/2a67a239333704a0ccc67716a532613c.jpg',
         price: 0.86, 
         filterSearch:['All', 'Photography'],
         id: 'AA08', 
@@ -93,7 +93,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 9',
-        path: 'Home/images/3132f0c5e6bb9aaeea4cf5cc85e3754d.jpg',
+        path: 'images/3132f0c5e6bb9aaeea4cf5cc85e3754d.jpg',
         price: 2.0, 
         filterSearch:['All','Photography'],
         id: 'AA09', 
@@ -102,7 +102,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 10',
-        path: 'Home/images/3194a0469d02712959f78903806e57ca.jpg',
+        path: 'images/3194a0469d02712959f78903806e57ca.jpg',
         price: 2.0, 
         filterSearch:['All', 'AI Models'],
         id: 'BA00', 
@@ -111,7 +111,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 11',
-        path: 'Home/images/3355be72a9c42dfd4d995bf773c59bd1.jpg',
+        path: 'images/3355be72a9c42dfd4d995bf773c59bd1.jpg',
         price: 1.29, 
         filterSearch:['All' , 'AI Models'],
         id: 'BA01', 
@@ -120,7 +120,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 12',
-        path: 'Home/images/3735de1ddf621a1444e8ad26bfb4f264.jpg',
+        path: 'images/3735de1ddf621a1444e8ad26bfb4f264.jpg',
         price: 6.0, 
         filterSearch:['All', 'AI Models'],
         id: 'BA02', 
@@ -129,7 +129,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 13',
-        path: 'Home/images/3d1d522036f4ca97d907d8bbdd339017.jpg',
+        path: 'images/3d1d522036f4ca97d907d8bbdd339017.jpg',
         price: 1.0, 
         filterSearch:['All' , 'AI Models'],
         id: 'BA03', 
@@ -138,7 +138,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 14',
-        path: 'Home/images/3e029621998332d2938d75a92c8a271f.jpg',
+        path: 'images/3e029621998332d2938d75a92c8a271f.jpg',
         price: 1.67, 
         filterSearch:['All','Photography'],
         id: 'BA04', 
@@ -147,14 +147,14 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 15',
-        path: 'Home/images/402a4215f49d77688e6531e8e45cd98d.jpg',
+        path: 'images/402a4215f49d77688e6531e8e45cd98d.jpg',
         price: 0.44, 
         filterSearch:['All' , 'AI Models'],
         id: 'BA05'
     },
     {
         ArtName: 'Art 16',
-        path: 'Home/images/485fd0dd58db6aaf2663768d91fd096a.jpg',
+        path: 'images/485fd0dd58db6aaf2663768d91fd096a.jpg',
         price: 3.67, 
         filterSearch:['All','Photography'],
         id: 'BA06', 
@@ -163,7 +163,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 17',
-        path: 'Home/images/4b0a2c23111d47de7ae6a3ddbd83c28e.jpg',
+        path: 'images/4b0a2c23111d47de7ae6a3ddbd83c28e.jpg',
         price: 2.11, 
         filterSearch:['All', 'AI Models'],
         id: 'BA07', 
@@ -172,7 +172,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 18',
-        path: 'Home/images/53c8559e872db16d8328c0f6380ae2f6.jpg',
+        path: 'images/53c8559e872db16d8328c0f6380ae2f6.jpg',
         price: 1.22, 
         filterSearch:['All' , 'AI Models'],
         id: 'BA08', 
@@ -181,7 +181,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 19',
-        path: 'Home/images/54c64b50fa9ffef4bd1ed10e06c6082b.jpg',
+        path: 'images/54c64b50fa9ffef4bd1ed10e06c6082b.jpg',
         price: 2.2, 
         filterSearch:['All' , 'AI Models'],
         id: 'BA09', 
@@ -190,7 +190,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 20',
-        path: 'Home/images/59d9d588f36ad379a5da2f7bf6b488a5.jpg',
+        path: 'images/59d9d588f36ad379a5da2f7bf6b488a5.jpg',
         price: 10.0, 
         filterSearch:['All','Photography'],
         id: 'CA00', 
@@ -199,7 +199,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 21',
-        path: 'Home/images/5d336666decc5df42b2b2fc89bfa7085.jpg',
+        path: 'images/5d336666decc5df42b2b2fc89bfa7085.jpg',
         price: 1.0, 
         filterSearch:['All' , 'AI Models'],
         id: 'CA01', 
@@ -208,7 +208,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 22',
-        path: 'Home/images/644e994097ce4a85c30e08e3aed4b810.jpg',
+        path: 'images/644e994097ce4a85c30e08e3aed4b810.jpg',
         price: 2.0, 
         filterSearch:['All','Photography'],
         id: 'CA02', 
@@ -217,7 +217,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 23',
-        path: 'Home/images/646a953edce6a6e03550eb1498eaa8c2.jpg',
+        path: 'images/646a953edce6a6e03550eb1498eaa8c2.jpg',
         price: 2.4, 
         filterSearch:['All','Photography'],
         id: 'CA03', 
@@ -226,14 +226,14 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 24',
-        path: 'Home/images/6680932bbbddd677be6a755eadb81c46.jpg',
+        path: 'images/6680932bbbddd677be6a755eadb81c46.jpg',
         price: 1.0, 
         filterSearch:['All','Photography'],
         id: 'CA04'
     },
     {
         ArtName: 'Art 25',
-        path: 'Home/images/7bf1a3c0442eabb26552a7ad6954e5c6.jpg',
+        path: 'images/7bf1a3c0442eabb26552a7ad6954e5c6.jpg',
         price: 2.29, 
         filterSearch:['All', 'AI Models'],
         id: 'CA05', 
@@ -242,14 +242,14 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 26',
-        path: 'Home/images/888166dad3a1b857fb245eb60f84bf22.jpg',
+        path: 'images/888166dad3a1b857fb245eb60f84bf22.jpg',
         price: 13.0, 
         filterSearch:['All','Photography'],
         id: 'CA06'
     },
     {
         ArtName: 'Art 27',
-        path: 'Home/images/ac42d4c25642d55e1a7d8e20633dcfb6.jpg',
+        path: 'images/ac42d4c25642d55e1a7d8e20633dcfb6.jpg',
         price: 0.14, 
         filterSearch:['All', 'AI Models'],
         id: 'CA07', 
@@ -258,7 +258,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 28',
-        path: 'Home/images/ae34b81323675c7797955fc33827b45e.jpg',
+        path: 'images/ae34b81323675c7797955fc33827b45e.jpg',
         price: 1.67, 
         filterSearch:['All', 'AI Models'],
         id: 'CA08', 
@@ -267,7 +267,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 29',
-        path: 'Home/images/b7dbfc8f61314049700ea402e8a959a5.jpg',
+        path: 'images/b7dbfc8f61314049700ea402e8a959a5.jpg',
         price: 1.33, 
         filterSearch:['All', 'AI Models'],
         id: 'CA09', 
@@ -276,7 +276,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 30',
-        path: 'Home/images/bbd471e29ddcc4768455afd0162d6654.jpg',
+        path: 'images/bbd471e29ddcc4768455afd0162d6654.jpg',
         price: 0.71, 
         filterSearch:['All', 'AI Models'],
         id: 'DB00', 
@@ -285,7 +285,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 31',
-        path: 'Home/images/c09eb7044c30c535cdbb3e41f3b2006d.jpg',
+        path: 'images/c09eb7044c30c535cdbb3e41f3b2006d.jpg',
         price: 1.0, 
         filterSearch:['All' , 'AI Models'],
         id: 'DB01', 
@@ -294,7 +294,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 32',
-        path: 'Home/images/c10616706ae7157bff9e257938327d98.jpg',
+        path: 'images/c10616706ae7157bff9e257938327d98.jpg',
         price: 0.6, 
         filterSearch:['All' , 'AI Models'],
         id: 'DB02', 
@@ -303,7 +303,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 33',
-        path: 'Home/images/c52a3a3f768a4db31a7aae3fd98327b4.jpg',
+        path: 'images/c52a3a3f768a4db31a7aae3fd98327b4.jpg',
         price: 2.11, 
         filterSearch:['All','Photography'],
         id: 'DB03', 
@@ -312,7 +312,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 34',
-        path: 'Home/images/cdd13c59ada83d6f7edaa4a6014ab33a.jpg',
+        path: 'images/cdd13c59ada83d6f7edaa4a6014ab33a.jpg',
         price: 2.29, 
         filterSearch:['All', 'AI Models'],
         id: 'DB04', 
@@ -321,7 +321,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 35',
-        path: 'Home/images/d0709970593327922ab03cba617ba2d4.jpg',
+        path: 'images/d0709970593327922ab03cba617ba2d4.jpg',
         price: 17.0, 
         filterSearch:['All' , 'AI Models'],
         id: 'DB05', 
@@ -330,14 +330,14 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 36',
-        path: 'Home/images/d2f07089f5829d4d04b9c1a6a78009c0.jpg',
+        path: 'images/d2f07089f5829d4d04b9c1a6a78009c0.jpg',
         price: 4.0, 
         filterSearch:['All', 'AI Models'],
         id: 'DB06'
     },
     {
         ArtName: 'Art 37',
-        path: 'Home/images/d45b8ca9af0b9e8350857dce2e767773.jpg',
+        path: 'images/d45b8ca9af0b9e8350857dce2e767773.jpg',
         price: 0.22, 
         filterSearch:['All', 'AI Models'],
         id: 'DB07', 
@@ -346,14 +346,14 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 38',
-        path: 'Home/images/d54597febda44e5d047fa5284462f15f.jpg',
+        path: 'images/d54597febda44e5d047fa5284462f15f.jpg',
         price: 2.0, 
         filterSearch:['All','AI Models'],
         id: 'DB08'
     },
     {
         ArtName: 'Art 39',
-        path: 'Home/images/da31be5885629cfa77b5168c3beb22b9.jpg',
+        path: 'images/da31be5885629cfa77b5168c3beb22b9.jpg',
         price: 1.0, 
         filterSearch:['All', 'AI Models'],
         id: 'DB09', 
@@ -362,7 +362,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 40',
-        path: 'Home/images/e88b1037a3e58764ece893bf82221828.jpg',
+        path: 'images/e88b1037a3e58764ece893bf82221828.jpg',
         price: 11.0, 
         filterSearch:['All', 'AI Models'],
         id: 'EB00', 
@@ -371,7 +371,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 41',
-        path: 'Home/images/ec514af84c27a9b68c2481d3b538198e.jpg',
+        path: 'images/ec514af84c27a9b68c2481d3b538198e.jpg',
         price: 2.14, 
         filterSearch:['All' , 'AI Models'],
         id: 'EB01', 
@@ -380,7 +380,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 42',
-        path: 'Home/images/f17f81a4e1f3a7fc3955211e4eda18c7.jpg',
+        path: 'images/f17f81a4e1f3a7fc3955211e4eda18c7.jpg',
         price: 0.57, 
         filterSearch:['All', 'AI Models'],
         id: 'EB02', 
@@ -389,7 +389,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 43',
-        path: 'Home/images/f82b68c7a495910a65f15719300cfb92.jpg',
+        path: 'images/f82b68c7a495910a65f15719300cfb92.jpg',
         price: 2.8, 
         filterSearch:['All','Photography'],
         id: 'EB03', 
@@ -398,14 +398,14 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 44',
-        path: 'Home/images/fashionable_glassesjpg.jpg',
+        path: 'images/fashionable_glassesjpg.jpg',
         price: 6.0, 
         filterSearch:['All', 'AI Models'],
         id: 'EB04'
     },
     {
         ArtName: 'Art 45',
-        path: 'Home/images/img1.jpg',
+        path: 'images/img1.jpg',
         price: 1.56, 
         filterSearch:['All','Photography'],
         id: 'EB05', 
@@ -414,7 +414,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 46',
-        path: 'Home/images/img10.jpg',
+        path: 'images/img10.jpg',
         price: 6.0, 
         filterSearch:['All','Ai Models'],
         id: 'EB06', 
@@ -423,7 +423,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 47',
-        path: 'Home/images/img11.jpg',
+        path: 'images/img11.jpg',
         price: 0.6, 
         filterSearch:['All','Photography'],
         id: 'EB07', 
@@ -432,7 +432,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 48',
-        path: 'Home/images/img12.jpg',
+        path: 'images/img12.jpg',
         price: 1.8, 
         filterSearch:['All', 'AI Models'],
         id: 'EB08', 
@@ -441,49 +441,49 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 49',
-        path: 'Home/images/img13.jpg',
+        path: 'images/img13.jpg',
         price: 1.2, 
         filterSearch:['All','Photography'],
         id: 'EB09'
     },
     {
         ArtName: 'Art 50',
-        path: 'Home/images/img14.jpg',
+        path: 'images/img14.jpg',
         price: 1.57, 
         filterSearch:['All','Photography'],
         id: 'FB00'
     },
     {
         ArtName: 'Art 51',
-        path: 'Home/images/img15.jpg',
+        path: 'images/img15.jpg',
         price: 1.67, 
         filterSearch:['All', 'AI Models'],
         id: 'FB01'
     },
     {
         ArtName: 'Art 52',
-        path: 'Home/images/img16.jpg',
+        path: 'images/img16.jpg',
         price: 0.33, 
         filterSearch:['All', 'AI Models'],
         id: 'FB02'
     },
     {
         ArtName: 'Art 53',
-        path: 'Home/images/img17jpg.jpg',
+        path: 'images/img17jpg.jpg',
         price: 5.67, 
         filterSearch:['All', 'AI Models'],
         id: 'FB03'
     },
     {
         ArtName: 'Art 54',
-        path: 'Home/images/img2.jpg',
+        path: 'images/img2.jpg',
         price: 0.2, 
         filterSearch:['All','Photography'],
         id: 'FB04'
     },
     {
         ArtName: 'Art 55',
-        path: 'Home/images/img3.jpg',
+        path: 'images/img3.jpg',
         price: 2.4, 
         filterSearch:['All','Photography'],
         id: 'FB05', 
@@ -492,7 +492,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 56',
-        path: 'Home/images/img4.jpg',
+        path: 'images/img4.jpg',
         price: 5.67, 
         filterSearch:['All', 'AI Models'],
         id: 'FB06', 
@@ -501,28 +501,28 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 57',
-        path: 'Home/images/img5.jpg',
+        path: 'images/img5.jpg',
         price: 1.0, 
         filterSearch:['All', 'AI Models'],
         id: 'FB07'
     },
     {
         ArtName: 'Art 58',
-        path: 'Home/images/img6.jpg',
+        path: 'images/img6.jpg',
         price: 1.0, 
         filterSearch:['All', 'AI Models'],
         id: 'FB08'
     },
     {
         ArtName: 'Art 59',
-        path: 'Home/images/img7.jpg',
+        path: 'images/img7.jpg',
         price: 0.33, 
         filterSearch:['All','Photography'],
         id: 'FB09'
     },
     {
         ArtName: 'Art 60',
-        path: 'Home/images/img8.jpg',
+        path: 'images/img8.jpg',
         price: 3.0, 
         filterSearch:['All', 'AI Models'],
         id: 'GB00', 
@@ -531,7 +531,7 @@ export const ArtArray: IArtObject[] = [
     },
     {
         ArtName: 'Art 61',
-        path: 'Home/images/img9.jpg',
+        path: 'images/img9.jpg',
         price: 5.0, 
         filterSearch:['All','Photography'],
         id: 'GB01', 
