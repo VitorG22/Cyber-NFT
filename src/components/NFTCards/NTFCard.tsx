@@ -38,7 +38,7 @@ export default function NFTCard({id, pathStart = ''}:{id: string, pathStart?:str
                         <span>$5</span>
                         <span>024</span>
                     </div>
-                    <Link to={`../ArtPreview/${artObject?.id}`} style={{ "textDecoration": 'none' }}>
+                    <Link to={`/Cyber-NFT/ArtPreview/${artObject?.id}`} style={{ "textDecoration": 'none' }}>
                         <Button handleClickFunction={ scrollToTop} content="View" classes="button1 font-1 bg-transparent border-white text-white text-500" />
                     </Link>
                 </section>
