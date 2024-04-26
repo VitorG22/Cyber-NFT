@@ -4,7 +4,7 @@ import Footer from "./components/footer/footer"
 import { ToastContainer } from "./components/others/toast/toast"
 
 function App() {
-  
+    
   return (
     <>
       <NavBar />

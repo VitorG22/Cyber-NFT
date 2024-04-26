@@ -59,7 +59,7 @@ export default function ({ id }: { id: string }): ReactNode {
                             <Button classes='button1 bg-white  gap-1 text-black text-500' content="Add to Cart" handleClickFunction={() => Toast({ title: 'Ahh...', timer: 5, description: 'Where did I leave my cart?', showButton: false, })}>
                                 <FontAwesomeIcon icon={faCartShopping} color="#000" />
                             </Button>
-                            <p>{selectedArt?.price} Eth</p>
+                            <p>{selectedArt?.EHT_price} Eth</p>
                         </div>
                     </section>
                 </div>

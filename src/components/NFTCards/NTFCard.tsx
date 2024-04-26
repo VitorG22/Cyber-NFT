@@ -1,11 +1,16 @@
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { Button } from "../others/buttons/buttons";
 import { Link } from "react-router-dom";
 import searchImg from "../../scripts/searchImg";
+import { convertValue } from "../../scripts/moneyConvert"; "../../scripts/moneyConvert";
 
 
-
-export default function NFTCard({id, pathStart = ''}:{id: string, pathStart?:string}): ReactNode {
+export default function NFTCard({ id, pathStart = '' }: { id: string, pathStart?: string }): ReactNode {
+    
+    const [bid_ETH_USD ,setBid_ETH_USD] =useState(0)
+    async function setBid(){
+        setBid_ETH_USD(await convertValue) // taxa de converção de ethereum para dolar americano
+    }setBid()
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -30,16 +35,16 @@ export default function NFTCard({id, pathStart = ''}:{id: string, pathStart?:str
                     <ul>
                         <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z" /></svg></li>
                         <li>
-                            <span>{artObject?.price}</span>
+                            <span>{artObject?.EHT_price}</span>
                             <span>eht</span>
                         </li>
                     </ul>
                     <div>
-                        <span>$5</span>
-                        <span>024</span>
+                        <span>${artObject?.EHT_price && ((artObject.EHT_price * bid_ETH_USD).toFixed(2))}</span>
+                        <span>USD</span>
                     </div>
                     <Link to={`/Cyber-NFT/ArtPreview/${artObject?.id}`} style={{ "textDecoration": 'none' }}>
-                        <Button handleClickFunction={ scrollToTop} content="View" classes="button1 font-1 bg-transparent border-white text-white text-500" />
+                        <Button handleClickFunction={scrollToTop} content="View" classes="button1 font-1 bg-transparent border-white text-white text-500" />
                     </Link>
                 </section>
             </div>
