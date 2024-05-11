@@ -1,0 +1,220 @@
+@import '../../../variaveisDeEstilo/variaveisDeEstilo'
+
+.loginPageContainer, .registerPageContainer
+    flex-direction: row
+    height: 100vh
+    width: 100vw
+    color: $white
+
+    .BackGroundAnimated
+        position: absolute
+        top: 0
+        left: 0
+        height: 100vh
+        width: 100vw
+        overflow: hidden
+
+    h1
+        font-family: $font-3
+        font-weith: 100
+        letter-spacing: 4px
+
+    .loginPageSection
+        border: solid $white 1px
+        padding: 4rem 2rem
+        border-radius: 15px
+        backdrop-filter: blur(15px)
+        background: #dad7d706
+        gap: 10px
+        width: fit-content
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        justify-self: center
+        z-index: 10
+
+    .registerPageSection
+        border-radius: 15px
+        backdrop-filter: blur(15px)
+        gap: 10px
+        width: fit-content
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        justify-self: center
+        z-index: 10
+
+    .loginPageSection,.registerPageSection 
+
+        .loginTop, .registerTop
+
+            display: flex
+            flex-direction: column
+            gap: 1vh
+            width: 30vw
+        .loginBottom
+
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            gap: 1vh
+            width: 30vw
+            height: fit-content
+            .loginPageRegisterButton
+                color: $pink
+                text-align: center
+                text-decoration: none
+                width: 100%
+                padding: 11px 0
+                border-radius: 5px
+                border: solid $pink 1px
+                font-family: $font-3
+                font-weight: thin
+                font-size: .9rem
+                &:hover
+                    color: $white
+                    background: $linear-gradient-buttom
+
+        .loginPageButton, .registerPageButton
+
+            color: $white
+            width: 100%
+            padding: 11px 0
+            font-size: .9rem
+            border-radius: 5px
+            background: $linear-gradient-buttom
+            font-family: $font-3
+            font-weight: bold
+            filter: brightness(90%)
+            &:hover
+                filter: brightness(100%)
+        .loginPageInput, .registerPageInput
+
+            color: $white
+            width: 100%
+            border-radius: 5px
+            border: solid 1px $lightGray
+            background: transparent
+
+        p
+            font-family: $font-3
+            font-size: .8rem
+
+        .linkText
+            align-self: flex-end
+            a
+                text-decoration: none
+                background: $linear-gradient-buttom
+                background-clip: text
+                color: transparent
+
+@media  (max-width: 440px)
+    .loginPageContainer, .registerPageContainer
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+
+        .imgContainerRegister, .imgContainerLogin
+            display: none
+        h1
+
+        .loginPageSection,.registerPageSection
+            width: 100vw
+            .loginTop, .registerTop
+                width: 60%
+            .loginBottom
+                flex-direction: row
+                gap: 3vw
+                width: 60%
+                .googleButtonContainerLarge
+                    display: none
+            .loginPageInput, .registerPageInput
+                padding: 11px 4vw
+
+@media  (min-width: 440px) and (max-width: 840px)
+    .loginPageContainer, .registerPageContainer
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+
+        .imgContainerRegister, .imgContainerLogin
+            display: none
+        h1
+
+        .loginPageSection,.registerPageSection
+            width: 80vw
+            .loginTop, .registerTop
+                width: 50%
+            .loginBottom
+                flex-direction: row
+                gap: 3vw
+                width: 50%
+                .googleButtonContainerSmall
+                    display: none
+            .loginPageInput, .registerPageInput
+                padding: 11px 2vw
+
+@media  (min-width: 841px)
+    .loginPageContainer
+        display: flex
+        justify-content: center
+        align-items: center
+    .registerPageContainer
+        display: grid
+        grid-template-columns: 1fr 1fr 
+        justify-content: center
+        align-items: center
+
+    .loginPageContainer,.registerPageContainer 
+
+        .imgContainerLogin
+            width: 100%
+            height: 100vh
+            overflow: hidden
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0px
+            filter: opacity(30%)
+            &::after
+                content: " "
+                right: 0
+                width: 50vh
+                height: 100vh
+                background: linear-gradient(90deg , transparent , $purple)
+                position: absolute
+            img
+                width: 100%
+        .imgContainerRegister
+            width: 100%
+            height: 100vh
+            overflow: hidden
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0px
+            // border-radius: 0 30px 30px 0
+            filter: opacity(30%)
+            &::after
+                content: " "
+                left: 0
+                width: 50vh
+                height: 100vh
+                background: linear-gradient(90deg , $purple, transparent)
+                position: absolute
+            img
+                width: 100%
+
+        .loginPageSection,.registerPageSection
+            .loginBottom
+                flex-direction: row
+                gap: 1vw
+                .googleButtonContainerSmall
+                    display: none
+            .loginPageInput, .registerPageInput
+                padding: 1vw 2vw

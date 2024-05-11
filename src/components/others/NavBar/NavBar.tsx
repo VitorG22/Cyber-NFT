@@ -1,10 +1,22 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import './sass/navBarStyle.css'
 import { NavLink } from "react-router-dom";
 import { Toast } from "../toast/toast";
+import { useAppContext } from "../../../hooks/useAppContext";
+import { IUser } from "../../../scripts/login";
 
 
 export default function NavBar(): ReactNode {
+    const [User, setUser] =useState<IUser>()
+    const {logedUserIndex} = useAppContext()
+    console.log(logedUserIndex)
+    var UsersList = localStorage.getItem("CyberNFTUsers")
+    useEffect(()=>{
+        if (UsersList != null ){
+            setUser(JSON.parse(UsersList)[logedUserIndex])
+        } 
+    },[])
+
     return (
         <nav className="navBar">
             <NavLink to="/Cyber-NFT/Home" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}>
@@ -55,6 +67,7 @@ export default function NavBar(): ReactNode {
                 }
 
             </ul>
+            <img className="profileImg" src={User?.imgPath} alt="" />
         </nav>
     )
 }

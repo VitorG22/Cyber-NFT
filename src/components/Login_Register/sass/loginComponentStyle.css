@@ -1,0 +1,239 @@
+.loginPageContainer, .registerPageContainer {
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  color: #ffffff;
+}
+.loginPageContainer .BackGroundAnimated, .registerPageContainer .BackGroundAnimated {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.loginPageContainer h1, .registerPageContainer h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weith: 100;
+  letter-spacing: 4px;
+}
+.loginPageContainer .loginPageSection, .registerPageContainer .loginPageSection {
+  border: solid #ffffff 1px;
+  padding: 4rem 2rem;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  background: rgba(218, 215, 215, 0.0235294118);
+  gap: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  z-index: 10;
+}
+.loginPageContainer .registerPageSection, .registerPageContainer .registerPageSection {
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  gap: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  z-index: 10;
+}
+.loginPageContainer .loginPageSection .loginTop, .loginPageContainer .loginPageSection .registerTop, .loginPageContainer .registerPageSection .loginTop, .loginPageContainer .registerPageSection .registerTop, .registerPageContainer .loginPageSection .loginTop, .registerPageContainer .loginPageSection .registerTop, .registerPageContainer .registerPageSection .loginTop, .registerPageContainer .registerPageSection .registerTop {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  width: 30vw;
+}
+.loginPageContainer .loginPageSection .loginBottom, .loginPageContainer .registerPageSection .loginBottom, .registerPageContainer .loginPageSection .loginBottom, .registerPageContainer .registerPageSection .loginBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vh;
+  width: 30vw;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.loginPageContainer .loginPageSection .loginBottom .loginPageRegisterButton, .loginPageContainer .registerPageSection .loginBottom .loginPageRegisterButton, .registerPageContainer .loginPageSection .loginBottom .loginPageRegisterButton, .registerPageContainer .registerPageSection .loginBottom .loginPageRegisterButton {
+  color: #cf25d8;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 11px 0;
+  border-radius: 5px;
+  border: solid #cf25d8 1px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: thin;
+  font-size: 0.9rem;
+}
+.loginPageContainer .loginPageSection .loginBottom .loginPageRegisterButton:hover, .loginPageContainer .registerPageSection .loginBottom .loginPageRegisterButton:hover, .registerPageContainer .loginPageSection .loginBottom .loginPageRegisterButton:hover, .registerPageContainer .registerPageSection .loginBottom .loginPageRegisterButton:hover {
+  color: #ffffff;
+  background: linear-gradient(15deg, #76137b, #cf25d8, #f651ff, #bb7956);
+}
+.loginPageContainer .loginPageSection .loginPageButton, .loginPageContainer .loginPageSection .registerPageButton, .loginPageContainer .registerPageSection .loginPageButton, .loginPageContainer .registerPageSection .registerPageButton, .registerPageContainer .loginPageSection .loginPageButton, .registerPageContainer .loginPageSection .registerPageButton, .registerPageContainer .registerPageSection .loginPageButton, .registerPageContainer .registerPageSection .registerPageButton {
+  color: #ffffff;
+  width: 100%;
+  padding: 11px 0;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  background: linear-gradient(15deg, #76137b, #cf25d8, #f651ff, #bb7956);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  filter: brightness(90%);
+}
+.loginPageContainer .loginPageSection .loginPageButton:hover, .loginPageContainer .loginPageSection .registerPageButton:hover, .loginPageContainer .registerPageSection .loginPageButton:hover, .loginPageContainer .registerPageSection .registerPageButton:hover, .registerPageContainer .loginPageSection .loginPageButton:hover, .registerPageContainer .loginPageSection .registerPageButton:hover, .registerPageContainer .registerPageSection .loginPageButton:hover, .registerPageContainer .registerPageSection .registerPageButton:hover {
+  filter: brightness(100%);
+}
+.loginPageContainer .loginPageSection .loginPageInput, .loginPageContainer .loginPageSection .registerPageInput, .loginPageContainer .registerPageSection .loginPageInput, .loginPageContainer .registerPageSection .registerPageInput, .registerPageContainer .loginPageSection .loginPageInput, .registerPageContainer .loginPageSection .registerPageInput, .registerPageContainer .registerPageSection .loginPageInput, .registerPageContainer .registerPageSection .registerPageInput {
+  color: #ffffff;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px rgba(255, 255, 255, 0.5960784314);
+  background: transparent;
+}
+.loginPageContainer .loginPageSection p, .loginPageContainer .registerPageSection p, .registerPageContainer .loginPageSection p, .registerPageContainer .registerPageSection p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+}
+.loginPageContainer .loginPageSection .linkText, .loginPageContainer .registerPageSection .linkText, .registerPageContainer .loginPageSection .linkText, .registerPageContainer .registerPageSection .linkText {
+  align-self: flex-end;
+}
+.loginPageContainer .loginPageSection .linkText a, .loginPageContainer .registerPageSection .linkText a, .registerPageContainer .loginPageSection .linkText a, .registerPageContainer .registerPageSection .linkText a {
+  text-decoration: none;
+  background: linear-gradient(15deg, #76137b, #cf25d8, #f651ff, #bb7956);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 440px) {
+  .loginPageContainer, .registerPageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .loginPageContainer .imgContainerRegister, .loginPageContainer .imgContainerLogin, .registerPageContainer .imgContainerRegister, .registerPageContainer .imgContainerLogin {
+    display: none;
+  }
+  .loginPageContainer .loginPageSection, .loginPageContainer .registerPageSection, .registerPageContainer .loginPageSection, .registerPageContainer .registerPageSection {
+    width: 100vw;
+  }
+  .loginPageContainer .loginPageSection .loginTop, .loginPageContainer .loginPageSection .registerTop, .loginPageContainer .registerPageSection .loginTop, .loginPageContainer .registerPageSection .registerTop, .registerPageContainer .loginPageSection .loginTop, .registerPageContainer .loginPageSection .registerTop, .registerPageContainer .registerPageSection .loginTop, .registerPageContainer .registerPageSection .registerTop {
+    width: 60%;
+  }
+  .loginPageContainer .loginPageSection .loginBottom, .loginPageContainer .registerPageSection .loginBottom, .registerPageContainer .loginPageSection .loginBottom, .registerPageContainer .registerPageSection .loginBottom {
+    flex-direction: row;
+    gap: 3vw;
+    width: 60%;
+  }
+  .loginPageContainer .loginPageSection .loginBottom .googleButtonContainerLarge, .loginPageContainer .registerPageSection .loginBottom .googleButtonContainerLarge, .registerPageContainer .loginPageSection .loginBottom .googleButtonContainerLarge, .registerPageContainer .registerPageSection .loginBottom .googleButtonContainerLarge {
+    display: none;
+  }
+  .loginPageContainer .loginPageSection .loginPageInput, .loginPageContainer .loginPageSection .registerPageInput, .loginPageContainer .registerPageSection .loginPageInput, .loginPageContainer .registerPageSection .registerPageInput, .registerPageContainer .loginPageSection .loginPageInput, .registerPageContainer .loginPageSection .registerPageInput, .registerPageContainer .registerPageSection .loginPageInput, .registerPageContainer .registerPageSection .registerPageInput {
+    padding: 11px 4vw;
+  }
+}
+@media (min-width: 440px) and (max-width: 840px) {
+  .loginPageContainer, .registerPageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .loginPageContainer .imgContainerRegister, .loginPageContainer .imgContainerLogin, .registerPageContainer .imgContainerRegister, .registerPageContainer .imgContainerLogin {
+    display: none;
+  }
+  .loginPageContainer .loginPageSection, .loginPageContainer .registerPageSection, .registerPageContainer .loginPageSection, .registerPageContainer .registerPageSection {
+    width: 80vw;
+  }
+  .loginPageContainer .loginPageSection .loginTop, .loginPageContainer .loginPageSection .registerTop, .loginPageContainer .registerPageSection .loginTop, .loginPageContainer .registerPageSection .registerTop, .registerPageContainer .loginPageSection .loginTop, .registerPageContainer .loginPageSection .registerTop, .registerPageContainer .registerPageSection .loginTop, .registerPageContainer .registerPageSection .registerTop {
+    width: 50%;
+  }
+  .loginPageContainer .loginPageSection .loginBottom, .loginPageContainer .registerPageSection .loginBottom, .registerPageContainer .loginPageSection .loginBottom, .registerPageContainer .registerPageSection .loginBottom {
+    flex-direction: row;
+    gap: 3vw;
+    width: 50%;
+  }
+  .loginPageContainer .loginPageSection .loginBottom .googleButtonContainerSmall, .loginPageContainer .registerPageSection .loginBottom .googleButtonContainerSmall, .registerPageContainer .loginPageSection .loginBottom .googleButtonContainerSmall, .registerPageContainer .registerPageSection .loginBottom .googleButtonContainerSmall {
+    display: none;
+  }
+  .loginPageContainer .loginPageSection .loginPageInput, .loginPageContainer .loginPageSection .registerPageInput, .loginPageContainer .registerPageSection .loginPageInput, .loginPageContainer .registerPageSection .registerPageInput, .registerPageContainer .loginPageSection .loginPageInput, .registerPageContainer .loginPageSection .registerPageInput, .registerPageContainer .registerPageSection .loginPageInput, .registerPageContainer .registerPageSection .registerPageInput {
+    padding: 11px 2vw;
+  }
+}
+@media (min-width: 841px) {
+  .loginPageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .registerPageContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  .loginPageContainer .imgContainerLogin, .registerPageContainer .imgContainerLogin {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    filter: opacity(30%);
+  }
+  .loginPageContainer .imgContainerLogin::after, .registerPageContainer .imgContainerLogin::after {
+    content: " ";
+    right: 0;
+    width: 50vh;
+    height: 100vh;
+    background: linear-gradient(90deg, transparent, #0d000d);
+    position: absolute;
+  }
+  .loginPageContainer .imgContainerLogin img, .registerPageContainer .imgContainerLogin img {
+    width: 100%;
+  }
+  .loginPageContainer .imgContainerRegister, .registerPageContainer .imgContainerRegister {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    filter: opacity(30%);
+  }
+  .loginPageContainer .imgContainerRegister::after, .registerPageContainer .imgContainerRegister::after {
+    content: " ";
+    left: 0;
+    width: 50vh;
+    height: 100vh;
+    background: linear-gradient(90deg, #0d000d, transparent);
+    position: absolute;
+  }
+  .loginPageContainer .imgContainerRegister img, .registerPageContainer .imgContainerRegister img {
+    width: 100%;
+  }
+  .loginPageContainer .loginPageSection .loginBottom, .loginPageContainer .registerPageSection .loginBottom, .registerPageContainer .loginPageSection .loginBottom, .registerPageContainer .registerPageSection .loginBottom {
+    flex-direction: row;
+    gap: 1vw;
+  }
+  .loginPageContainer .loginPageSection .loginBottom .googleButtonContainerSmall, .loginPageContainer .registerPageSection .loginBottom .googleButtonContainerSmall, .registerPageContainer .loginPageSection .loginBottom .googleButtonContainerSmall, .registerPageContainer .registerPageSection .loginBottom .googleButtonContainerSmall {
+    display: none;
+  }
+  .loginPageContainer .loginPageSection .loginPageInput, .loginPageContainer .loginPageSection .registerPageInput, .loginPageContainer .registerPageSection .loginPageInput, .loginPageContainer .registerPageSection .registerPageInput, .registerPageContainer .loginPageSection .loginPageInput, .registerPageContainer .loginPageSection .registerPageInput, .registerPageContainer .registerPageSection .loginPageInput, .registerPageContainer .registerPageSection .registerPageInput {
+    padding: 1vw 2vw;
+  }
+}/*# sourceMappingURL=loginComponentStyle.css.map */

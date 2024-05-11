@@ -1,16 +1,22 @@
+import { createContext, useState } from "react"
 import { Outlet } from "react-router-dom"
-import NavBar from "./components/others/NavBar/NavBar"
-import Footer from "./components/footer/footer"
-import { ToastContainer } from "./components/others/toast/toast"
+
+interface IAppContext {
+  logedUserIndex: number
+  setLogedUserIndex: React.Dispatch<React.SetStateAction<number>>
+
+}
+
+export const AppContext = createContext<IAppContext | null>(null)
 
 function App() {
-    
+  const [logedUserIndex, setLogedUserIndex] = useState<number>(-1)
+
   return (
     <>
-      <NavBar />
-      <Outlet />
-      <Footer />
-      <ToastContainer />
+      <AppContext.Provider value={{ logedUserIndex, setLogedUserIndex }}>
+        <Outlet />
+      </AppContext.Provider>
     </>
   )
 }

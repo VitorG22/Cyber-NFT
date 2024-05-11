@@ -58,7 +58,6 @@ export default function NFTCardPage({ searchBar, imagesCount, title, showFilter,
                     <div className="InputContainer">
                         <FontAwesomeIcon icon={faSearch} />
                         <input id="SearchBar" type="text" value={searchBarValue} onChange={(e) => setSearchBarValue(e.target.value)} />
-                        {/* <input id="SearchBar" type="text" value={searchBarValue} onChange={(e) => setSearchBarValue(e.target.value)} /> */}
                     </div>
                 }
                 {showFilter &&
