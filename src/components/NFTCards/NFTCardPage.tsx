@@ -2,7 +2,7 @@ import { ReactNode, useState, useEffect, lazy, Suspense } from "react";
 import './sass/NFTCardsStyle.css'
 import FilterButton from "./Buttons";
 import { ArtArray, IArtObject } from '../../utils/ArtsArray'
-import LightsBackground from "../others/AnimatedBackground/animatedBackground";
+// import LightsBackground from "../others/AnimatedBackground/animatedBackground";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faHeartBroken } from "@fortawesome/free-solid-svg-icons/faHeartBroken";
@@ -25,6 +25,7 @@ export default function NFTCardPage({ searchBar, imagesCount, title, showFilter,
 
 
     useEffect(() => {
+        console.log('iniciando Filtro')
         var filteredList = ArtArray.filter((art) => {
             return art.filterSearch.includes(selectedFilter)
         })
@@ -39,7 +40,7 @@ export default function NFTCardPage({ searchBar, imagesCount, title, showFilter,
         } else {
             setArtArrayForRender(filteredList)
         }
-
+        console.log('finalizando Filtro')
     }, [selectedFilter, searchBarValue])
 
 
@@ -51,7 +52,7 @@ export default function NFTCardPage({ searchBar, imagesCount, title, showFilter,
 
     return (
         <main id='NFTCardPage'>
-            <LightsBackground />
+            {/* <LightsBackground /> */}
             <nav>
                 <h4>{title}</h4>
                 {searchBar &&

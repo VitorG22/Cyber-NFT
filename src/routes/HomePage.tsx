@@ -3,7 +3,7 @@ import OfferPage from "../components/Offer/OfferPage";
 import HomeComponent from "../components/homeSection/homeComponent";
 import KnowMore from "../components/knowMore/KnowMoreComponent";
 import HorizontalBar from "../components/others/horizontalBar/HorizontalBar";
-import SubscribComponent from "../components/subscribe/SubscribCompnent";
+// import SubscribComponent from "../components/subscribe/SubscribCompnent";
 import TopCollectors from "../components/topCollectors/topCollectorPage";
 
 export default function HomePage() {
@@ -16,7 +16,7 @@ export default function HomePage() {
             <NFTCardPage searchBar={false} title="ArtWorks" showFilter={true} imagesCount={10} />
             <OfferPage />
             <TopCollectors />
-            <SubscribComponent />
+            {/* <SubscribComponent /> */}
         </>
     )
 }

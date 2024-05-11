@@ -1,16 +1,19 @@
-import { ReactNode, useState } from "react";
-import { Button } from "../others/buttons/buttons";
+import { ReactNode, useEffect, useState } from "react";
+// import { Button } from "../others/buttons/buttons";
 import { Link } from "react-router-dom";
 import searchImg from "../../scripts/searchImg";
 import { convertValue } from "../../scripts/moneyConvert"; "../../scripts/moneyConvert";
 
 
 export default function NFTCard({ id, pathStart = '' }: { id: string, pathStart?: string }): ReactNode {
-    
-    const [bid_ETH_USD ,setBid_ETH_USD] =useState(0)
-    async function setBid(){
+
+    const [bid_ETH_USD, setBid_ETH_USD] = useState(0)
+    async function setBid() {
         setBid_ETH_USD(await convertValue) // taxa de converção de ethereum para dolar americano
-    }setBid()
+    }
+    useEffect(() => {
+        setBid()
+    }, [])
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -22,6 +25,7 @@ export default function NFTCard({ id, pathStart = '' }: { id: string, pathStart?
     const artObject = searchImg(id)
 
     return (
+        <Link to={`/Cyber-NFT/ArtPreview/${artObject?.id}`} style={{ "textDecoration": 'none' }} onClick={() => scrollToTop()}>
         <div className='Card'>
             <div className="imgContainer">
                 <img src={`${pathStart}${artObject?.path}`} alt="" />
@@ -43,11 +47,12 @@ export default function NFTCard({ id, pathStart = '' }: { id: string, pathStart?
                         <span>${artObject?.EHT_price && ((artObject.EHT_price * bid_ETH_USD).toFixed(2))}</span>
                         <span>USD</span>
                     </div>
-                    <Link to={`/Cyber-NFT/ArtPreview/${artObject?.id}`} style={{ "textDecoration": 'none' }}>
-                        <Button handleClickFunction={scrollToTop} content="View" classes="button1 font-1 bg-transparent border-white text-white text-500" />
-                    </Link>
+                    {/* <Link to={`/Cyber-NFT/ArtPreview/${artObject?.id}`} style={{ "textDecoration": 'none' }}> */}
+                        {/* <Button handleClickFunction={scrollToTop} content="View" classes="button1 font-1 bg-transparent border-white text-white text-500" /> */}
+                    {/* </Link> */}
                 </section>
             </div>
         </div>
+        </Link>
     )
 }
