@@ -15,7 +15,7 @@ export default function RegisterComponent(): ReactNode {
         let loginIndexReturn = Register(props)
         if (loginIndexReturn != undefined) {
             setLogedUserIndex(loginIndexReturn)
-            navigate('/Cyber-NFT/Home')
+            navigate('/Home')
         }
     }
 
@@ -41,7 +41,7 @@ export default function RegisterComponent(): ReactNode {
                     <input type="email" required id="emailInput" placeholder="Email" name="Email" className="registerPageInput" />
                     <input type="password" required id="passwordInput" placeholder="Password" name="Password" className="registerPageInput" />
                     <input type="submit" value="Register" className="registerPageButton" />
-                    <p className="linkText">Do you have an account? <Link to="/Cyber-NFT/Login">Login</Link></p>
+                    <p className="linkText">Do you have an account? <Link to="/Login">Login</Link></p>
                 </form>
 
             </section>

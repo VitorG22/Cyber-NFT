@@ -25,7 +25,7 @@ export default function NFTCard({ id, pathStart = '' }: { id: string, pathStart?
     const artObject = searchImg(id)
 
     return (
-        <Link to={`/Cyber-NFT/ArtPreview/${artObject?.id}`} style={{ "textDecoration": 'none' }} onClick={() => scrollToTop()}>
+        <Link to={`/ArtPreview/${artObject?.id}`} style={{ "textDecoration": 'none' }} onClick={() => scrollToTop()}>
         <div className='Card'>
             <div className="imgContainer">
                 <img src={`${pathStart}${artObject?.path}`} alt="" />

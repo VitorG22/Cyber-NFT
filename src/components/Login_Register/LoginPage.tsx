@@ -28,10 +28,10 @@ export default function LoginComponent(): ReactNode {
 
         if (loginIndexReturn != -1) {
             setLogedUserIndex(loginIndexReturn)
-            navigate('/Cyber-NFT/Home')
+            navigate('/Home')
         } else if (isLoginFromGoogle) {
             Register(props)
-            navigate('/Cyber-NFT/Home')
+            navigate('/Home')
         } 
     }
 
@@ -109,7 +109,7 @@ export default function LoginComponent(): ReactNode {
                             />
                         </button>
                     </GoogleOAuthProvider>
-                    <Link className='loginPageRegisterButton' to="/Cyber-NFT/Register">Register</Link>
+                    <Link className='loginPageRegisterButton' to="/Register">Register</Link>
                 </div>
             </section>
         </section>

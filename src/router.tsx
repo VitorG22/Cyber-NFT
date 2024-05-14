@@ -12,39 +12,39 @@ import PageEstructure from './routes/pageEstructureNavBar.tsx'
 
 export const router = createBrowserRouter([
     {
-        path: 'Cyber-NFT/',
+        path: '/',
         element: <App />,
         errorElement: <ErrorPage />,
         children: [
             {
-                path: '/Cyber-NFT/',
+                path: '/',
                 element: <PageEstructure />,
                 children: [
                     {
-                        path: '/Cyber-NFT/',
-                        element: <Navigate to={'/Cyber-NFT/Login'} />
+                        path: '/',
+                        element: <Navigate to={'/Login'} />
                     },
                     {
-                        path: '/Cyber-NFT/Home',
+                        path: '/Home',
                         element: <HomePage />
                     },
                     {
-                        path: '/Cyber-NFT/ArtPreview/:id',
+                        path: '/ArtPreview/:id',
                         element: <ArtShowPage />
                     },
                     {
-                        path: '/Cyber-NFT/MarketPlace',
+                        path: '/MarketPlace',
                         element: <MarketPlace />
                     }
                 ]
             },
             {
-                path: '/Cyber-NFT/Login',
+                path: '/Login',
                 element: <LoginPage />,
                 errorElement: <ErrorPage />,
             },
             {
-                path: '/Cyber-NFT/Register',
+                path: '/Register',
                 element: <RegisterPage />,
                 errorElement: <ErrorPage />,
             }
@@ -53,3 +53,47 @@ export const router = createBrowserRouter([
     }
 
 ])
+
+// export const router = createBrowserRouter([
+//     {
+//         path: 'Cyber-NFT/',
+//         element: <App />,
+//         errorElement: <ErrorPage />,
+//         children: [
+//             {
+//                 path: '/Cyber-NFT/',
+//                 element: <PageEstructure />,
+//                 children: [
+//                     {
+//                         path: '/Cyber-NFT/',
+//                         element: <Navigate to={'/Cyber-NFT/Login'} />
+//                     },
+//                     {
+//                         path: '/Cyber-NFT/Home',
+//                         element: <HomePage />
+//                     },
+//                     {
+//                         path: '/Cyber-NFT/ArtPreview/:id',
+//                         element: <ArtShowPage />
+//                     },
+//                     {
+//                         path: '/Cyber-NFT/MarketPlace',
+//                         element: <MarketPlace />
+//                     }
+//                 ]
+//             },
+//             {
+//                 path: '/Cyber-NFT/Login',
+//                 element: <LoginPage />,
+//                 errorElement: <ErrorPage />,
+//             },
+//             {
+//                 path: '/Cyber-NFT/Register',
+//                 element: <RegisterPage />,
+//                 errorElement: <ErrorPage />,
+//             }
+
+//         ]
+//     }
+
+// ])
