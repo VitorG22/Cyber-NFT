@@ -1,5 +1,5 @@
 import { GoogleLogin, GoogleOAuthProvider, } from "@react-oauth/google";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { jwtDecode } from "jwt-decode";
 import { Link, useNavigate } from "react-router-dom";
 import './sass/loginComponentStyle.css'
@@ -23,9 +23,6 @@ export default function LoginComponent(): ReactNode {
     const navigate = useNavigate()
     // var randomImgPath = ArtArray[Math.floor(Math.random() * ArtArray.length)].path
 
-
-
-
     function callToLogin(props: IUser, isLoginFromGoogle?: boolean) {
         var loginIndexReturn = Login(props)
 
@@ -35,28 +32,41 @@ export default function LoginComponent(): ReactNode {
         } else if (isLoginFromGoogle) {
             Register(props)
             navigate('/Cyber-NFT/Home')
-
-        }
+        } 
     }
 
+    useEffect(() => {
+        var loginForm = document.getElementById('loginForm') as HTMLFormElement
+        loginForm?.addEventListener('submit', function (e) {
+            e.preventDefault()
+            callToLogin({
+                name: "null",
+                email: (document.getElementById("emailInput") as HTMLInputElement).value,
+                password: (document.getElementById("passwordInput") as HTMLInputElement).value
+            })
+        })
+
+    }, [])
 
     return (
         <section className="loginPageContainer">
             {/* <div className="imgContainerLogin"><img src={randomImgPath} /></div> */}
-            <BackGroundAnimated/>
+            <BackGroundAnimated />
             <section className="loginPageSection">
                 <h1>Sign in</h1>
-                <form className="loginTop"
-                        onSubmit={()=>callToLogin({
-                            name: "null",
-                            email: (document.getElementById("emailInput") as HTMLInputElement).value,
-                            password: (document.getElementById("passwordInput") as HTMLInputElement).value
-
-                        })}
-                        >
-                    <input type="email"  required placeholder="Email" id="emailInput" className="loginPageInput" />
+                <form
+                    id="loginForm"
+                    className="loginTop"
+                    // onSubmit={() => callToLogin({
+                    //     name: "null",
+                    //     email: (document.getElementById("emailInput") as HTMLInputElement).value,
+                    //     password: (document.getElementById("passwordInput") as HTMLInputElement).value
+                    // })
+                    // }
+                >
+                    <input type="email" required placeholder="Email" id="emailInput" className="loginPageInput" />
                     <input type="password" required placeholder="Password" id="passwordInput" className="loginPageInput" />
-                    <input type="submit" value="Login"  className="loginPageButton"/>
+                    <input type="submit" value="Login" className="loginPageButton" />
                 </form>
 
                 <p>or</p>
@@ -75,8 +85,9 @@ export default function LoginComponent(): ReactNode {
                                             password: decode.sub,
                                             imgPath: decode.picture
                                         }, true)
-                                    }}}
-                                onError={() => console.log('can you try again?')} 
+                                    }
+                                }}
+                                onError={() => console.log('can you try again?')}
                             />
                         </button>
                         <button className="googleButtonContainerLarge">
@@ -94,7 +105,7 @@ export default function LoginComponent(): ReactNode {
                                     }
                                 }
                                 }
-                                onError={() => console.log('can you try again?')} 
+                                onError={() => console.log('can you try again?')}
                             />
                         </button>
                     </GoogleOAuthProvider>

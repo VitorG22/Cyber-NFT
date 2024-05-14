@@ -42,17 +42,19 @@
 @media ( max-width: 440px )
     .CollectorCard
         width: fit-content
-        grid-template-areas: "number number image data data data"
+        grid-template-columns: 1.4rem 2fr 5fr 
+        // grid-template-areas: "number number image data data data"
         padding: 4vw
         gap: 6vw
+
         p
             font-size: $size-text-tablet
-            grid-area: number
+            // grid-area: number
         .cardImgContainer
-            grid-area: image
+            // grid-area: image
             width: clamp(0px , 15vw, 3rem)
         span
-            grid-area: data
+            // grid-area: data
             h4
                 font-size: calc($size-text-phone * 1.2)
             p
@@ -62,40 +64,44 @@
 @media ( min-width: 440px ) and ( max-width: 840px)
     .CollectorCard
         width: fit-content
-        min-width: 60%
-        grid-template-areas: "number number image data data data"
+        width: 60%
+        grid-template-columns: 3rem 2fr 5fr 
+        // grid-template-areas: "number number image data data data"
         padding: 4vw 
         gap: 4vw
+
         p
-            font-size: $size-text-tablet
-            grid-area: number
+            // width: 100%
+            font-size: calc($size-text-tablet * 0.8)
+            // grid-area: number
         .cardImgContainer
-            grid-area: image
+            // grid-area: image
             width: clamp(0px , 15vw, 5rem)
         span
-            grid-area: data
+            // grid-area: data
             // padding: 0 3vw
             h4
-                font-size: calc($size-text-phone * 1.2)
+                font-size: $size-text-phone 
             p
-                font-size: calc($size-text-phone * 1.5)
+                font-size: $size-text-phone 
 
 
 @media ( min-width: 841px )
     .CollectorCard
         width: 100%
-        grid-template-areas: "number number image data data data"
+        grid-template-columns: 3rem 2fr 3fr 
+        // grid-template-areas: "number number image data data data"
         padding: 2vw 4vw
         gap: 1vw
         p
             font-size: calc($size-text-laptop/3)
-            grid-area: number
+            // grid-area: number
         .cardImgContainer
-            grid-area: image
+            // grid-area: image
             width: 3vw
 
         span
-            grid-area: data
+            // grid-area: data
             h4
                 font-size: calc($size-text-laptop/3)
             p

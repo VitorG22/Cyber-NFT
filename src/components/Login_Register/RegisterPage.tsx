@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { ArtArray } from "../../utils/ArtsArray";
 import { Link, useNavigate } from "react-router-dom";
 import { IUser, Register } from "../../scripts/login";
@@ -19,15 +19,24 @@ export default function RegisterComponent(): ReactNode {
         }
     }
 
+    useEffect(() => {
+        var registerInput = document.getElementById('RegisterForm') as HTMLFormElement
+        registerInput?.addEventListener('submit', function (e) {
+            e.preventDefault()
+            callToRegister({
+                email: (document.getElementById('emailInput') as HTMLInputElement).value,
+                name: (document.getElementById('nameInput') as HTMLInputElement).value,
+                password: (document.getElementById('passwordInput') as HTMLInputElement).value
+            })
+        })
+    }, [])
+
+
     return (
         <section className="registerPageContainer">
             <section className="registerPageSection">
                 <h1>Register</h1>
-                <form className="registerTop" id='RegisterForm' onSubmit={() => callToRegister({
-                    email: (document.getElementById('emailInput') as HTMLInputElement).value,
-                    name: (document.getElementById('nameInput') as HTMLInputElement).value,
-                    password: (document.getElementById('passwordInput') as HTMLInputElement).value
-                })}>
+                <form className="registerTop" id='RegisterForm' >
                     <input type="text" required id="nameInput" placeholder="Name" name="Name" className="registerPageInput" />
                     <input type="email" required id="emailInput" placeholder="Email" name="Email" className="registerPageInput" />
                     <input type="password" required id="passwordInput" placeholder="Password" name="Password" className="registerPageInput" />

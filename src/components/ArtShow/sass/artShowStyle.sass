@@ -1,6 +1,5 @@
 @import '../../../variaveisDeEstilo/variaveisDeEstilo'
 
-
 @media  (max-width: 440px)
     #ArtShowPage
         overflow: hidden
@@ -15,7 +14,7 @@
             overflow: hidden
             justify-self: center
             justify-content: center
-            align-items: center 
+            align-items: center
             width: 90%
             aspect-ratio: 1/1
             border-radius: 20px
@@ -35,8 +34,8 @@
             width: 100%
 
             section
-                display: grid
-                grid-template-areas: "textTop textTop textTop" "id . ." "collection . cartButton" 
+                display: flex
+                // grid-template-areas: "textTop textTop textTop" "id .." "collection .cartButton"
                 flex-direction: column
                 align-items: flex-start
                 gap: 2vh
@@ -46,9 +45,8 @@
                 background: $pink
 
                 .CartCardTop
-                    grid-area: textTop 
-                    display: grid
-                    grid-template-columns: 1fr 1fr
+                    grid-area: textTop
+                    display: flex
                     width: 100%
                     flex-direction: row
                     justify-content: space-between
@@ -58,6 +56,41 @@
                         font-family: $font-3
                         font-size: calc($size-text-phone * 2)
                         font-weight: 300
+
+                    .ownerCard
+                        display: flex
+                        flex-direction: column
+                        align-items: start
+                        height: fit-content
+                        width: fit-content
+                        position: relative
+
+                        .OwnerText
+                            color: $lightGray
+                            font-family: $font-2
+                            font-size: calc($size-text-phone)
+                            font-style: italic
+
+                        .ownerName
+                            color: $white
+                            font-family: $font-3
+                            font-weight: 200
+                            font-size: $size-text-phone
+                            margin-left: 1rem
+                        div
+                            display: flex
+                            flex-direction: row
+                            margin-left: 1rem
+                            align-items: center
+
+                            .ownerImgContainer
+                                height: 3rem
+                                aspect-ratio: 1
+                                border-radius: 100%
+                                display: flex
+                                overflow: hidden
+                                .ownerImg
+                                    width: 100%
                 span
                     p
                         color: $lightGray
@@ -71,15 +104,15 @@
                         font-size: $size-text-phone
                         margin-left: 1rem
                 .idContainer
-                    grid-area: id 
+                    grid-area: id
                 .collectionInfoContainer
-                    grid-area: collection 
+                    grid-area: collection
 
                 .buttonContainer
-                    grid-area: cartButton
+                    width: 100%
+                    justify-content: flex-start
                     display: flex
                     flex-direction: row-reverse
-                    justify-content: space-between
                     align-items: center
                     gap: 2vw
 
@@ -90,7 +123,7 @@
                         font-weight: 100
 
             .collectionContainer
-                margin: 0 2vw 
+                margin: 0 2vw
 
                 .CollectionName
                     color: $white
@@ -99,22 +132,19 @@
                     font-size: $size-text-phone
                     z-index: 4
                     display: flex
-                    align-items: end  
-                    margin-left: 4.5vw  
-                    
+                    align-items: end
+                    margin-left: 4.5vw
 
                 .collectionImagesContainer
                     display: flex
                     // flex-wrap: wrap
                     align-items: center
-                    padding: 3vw 4vw 
+                    padding: 3vw 4vw
                     border: solid $white 1px
                     border-radius: 20px
                     position: relative
                     overflow: scroll
                     gap: .3vw
-                    
-
 
                     .artThumbnail
                         border-radius: 15px
@@ -133,8 +163,6 @@
                             &:hover
                                 scale: 1.15
 
-
-    
 @media  (min-width: 440px) and (max-width: 840px)
     #ArtShowPage
         overflow: hidden
@@ -149,7 +177,7 @@
             overflow: hidden
             justify-self: center
             justify-content: center
-            align-items: center 
+            align-items: center
             width: 90%
             aspect-ratio: 1/1
             border-radius: 20px
@@ -169,8 +197,8 @@
             width: 100%
 
             section
-                display: grid
-                grid-template-areas: "textTop textTop textTop" "id . ." "collection . cartButton" 
+                // display: grid
+                display: flex
                 flex-direction: column
                 align-items: flex-start
                 gap: 2vh
@@ -180,9 +208,11 @@
                 background: $pink
 
                 .CartCardTop
-                    grid-area: textTop 
+                    grid-area: textTop
                     display: grid
+                    display: flex
                     grid-template-columns: 1fr 1fr
+                    // border: solid red 2px
                     width: 100%
                     flex-direction: row
                     justify-content: space-between
@@ -192,6 +222,41 @@
                         font-family: $font-3
                         font-size: calc($size-text-tablet * 2)
                         font-weight: 300
+
+                    .ownerCard
+                        display: flex
+                        flex-direction: column
+                        align-items: start
+                        height: fit-content
+                        width: fit-content
+                        position: relative
+
+                        .OwnerText
+                            color: $lightGray
+                            font-family: $font-2
+                            font-size: calc($size-text-tablet)
+                            font-style: italic
+
+                        .ownerName
+                            color: $white
+                            font-family: $font-3
+                            font-weight: 200
+                            font-size: $size-text-phone
+                            margin-left: 1rem
+                        div
+                            display: flex
+                            flex-direction: row
+                            margin-left: 1rem
+                            align-items: center
+
+                            .ownerImgContainer
+                                height: 4rem
+                                aspect-ratio: 1
+                                border-radius: 100%
+                                display: flex
+                                overflow: hidden
+                                .ownerImg
+                                    width: 100%
                 span
                     p
                         color: $lightGray
@@ -205,9 +270,9 @@
                         font-size: $size-text-phone
                         margin-left: 1rem
                 .idContainer
-                    grid-area: id 
+                    grid-area: id
                 .collectionInfoContainer
-                    grid-area: collection 
+                    grid-area: collection
 
                 .buttonContainer
                     grid-area: cartButton
@@ -225,7 +290,7 @@
                         font-weight: 100
 
             .collectionContainer
-                margin: 0 2vw 
+                margin: 0 2vw
 
                 .CollectionName
                     color: $white
@@ -234,22 +299,19 @@
                     font-size: $size-text-phone
                     z-index: 4
                     display: flex
-                    align-items: end  
-                    margin-left: 4.5vw  
-                    
+                    align-items: end
+                    margin-left: 4.5vw
 
                 .collectionImagesContainer
                     display: flex
                     // flex-wrap: wrap
                     align-items: center
-                    padding: 3vw 4vw 
+                    padding: 3vw 4vw
                     border: solid $white 1px
                     border-radius: 20px
                     position: relative
                     overflow: scroll
                     gap: .3vw
-                    
-
 
                     .artThumbnail
                         border-radius: 15px
@@ -268,14 +330,12 @@
                             &:hover
                                 scale: 1.15
 
-
-    
 @media  (min-width: 841px)
     #ArtShowPage
         display: grid
         grid-template-columns: 1fr 1fr
         margin-top: 4vh
-        height:  fit-content
+        height: fit-content
         padding: 1vw
         align-items: center
 
@@ -284,7 +344,7 @@
             overflow: hidden
             justify-self: center
             justify-content: center
-            align-items: center 
+            align-items: center
             width: 80%
             aspect-ratio: 1/1
             border-radius: 20px
@@ -313,8 +373,8 @@
                 background: $pink
 
                 .CartCardTop
-                    display: grid
-                    grid-template-columns: 1fr 1fr
+                    display: flex
+                    // grid-template-columns: 1fr 1fr
                     width: 100%
                     flex-direction: row
                     justify-content: space-between
@@ -324,6 +384,41 @@
                         font-family: $font-3
                         font-size: $size-text-laptop
                         font-weight: 500
+
+                    .ownerCard
+                        display: flex
+                        flex-direction: column
+                        align-items: start
+                        height: fit-content
+                        width: fit-content
+                        // border: solid red 2px
+                        position: relative
+
+                        .OwnerText
+                            color: $lightGray
+                            font-family: $font-2
+                            font-size: calc($size-text-laptop/4)
+                            font-style: italic
+
+                        .ownerName
+                            font-family: $font-3
+                            color: $white
+                            font-size: calc($size-text-laptop/3)
+                        div
+                            // border: solid blue 2px
+                            display: flex
+                            flex-direction: row
+                            margin-left: 1rem
+                            align-items: center
+
+                            .ownerImgContainer
+                                height: 2rem
+                                aspect-ratio: 1
+                                border-radius: 100%
+                                display: flex
+                                overflow: hidden
+                                .ownerImg
+                                    width: 100%
                 span
                     p
                         color: $lightGray
@@ -342,7 +437,7 @@
                         font-size: calc($size-text-laptop/2)
                         margin-left: 1rem
 
-                div
+                .buttonContainer
                     display: flex
                     flex-direction: row
                     justify-content: space-between
@@ -361,8 +456,8 @@
                     font-weight: 100
                     z-index: 4
                     display: flex
-                    align-items: end    
-                    padding: .1vw 1vw 
+                    align-items: end
+                    padding: .1vw 1vw
 
                 .collectionImagesContainer
                     height: fit-content
@@ -370,14 +465,12 @@
                     display: flex
                     flex-wrap: wrap
                     align-items: center
-                    padding: 2vw 
+                    padding: 2vw
                     border: solid $white 1px
                     border-radius: 20px
                     position: relative
                     overflow: scroll
                     gap: .3vw
-                    
-
 
                     .artThumbnail
                         border-radius: 15px

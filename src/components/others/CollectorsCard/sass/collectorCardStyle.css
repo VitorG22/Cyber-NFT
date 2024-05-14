@@ -36,20 +36,15 @@
   .CollectorCard {
     width: -moz-fit-content;
     width: fit-content;
-    grid-template-areas: "number number image data data data";
+    grid-template-columns: 1.4rem 2fr 5fr;
     padding: 4vw;
     gap: 6vw;
   }
   .CollectorCard p {
     font-size: clamp(0.6rem, 3vw, 3rem);
-    grid-area: number;
   }
   .CollectorCard .cardImgContainer {
-    grid-area: image;
     width: clamp(0px, 15vw, 3rem);
-  }
-  .CollectorCard span {
-    grid-area: data;
   }
   .CollectorCard span h4 {
     font-size: calc(clamp(0.4rem, 3vw, 2rem) * 1.2);
@@ -62,46 +57,36 @@
   .CollectorCard {
     width: -moz-fit-content;
     width: fit-content;
-    min-width: 60%;
-    grid-template-areas: "number number image data data data";
+    width: 60%;
+    grid-template-columns: 3rem 2fr 5fr;
     padding: 4vw;
     gap: 4vw;
   }
   .CollectorCard p {
-    font-size: clamp(0.6rem, 3vw, 3rem);
-    grid-area: number;
+    font-size: calc(clamp(0.6rem, 3vw, 3rem) * 0.8);
   }
   .CollectorCard .cardImgContainer {
-    grid-area: image;
     width: clamp(0px, 15vw, 5rem);
   }
-  .CollectorCard span {
-    grid-area: data;
-  }
   .CollectorCard span h4 {
-    font-size: calc(clamp(0.4rem, 3vw, 2rem) * 1.2);
+    font-size: clamp(0.4rem, 3vw, 2rem);
   }
   .CollectorCard span p {
-    font-size: calc(clamp(0.4rem, 3vw, 2rem) * 1.5);
+    font-size: clamp(0.4rem, 3vw, 2rem);
   }
 }
 @media (min-width: 841px) {
   .CollectorCard {
     width: 100%;
-    grid-template-areas: "number number image data data data";
+    grid-template-columns: 3rem 2fr 3fr;
     padding: 2vw 4vw;
     gap: 1vw;
   }
   .CollectorCard p {
     font-size: calc(clamp(0.8rem, 3vw, 3rem) / 3);
-    grid-area: number;
   }
   .CollectorCard .cardImgContainer {
-    grid-area: image;
     width: 3vw;
-  }
-  .CollectorCard span {
-    grid-area: data;
   }
   .CollectorCard span h4 {
     font-size: calc(clamp(0.8rem, 3vw, 3rem) / 3);

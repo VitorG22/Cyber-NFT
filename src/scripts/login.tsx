@@ -1,4 +1,5 @@
 
+
 export interface IUser {
     name: string
     email: string
@@ -58,6 +59,7 @@ export function Register(props: IUser): number | undefined {
 }
 
 export function Login(props: IUser): number {
+    
     var SelectedUser: number = -1
 
     if (localStorage.CyberNFTUsers) {

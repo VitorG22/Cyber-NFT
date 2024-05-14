@@ -104,6 +104,7 @@
     transition: ease 0.2s;
     display: flex;
     flex-direction: row;
+    color: #ffffff;
   }
   #NFTCardPage .CardsContainer .Card:hover {
     box-shadow: 0 0 2px #ffffff;
@@ -282,8 +283,9 @@
     flex-direction: row;
     align-items: center;
   }
-  #NFTCardPage .CardsContainer .Card:hover {
+  #NFTCardPage .CardsContainer .Card:hover img {
     box-shadow: 0 0 2px #ffffff;
+    scale: 1.2;
   }
   #NFTCardPage .CardsContainer .Card .imgContainer {
     width: 18vw;
@@ -300,15 +302,13 @@
     width: 100%;
     transition: 0.2s;
   }
-  #NFTCardPage .CardsContainer .Card .imgContainer img:hover {
-    scale: 1.2;
-  }
   #NFTCardPage .CardsContainer .Card .cardInfos {
     padding: 3% 5%;
     display: flex;
     flex-direction: column;
     gap: 2vh;
     width: 100%;
+    color: #ffffff;
   }
   #NFTCardPage .CardsContainer .Card .cardInfos .cardTopTexts {
     display: flex;

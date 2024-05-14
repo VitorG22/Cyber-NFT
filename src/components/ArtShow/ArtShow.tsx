@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { Button } from "../others/buttons/buttons";
 import { ArtArray, IArtObject } from "../../utils/ArtsArray";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,9 +6,9 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons/faCartShopping
 import './sass/artShowStyle.css'
 import { CollectionArray, ICollectionArray } from "../../utils/CollectionArray";
 import ImgThumbnail from "./imgThumbnail";
-import { CollectorCard } from "../others/CollectorsCard/CollectorCard";
 import NFTCardPage from "../NFTCards/NFTCardPage";
 import { Toast } from "../others/toast/toast";
+import { Collectors } from "../topCollectors/CollectorsArray";
 
 export default function ({ id }: { id: string }): ReactNode {
     const selectedArt: IArtObject | undefined = ArtArray.find((art) => { return art.id == id })
@@ -18,6 +18,15 @@ export default function ({ id }: { id: string }): ReactNode {
         })
     )
 
+    const [selectedCollectorIndex, setSelectedCollectorIndex] = useState(-1)
+    useEffect(() => {
+        setSelectedCollectorIndex(Collectors.findIndex((element) => {
+            return element.id == "AA004"
+        }))
+    }, [])
+
+
+
     return (
         <>
             <section id="ArtShowPage">
@@ -25,7 +34,7 @@ export default function ({ id }: { id: string }): ReactNode {
                     <img src={`../${selectedArt?.path}`} />
                 </section>
                 <div className="imgDataContainer">
-                    {collectionSelected && 
+                    {collectionSelected &&
                         <div className='collectionContainer'>
                             <p className='CollectionName' >{collectionSelected?.name} collection</p>
                             <div className="collectionImagesContainer">
@@ -38,12 +47,18 @@ export default function ({ id }: { id: string }): ReactNode {
                                 }
                             </div>
                         </div>
-                    
+
                     }
                     <section>
                         <div className="CartCardTop">
                             <h2>{selectedArt?.ArtName}</h2>
-                            <CollectorCard id={'AA004'} showRankPosition={false} showMoneyValue={false} key={"AA004"} pathStart="../"/>
+                            <div className='ownerCard'>
+                                <p className='OwnerText'>Owner: </p>
+                                <div>
+                                    <p className='ownerName'>{Collectors[selectedCollectorIndex]?.name}</p>
+                                    <div className='ownerImgContainer'><img className='ownerImg' key={"AA004"} src={`../${Collectors[selectedCollectorIndex]?.imgPath}`} /></div>
+                                </div>
+                            </div>
                         </div>
                         <span className='idContainer'>
                             <p>Id:</p>
