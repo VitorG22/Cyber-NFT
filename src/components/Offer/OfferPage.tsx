@@ -5,7 +5,8 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
 import { ArtArray } from "../../utils/ArtsArray";
 import './sass/offerStyle.css'
 import LightsBackground from "../others/AnimatedBackground/animatedBackground";
-import { Toast } from "../others/toast/toast";
+import { toast } from "sonner";
+import { ToastElement } from "../others/toast/toast";
 
 export default function OfferPage(): ReactNode {
     return (
@@ -29,13 +30,33 @@ export default function OfferPage(): ReactNode {
             <section>
                 <div className='card1'>
                     <img src={ArtArray[30].path} />
-                    <Button classes='button2 bg-white text-black' handleClickFunction={()=>Toast({title:'Ah!',timer:5,description:'Should this button do something?',showButton:false,})}><FontAwesomeIcon icon={faArrowRight} /></Button>
+                    <Button classes='button2 bg-white text-black' handleClickFunction={()=>toast(
+                                    <ToastElement
+                                        title="Ah!"
+                                        description='Should this button do something?'
+                                        showButton={false}
+                                        handleFunction={() => { }}
+                                    />,
+                                    {
+                                        duration: 5000
+                                    }
+                                )}><FontAwesomeIcon icon={faArrowRight} /></Button>
                 </div>
                 <div className='card2'>
                     <article>
                         <div className="pinkCardTop">
                             <h2>Discover <br />Exclusive Promos</h2>
-                            <Button classes='button2 bg-white text-black' handleClickFunction={()=>Toast({title:'Loading...',timer:5,description:'ok I lied, this button has no functions, sorry',showButton:false,})}><FontAwesomeIcon icon={faArrowRight} /></Button>
+                            <Button classes='button2 bg-white text-black' handleClickFunction={()=>toast(
+                                    <ToastElement
+                                        title="Loading..."
+                                        description='ok I lied, this button has no functions, sorry'
+                                        showButton={false}
+                                        handleFunction={() => { }}
+                                    />,
+                                    {
+                                        duration: 5000
+                                    }
+                                )}><FontAwesomeIcon icon={faArrowRight} /></Button>
                         </div>
                         <p>
                             Welcome to CyberNFT's exclusive promo section, where art enthusiasts and collectors converge to explore a treasure trove of digital masterpieces. Our curated selection of AI model portraits in mesmerizing neon purple hues awaits, each piece a testament to the fusion of creativity and technology. As you navigate throungh our promo offers, immerse yourself in the captivating narratives woven into each artwork
@@ -44,11 +65,31 @@ export default function OfferPage(): ReactNode {
                 </div>
                 <div className='card3'>
                     <img src={ArtArray[6].path} />
-                    <Button classes='button2 bg-white' handleClickFunction={()=>Toast({title:'Ah!',timer:5,description:'Should this button do something?',showButton:false,})}><FontAwesomeIcon icon={faArrowRight} /></Button>
+                    <Button classes='button2 bg-white text-black' handleClickFunction={()=>toast(
+                                    <ToastElement
+                                        title="Ah!"
+                                        description='Should this button do something?'
+                                        showButton={false}
+                                        handleFunction={() => { }}
+                                    />,
+                                    {
+                                        duration: 5000
+                                    }
+                                )}><FontAwesomeIcon icon={faArrowRight} /></Button>
                 </div>
                 <div className='card4'>
                     <img src={ArtArray[43].path} />
-                    <Button classes='button2 bg-white' handleClickFunction={()=>Toast({title:'Loading...',timer:5,description:'ok I lied, this button has no functions, sorry',showButton:false,})}><FontAwesomeIcon icon={faArrowRight} /></Button>
+                    <Button classes='button2 bg-white text-black' handleClickFunction={()=>toast(
+                                    <ToastElement
+                                        title="Loading..."
+                                        description='ok I lied, this button has no functions, sorry'
+                                        showButton={false}
+                                        handleFunction={() => { }}
+                                    />,
+                                    {
+                                        duration: 5000
+                                    }
+                                )}><FontAwesomeIcon icon={faArrowRight} /></Button>
                 </div>
             </section>
         </section>

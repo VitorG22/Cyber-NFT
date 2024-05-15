@@ -7,8 +7,9 @@ import './sass/artShowStyle.css'
 import { CollectionArray, ICollectionArray } from "../../utils/CollectionArray";
 import ImgThumbnail from "./imgThumbnail";
 import NFTCardPage from "../NFTCards/NFTCardPage";
-import { Toast } from "../others/toast/toast";
 import { Collectors } from "../topCollectors/CollectorsArray";
+import { toast } from "sonner";
+import { ToastElement } from "../others/toast/toast";
 
 export default function ({ id }: { id: string }): ReactNode {
     const selectedArt: IArtObject | undefined = ArtArray.find((art) => { return art.id == id })
@@ -71,7 +72,14 @@ export default function ({ id }: { id: string }): ReactNode {
                             </span>
                         )}
                         <div className="buttonContainer">
-                            <Button classes='button1 bg-white  gap-1 text-black text-500' content="Add to Cart" handleClickFunction={() => Toast({ title: 'Ahh...', timer: 5, description: 'Where did I leave my cart?', showButton: false, })}>
+                            <Button classes='button1 bg-white  gap-1 text-black text-500' content="Add to Cart" handleClickFunction={() =>toast(
+                            <ToastElement 
+                                title="Ahh..."
+                                description='Where did I leave my cart?'
+                                showButton= {false} 
+                                handleFunction={()=>{}}
+                            />)}>
+                            
                                 <FontAwesomeIcon icon={faCartShopping} color="#000" />
                             </Button>
                             <p>{selectedArt?.EHT_price} Eth</p>

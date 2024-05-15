@@ -4,10 +4,11 @@ import './sass/KnowMoreStyle.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Button } from '../others/buttons/buttons'
-import { Toast } from '../others/toast/toast'
+import { toast } from 'sonner'
+import { ToastElement } from '../others/toast/toast'
 
 export default function KnowMore(): ReactNode {
-    
+
     return (
         <PageSection id='KnowMore'>
             <>
@@ -32,8 +33,28 @@ export default function KnowMore(): ReactNode {
                                 world of digital creativity
                             </p>
                             <div className='buttonsContainer'>
-                                <Button classes='button1 bg-transparent border-white text-bold' content='Know More' handleClickFunction={()=>Toast({title:'Sorry',timer:5,description:'This button has no functions, maybe next time?',showButton:false,})}/>
-                                <Button classes='button2 bg-pink ' handleClickFunction={()=>Toast({title:'Sorry',timer:5,description:'This button has no functions, maybe next time',showButton:false,})}><FontAwesomeIcon icon={faArrowRight} /></Button>
+                                <Button classes='button1 bg-transparent border-white text-bold' content='Know More' handleClickFunction={() => toast(
+                                    <ToastElement
+                                        title="Sorry"
+                                        description='This button has no functions, maybe next time'
+                                        showButton={false}
+                                        handleFunction={() => { }}
+                                    />,
+                                    {
+                                        duration: 5000
+                                    }
+                                )} />
+                                <Button classes='button2 bg-pink ' handleClickFunction={() => toast(
+                                    <ToastElement
+                                        title="Sorry"
+                                        description='This button has no functions, maybe next time'
+                                        showButton={false}
+                                        handleFunction={() => { }}
+                                    />,
+                                    {
+                                        duration: 5000
+                                    }
+                                )}><FontAwesomeIcon icon={faArrowRight} /></Button>
                             </div>
                         </article>
                     </section>

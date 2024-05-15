@@ -1,114 +1,88 @@
 @import '../../../../variaveisDeEstilo/variaveisDeEstilo'
 
-.toastContainer
-    color: $white
-    position: fixed
-    // bottom: 30px
-    // right: 30px
 
-    .toast
-        display: flex
-        flex-direction: row
-        overflow: hidden
-        gap: 2vw
-        position: relative
-
-        background: #000000bc
-        backdrop-filter: blur(10px)
-        border: solid $white 1px
-        border-radius: 15px
-        // padding: 1vw
-        margin-top: 2vh
-        animation: toastEnter .3s
-        
-
-        .closeButton
-            position: absolute
-            top: 10%
-            right: 5%
-            background: none
-            border: none
-            color: white
-        
-        article
-            display: flex
-            flex-direction: column
-            justify-content: space-around
-            h4
-                font-family: $font-3
-                font-weight: 500
-
-            p
-                color: $lightGray
-                font-family: $font-3
-                font-weight: 100
-
-        .undoButton 
-            color: white
-            border-radius: 10px
-            padding: 1vw 2vw
-            background: transparent
-            border: transparent solid 1px
-            &:hover
-                border: $white solid 1px
-
-        .timeBar
-            width: 100%
-            height: 4%
-            background: $pink
-            position: absolute
-            bottom: 0
-            border-radius: 15px
-            left: 0
-            animation-name: timer
-            transition: ease
-            
-
-@keyframes toastEnter
-    0%
-        transform: translateX(400px)  
-    100%
-        transform: translateX(0px)  
-
-
-@keyframes timer
-    0%
-        width: 100% 
-    100%
-        width: 0%
-
-
-@media ( max-width: 440px )
-    .toastContainer
-        top: 25px
+.Toast
+    transition: ease .6s
+    background: #000000f9
+    padding: 10px 20px
+    border-radius: 15px
+    backdrop-filter: blur(20px)
+    border: solid 1px $white 
+    
+    .closeButton
+        position: absolute
+        top: 10px
         right: 10px
-        .toast 
-            padding: 2vw
-            article
-                h4
-                    font-size: calc($size-text-phone * 1.5)
-                p
-                    font-size: calc($size-text-phone * 1.5)
+        background: none
+        border: none
+        color: white
+    
+    article
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        h4
+            font-family: $font-3
+            font-weight: 500
+            color: $white
+
+        p
+            color: $lightGray
+            font-family: $font-3
+            font-weight: 100
+
+    .undoButton 
+        color: white
+        border-radius: 10px
+        padding: 1vw 2vw
+        background: transparent
+        border: transparent solid 1px
+        &:hover
+            border: $white solid 1px
+
+    .timeBar
+        width: 100%
+        height: 4%
+        background: $pink
+        position: absolute
+        bottom: 0
+        border-radius: 15px
+        left: 0
+        animation-name: timer
+        transition: ease
+        
+
+// @media ( max-width: 440px )
+//     .toastContainer
+//         top: 25px
+//         right: 10px
+//         .toast 
+//             padding: 2vw
+//             article
+//                 h4
+//                     font-size: calc($size-text-phone * 1.5)
+//                 p
+//                     font-size: calc($size-text-phone * 1.5)
             
     
-@media (min-width: 440px) and (max-width: 840px)
-    .toastContainer
-        top: 30px
-        right: 30px
-        .toast 
-            padding: 3vw
-            article
-                h4
-                    font-size: $size-text-laptop
-                p
-                    font-size: $size-text-laptop
+// @media (min-width: 440px) and (max-width: 840px)
+//     .toastContainer
+//         top: 30px
+//         right: 30px
+//         .toast 
+//             padding: 3vw
+//             article
+//                 h4
+//                     font-size: $size-text-laptop
+//                 p
+//                     font-size: $size-text-laptop
             
     
-@media (min-width: 841px  )
-    .toastContainer
-        bottom: 30px
-        right: 30px
-        .toast 
-            padding: 1vw
+// @media (min-width: 841px  )
+//     .toastContainer
+//         bottom: 30px
+//         right: 30px
+//         .toast 
+//             padding: 1vw
                 
             

@@ -1,54 +1,46 @@
-.toastContainer {
-  color: #ffffff;
-  position: fixed;
-}
-.toastContainer .toast {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  gap: 2vw;
-  position: relative;
-  background: rgba(0, 0, 0, 0.737254902);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border: solid #ffffff 1px;
+.Toast {
+  transition: ease 0.6s;
+  background: rgba(0, 0, 0, 0.9764705882);
+  padding: 10px 20px;
   border-radius: 15px;
-  margin-top: 2vh;
-  animation: toastEnter 0.3s;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border: solid 1px #ffffff;
 }
-.toastContainer .toast .closeButton {
+.Toast .closeButton {
   position: absolute;
-  top: 10%;
-  right: 5%;
+  top: 10px;
+  right: 10px;
   background: none;
   border: none;
   color: white;
 }
-.toastContainer .toast article {
+.Toast article {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.toastContainer .toast article h4 {
+.Toast article h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  color: #ffffff;
 }
-.toastContainer .toast article p {
+.Toast article p {
   color: rgba(255, 255, 255, 0.5960784314);
   font-family: "Montserrat", sans-serif;
   font-weight: 100;
 }
-.toastContainer .toast .undoButton {
+.Toast .undoButton {
   color: white;
   border-radius: 10px;
   padding: 1vw 2vw;
   background: transparent;
   border: transparent solid 1px;
 }
-.toastContainer .toast .undoButton:hover {
+.Toast .undoButton:hover {
   border: #ffffff solid 1px;
 }
-.toastContainer .toast .timeBar {
+.Toast .timeBar {
   width: 100%;
   height: 4%;
   background: #cf25d8;
@@ -58,60 +50,4 @@
   left: 0;
   animation-name: timer;
   transition: ease;
-}
-
-@keyframes toastEnter {
-  0% {
-    transform: translateX(400px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-@keyframes timer {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0%;
-  }
-}
-@media (max-width: 440px) {
-  .toastContainer {
-    top: 25px;
-    right: 10px;
-  }
-  .toastContainer .toast {
-    padding: 2vw;
-  }
-  .toastContainer .toast article h4 {
-    font-size: calc(clamp(0.4rem, 3vw, 2rem) * 1.5);
-  }
-  .toastContainer .toast article p {
-    font-size: calc(clamp(0.4rem, 3vw, 2rem) * 1.5);
-  }
-}
-@media (min-width: 440px) and (max-width: 840px) {
-  .toastContainer {
-    top: 30px;
-    right: 30px;
-  }
-  .toastContainer .toast {
-    padding: 3vw;
-  }
-  .toastContainer .toast article h4 {
-    font-size: clamp(0.8rem, 3vw, 3rem);
-  }
-  .toastContainer .toast article p {
-    font-size: clamp(0.8rem, 3vw, 3rem);
-  }
-}
-@media (min-width: 841px) {
-  .toastContainer {
-    bottom: 30px;
-    right: 30px;
-  }
-  .toastContainer .toast {
-    padding: 1vw;
-  }
 }/*# sourceMappingURL=toastStyle.css.map */

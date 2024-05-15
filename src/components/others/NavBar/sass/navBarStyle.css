@@ -1,5 +1,6 @@
 .navBar {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -7,6 +8,7 @@
   position: sticky;
   width: 100vw;
   z-index: 5;
+  background: rgba(0, 0, 0, 0.537254902);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   border: #ffffff 1px solid;
@@ -22,14 +24,24 @@
 .navBar div svg:hover {
   fill: rgba(255, 255, 255, 0.5960784314);
 }
+.navBar img {
+  justify-self: flex-end;
+}
 .navBar ul {
   list-style: none;
   display: flex;
+  justify-self: center;
   flex-direction: row;
+  grid-column-start: 2;
+  grid-column-end: 3;
   gap: 1vw;
 }
 .navBar ul li a {
-  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5960784314);
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   padding: 0.5vw 1vw;
@@ -39,7 +51,7 @@
   color: #cf25d8;
 }
 .navBar ul li .active {
-  color: #cf25d8;
+  color: #ffffff;
 }
 .navBar .profileImg {
   border-radius: 100%;
@@ -63,7 +75,7 @@
 @media (min-width: 440px) and (max-width: 840px) {
   .navBar {
     padding: 2vw 2vw;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 8px 8px;
   }
   .navBar svg {
     width: 2.5vw;
@@ -78,7 +90,7 @@
 @media (min-width: 841px) {
   .navBar {
     padding: 1vw 2vw;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 8px 8px;
   }
   .navBar svg {
     width: 1.2vw;

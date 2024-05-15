@@ -1,7 +1,8 @@
 @import '../../../../variaveisDeEstilo/variaveisDeEstilo' 
 
 .navBar
-        display: flex
+        display: grid
+        grid-template-columns: 1fr 5fr 1fr
         flex-direction: row
         justify-content: space-between
         align-items: center
@@ -10,7 +11,7 @@
         width: 100vw
         z-index: 5
         
-
+        background: #00000089
         backdrop-filter: blur(20px)
         border: $white 1px solid
         border-top: none
@@ -21,24 +22,33 @@
                 fill: $white
                 &:hover
                     fill: $lightGray    
-
+        img
+            justify-self: flex-end
         ul
             list-style: none
             display: flex
+            justify-self: center
             flex-direction: row
+            grid-column-start: 2
+            grid-column-end: 3
             gap: 1vw
             li
                 a        
-                    color: $white
+                    display: flex
+                    flex-direction: row
+                    gap: 2px
+                    align-items: center
+                    color: $lightGray
                     text-decoration: none
                     font-family: $font-3
                     padding: .5vw 1vw
                     border-radius: 15px
+                    
                     &:hover
                         color: $pink
                     
                 .active
-                    color: $pink
+                    color: $white
         .profileImg
             border-radius: 100%
 
@@ -58,7 +68,7 @@
 @media  (min-width: 440px) and (max-width: 840px)
     .navBar
         padding:  2vw 2vw
-        border-radius: 0 0 15px 15px  
+        border-radius: 0 0 8px 8px  
 
         svg
             width: 2.5vw
@@ -72,7 +82,7 @@
 @media  (min-width: 841px)
     .navBar
         padding:  1vw 2vw
-        border-radius: 0 0 15px 15px  
+        border-radius: 0 0 8px 8px  
 
         svg
             width: 1.2vw

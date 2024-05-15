@@ -1,5 +1,6 @@
 import { createContext, useState } from "react"
 import { Outlet } from "react-router-dom"
+import { Toaster } from "sonner"
 
 interface IAppContext {
   logedUserIndex: number
@@ -15,6 +16,11 @@ function App() {
   return (
     <>
       <AppContext.Provider value={{ logedUserIndex, setLogedUserIndex }}>
+        <Toaster
+          toastOptions={{
+            unstyled: true,
+            className: 'toast'}}
+        />
         <Outlet />
       </AppContext.Provider>
     </>

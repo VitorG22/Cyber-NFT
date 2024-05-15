@@ -448,13 +448,15 @@
     font-family: "Michroma", sans-serif;
   }
   #NFTCardPage .CardsContainer .Card {
-    border-radius: 15px;
-    overflow: hidden;
+    border-radius: 8px;
     transition: ease 0.2s;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    background: #090009;
+  }
+  #NFTCardPage .CardsContainer .Card:hover {
+    background: #100010;
   }
   #NFTCardPage .CardsContainer .Card:hover img {
     scale: 1.1;
@@ -465,37 +467,33 @@
     display: flex;
     overflow: hidden;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 4px;
     filter: brightness(100%) contrast(120%);
     transition: 0.2s;
   }
   #NFTCardPage .CardsContainer .Card .imgContainer img {
     display: flex;
-    position: absolute;
     width: 100%;
+    transition: 0.2s;
   }
   #NFTCardPage .CardsContainer .Card .cardInfos {
     padding: 3% 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 2vh;
     width: 100%;
-    height: 100%;
-    color: #ffffff;
-    background: radial-gradient(transparent 20%, #000000);
-    position: absolute;
   }
   #NFTCardPage .CardsContainer .Card .cardInfos .cardTopTexts {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    color: #ffffff;
   }
   #NFTCardPage .CardsContainer .Card .cardInfos .cardTopTexts .CardTitle {
     font-family: "Michroma", sans-serif;
     transform: translateY(10%);
-    font-size: calc(clamp(0.8rem, 3vw, 3rem) / 3.5);
+    font-size: calc(clamp(0.8rem, 3vw, 3rem) / 2.2);
   }
   #NFTCardPage .CardsContainer .Card .cardInfos .cardTopTexts p {
     font-family: "Ubuntu Mono", monospace;
@@ -503,7 +501,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-size: calc(clamp(0.8rem, 3vw, 3rem) / 3.8);
+    font-size: calc(clamp(0.8rem, 3vw, 3rem) / 3);
   }
   #NFTCardPage .CardsContainer .Card .cardInfos section {
     display: flex;
@@ -511,7 +509,7 @@
     justify-content: space-between;
     align-items: center;
     font-family: "Ubuntu Mono", monospace;
-    font-size: calc(clamp(0.8rem, 3vw, 3rem) / 3.5);
+    font-size: calc(clamp(0.8rem, 3vw, 3rem) / 2.7);
     font-weight: 100;
   }
   #NFTCardPage .CardsContainer .Card .cardInfos section ul {
@@ -527,7 +525,7 @@
     justify-content: center;
   }
   #NFTCardPage .CardsContainer .Card .cardInfos section ul li svg {
-    height: 1.5vw;
+    height: 2vw;
     fill: #cf25d8;
   }
   #NFTCardPage .CardsContainer .Card .cardInfos section div {
