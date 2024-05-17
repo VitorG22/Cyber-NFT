@@ -35,7 +35,6 @@ export default function OfferPage(): ReactNode {
                                         title="Ah!"
                                         description='Should this button do something?'
                                         showButton={false}
-                                        handleFunction={() => { }}
                                     />,
                                     {
                                         duration: 5000
@@ -51,7 +50,6 @@ export default function OfferPage(): ReactNode {
                                         title="Loading..."
                                         description='ok I lied, this button has no functions, sorry'
                                         showButton={false}
-                                        handleFunction={() => { }}
                                     />,
                                     {
                                         duration: 5000
@@ -70,7 +68,6 @@ export default function OfferPage(): ReactNode {
                                         title="Ah!"
                                         description='Should this button do something?'
                                         showButton={false}
-                                        handleFunction={() => { }}
                                     />,
                                     {
                                         duration: 5000
@@ -84,7 +81,6 @@ export default function OfferPage(): ReactNode {
                                         title="Loading..."
                                         description='ok I lied, this button has no functions, sorry'
                                         showButton={false}
-                                        handleFunction={() => { }}
                                     />,
                                     {
                                         duration: 5000

@@ -1,0 +1,65 @@
+@import '../../../../variaveisDeEstilo/variaveisDeEstilo'
+
+.profilePictureContainer
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+    transition: ease .3s
+    .profilePicture
+        aspect-ratio: 1/1
+        width: 100%
+.selectedPicture
+
+    border: solid #46f979 1px
+    background: #46f97920
+    border-radius: 100%
+
+.notSelectedPicture
+    border: solid $lightGray 1px
+    background: #ffffff08
+    border-radius: 100%
+
+@media  (max-width: 440px)
+    .size-1
+        height: 1.5rem
+        min-width: 1.5rem
+        aspect-ratio: 1/1
+    .size-2
+        height: 2.5rem
+        min-width: 2.5rem
+        aspect-ratio: 1/1
+    .size-3
+        height: 3.5rem
+        min-width: 3.5rem
+        aspect-ratio: 1/1
+
+@media  (min-width: 440px) and (max-width: 840px)
+    .size-1
+        height: 2.5rem
+        min-width: 2.5rem
+        aspect-ratio: 1/1
+    .size-2
+        height: 3.5rem
+        min-width: 3.5rem
+        aspect-ratio: 1/1
+    .size-3
+        height: 4.5rem
+        min-width: 4.5rem
+        aspect-ratio: 1/1
+
+
+@media  (min-width: 841px)
+    .size-1
+        height: 2.5rem
+        min-width: 2.5rem
+        aspect-ratio: 1/1
+    .size-2
+        height: 4rem
+        min-width: 4rem
+        aspect-ratio: 1/1
+    .size-3
+        height: 5rem
+        min-width: 5rem
+        aspect-ratio: 1/1

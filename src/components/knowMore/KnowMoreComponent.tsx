@@ -38,7 +38,6 @@ export default function KnowMore(): ReactNode {
                                         title="Sorry"
                                         description='This button has no functions, maybe next time'
                                         showButton={false}
-                                        handleFunction={() => { }}
                                     />,
                                     {
                                         duration: 5000
@@ -49,7 +48,6 @@ export default function KnowMore(): ReactNode {
                                         title="Sorry"
                                         description='This button has no functions, maybe next time'
                                         showButton={false}
-                                        handleFunction={() => { }}
                                     />,
                                     {
                                         duration: 5000

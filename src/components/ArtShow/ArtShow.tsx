@@ -77,7 +77,6 @@ export default function ({ id }: { id: string }): ReactNode {
                                 title="Ahh..."
                                 description='Where did I leave my cart?'
                                 showButton= {false} 
-                                handleFunction={()=>{}}
                             />)}>
                             
                                 <FontAwesomeIcon icon={faCartShopping} color="#000" />

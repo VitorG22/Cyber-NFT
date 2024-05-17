@@ -1,0 +1,49 @@
+.ModalContainer {
+  position: absolute;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6196078431);
+  border: rgba(255, 255, 255, 0.5960784314) solid 1px;
+  height: 100vh;
+  width: 100vw;
+}
+.ModalContainer .Modal {
+  padding: 3rem;
+  background: #0d000d;
+  border-radius: 8px;
+  position: relative;
+}
+.ModalContainer .Modal .closeModalButton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.4rem;
+  aspect-ratio: 1/1;
+  background: none;
+  color: #ffffff;
+  font-size: 1rem;
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-width: 440px) {
+  .Modal {
+    width: 80%;
+    max-height: 80%;
+  }
+}
+@media (min-width: 440px) and (max-width: 840px) {
+  .Modal {
+    max-width: 70%;
+    max-height: 70%;
+  }
+}
+@media (min-width: 841px) {
+  .Modal {
+    max-width: 70%;
+    max-height: 70%;
+  }
+}/*# sourceMappingURL=modal.css.map */

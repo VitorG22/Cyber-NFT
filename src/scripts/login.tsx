@@ -40,14 +40,14 @@ export function Register(props: IUser): number | undefined {
 
         if (UsersInString != null) {
             let Users = JSON.parse(UsersInString)
-            let isUserRegistred = Users.findIndex((userData:IUser)=> {return userData.email == email})
+            let isUserRegistred = Users.findIndex((userData: IUser) => { return userData.email == email })
             console.log(isUserRegistred)
-            if(isUserRegistred == -1){
+            if (isUserRegistred == -1) {
                 Users.push(new user({ name, email, id, password, imgPath }))
                 localStorage.setItem("CyberNFTUsers", JSON.stringify(Users))
                 return Login(props)
 
-            }else{console.log('Email ja cadastrado')}
+            } else { console.log('Email ja cadastrado') }
         }
     } else {
         let Users = [new user({ name, email, id, password, imgPath })]
@@ -59,7 +59,7 @@ export function Register(props: IUser): number | undefined {
 }
 
 export function Login(props: IUser): number {
-    
+
     var SelectedUser: number = -1
 
     if (localStorage.CyberNFTUsers) {

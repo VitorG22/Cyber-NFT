@@ -8,6 +8,7 @@ import { ToastElement } from "../toast/toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faPercentage, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
+import ProfilePicture from "../profilePicture/profilePicture";
 
 
 export default function NavBar(): ReactNode {
@@ -18,16 +19,12 @@ export default function NavBar(): ReactNode {
     useEffect(() => {
         if (UsersList != null) {
             setUser(JSON.parse(UsersList)[logedUserIndex])
+            console.log(logedUserIndex)
         }
-    }, [])
+    }, [logedUserIndex])
 
     return (
         <nav className="navBar">
-            {/* <NavLink to="/Home" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z" /></svg>
-                </div>
-            </NavLink> */}
             <ul>
 
                 {
@@ -57,7 +54,6 @@ export default function NavBar(): ReactNode {
                                 title="Sorry"
                                 description='This button has no functions, maybe next time'
                                 showButton={false}
-                                handleFunction={() => { }}
                             />,
                             {
                                 duration: 5000
@@ -79,7 +75,6 @@ export default function NavBar(): ReactNode {
                                 title="Sorry"
                                 description='This button has no functions, maybe next time'
                                 showButton={false}
-                                handleFunction={() => { }}
                             />,
                             {
                                 duration: 5000
@@ -94,7 +89,10 @@ export default function NavBar(): ReactNode {
                 }
 
             </ul>
-            <img className="profileImg" src={User?.imgPath} alt="" />
+
+                <ProfilePicture imgPath={User?.imgPath} size="size-1"/> 
+            {/* <img className="profileImg" src={User?.imgPath} alt="" /> */}
+
         </nav>
     )
 }

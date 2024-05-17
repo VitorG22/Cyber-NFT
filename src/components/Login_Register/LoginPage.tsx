@@ -31,7 +31,12 @@ export default function LoginComponent(): ReactNode {
             navigate('/Home')
         } else if (isLoginFromGoogle) {
             Register(props)
-            navigate('/Home')
+            loginIndexReturn = Login(props)
+            console.log(loginIndexReturn)
+            if (loginIndexReturn != -1){
+                setLogedUserIndex(loginIndexReturn)
+                navigate('/Home')
+            }
         } 
     }
 
