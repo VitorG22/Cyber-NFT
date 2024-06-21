@@ -1,19 +1,24 @@
 .ModalContainer {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 15;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.6196078431);
-  border: rgba(255, 255, 255, 0.5960784314) solid 1px;
   height: 100vh;
   width: 100vw;
 }
 .ModalContainer .Modal {
-  padding: 3rem;
+  padding: 1.5rem;
   background: #0d000d;
   border-radius: 8px;
   position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .ModalContainer .Modal .closeModalButton {
   position: absolute;
@@ -32,18 +37,15 @@
 @media (max-width: 440px) {
   .Modal {
     width: 80%;
-    max-height: 80%;
   }
 }
 @media (min-width: 440px) and (max-width: 840px) {
   .Modal {
     max-width: 70%;
-    max-height: 70%;
   }
 }
 @media (min-width: 841px) {
   .Modal {
     max-width: 70%;
-    max-height: 70%;
   }
 }/*# sourceMappingURL=modal.css.map */

@@ -1,19 +1,29 @@
 @import '../../../../variaveisDeEstilo/variaveisDeEstilo'
 
 .CollectorCard
-    display: grid
-    // flex-direction: row
+
+    display: flex
     align-items: center
-    // justify-content: flex-start
-    // gap: 3vw
-    padding: 1vw 0 1vw 2vw 
-    border-bottom: $gray solid 1px
-    
+    // background: #00000095
+    background-image: linear-gradient(90deg, #000000a5, #0000007c)
+    border-radius: 8px
+    color: $gray
+    text-decoration: none
+    overflow: hidden
+    position: relative
+    &:hover
+        background-color:  #00000070
     p
         font-family: $font-1
         
+    .cardBanner
+        position: absolute
+        left: 0
+        width: 100%
+        min-height: 100%
+        z-index: -10
+
     .cardImgContainer
-        // width: 3vw
         aspect-ratio: 1/1
         display: flex
         justify-content: center
@@ -34,75 +44,52 @@
             
             font-family: $font-1
             margin-bottom: 4%
-        p
-            font-family: $font-2
-            color: $pink
-
+    
 
 @media ( max-width: 440px )
-    .CollectorCard
-        width: fit-content
-        grid-template-columns: 1.4rem 2fr 5fr 
-        // grid-template-areas: "number number image data data data"
-        padding: 4vw
-        gap: 6vw
-
+    .CollectorCard        
+        width: 80vw
+        padding-left: 1rem 
+        aspect-ratio: 3/.8
         p
             font-size: $size-text-tablet
-            // grid-area: number
         .cardImgContainer
-            // grid-area: image
             width: clamp(0px , 15vw, 3rem)
         span
-            // grid-area: data
             h4
                 font-size: calc($size-text-phone * 1.2)
-            p
-                font-size: calc($size-text-phone * 1.5)
+       
 
 
 @media ( min-width: 440px ) and ( max-width: 840px)
     .CollectorCard
-        width: fit-content
-        width: 60%
-        grid-template-columns: 3rem 2fr 5fr 
-        // grid-template-areas: "number number image data data data"
+        width: 45vw
+        aspect-ratio: 3/1
         padding: 4vw 
         gap: 4vw
 
         p
-            // width: 100%
             font-size: calc($size-text-tablet * 0.8)
-            // grid-area: number
         .cardImgContainer
-            // grid-area: image
-            width: clamp(0px , 15vw, 5rem)
+            height: 100%
         span
-            // grid-area: data
-            // padding: 0 3vw
             h4
                 font-size: $size-text-phone 
-            p
-                font-size: $size-text-phone 
+           
 
 
 @media ( min-width: 841px )
     .CollectorCard
         width: 100%
-        grid-template-columns: 3rem 2fr 3fr 
-        // grid-template-areas: "number number image data data data"
-        padding: 2vw 4vw
+        display: flex
+        padding: 2vw 3vw
         gap: 1vw
         p
             font-size: calc($size-text-laptop/3)
-            // grid-area: number
         .cardImgContainer
-            // grid-area: image
             width: 3vw
 
         span
-            // grid-area: data
             h4
                 font-size: calc($size-text-laptop/3)
-            p
-                font-size: calc($size-text-laptop/3)
+          

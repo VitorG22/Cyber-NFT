@@ -1,21 +1,26 @@
-import { createContext, useState } from "react"
+import { createContext, useEffect, useState } from "react"
 import { Outlet } from "react-router-dom"
 import { Toaster } from "sonner"
+import { IUserNoPriorityData, initUsersFunctions } from "./scripts/usersFunction"
 
 interface IAppContext {
-  logedUserIndex: number
-  setLogedUserIndex: React.Dispatch<React.SetStateAction<number>>
-
+  logedUserData: IUserNoPriorityData | null
+  setLogedUserData: React.Dispatch<React.SetStateAction<IUserNoPriorityData|null>>
 }
 
 export const AppContext = createContext<IAppContext | null>(null)
 
 function App() {
-  const [logedUserIndex, setLogedUserIndex] = useState<number>(-1)
+  const [logedUserData, setLogedUserData] = useState<IUserNoPriorityData|null>(null)
+  useEffect(() => {
+    initUsersFunctions()
+
+  }, [])
+  
 
   return (
     <>
-      <AppContext.Provider value={{ logedUserIndex, setLogedUserIndex }}>
+      <AppContext.Provider value={{ logedUserData, setLogedUserData }}>
         <Toaster
           toastOptions={{
             unstyled: true,

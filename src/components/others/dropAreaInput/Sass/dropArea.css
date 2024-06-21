@@ -1,0 +1,14 @@
+.modalDropAreaInput {
+  display: none;
+}
+
+.modalDropArea {
+  display: flex;
+  text-align: center;
+  border: dashed rgba(186, 186, 186, 0.3137254902) 1px;
+  color: rgba(186, 186, 186, 0.3137254902);
+  border-radius: 4px;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=dropArea.css.map */

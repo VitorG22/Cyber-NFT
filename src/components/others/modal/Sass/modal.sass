@@ -1,24 +1,27 @@
 @import '../../../../variaveisDeEstilo/variaveisDeEstilo'
 
 .ModalContainer
-    position: absolute
+    position: fixed
+    top: 0
+    left: 0
     z-index: 15
 
     display: flex
     align-items: center
     justify-content: center
     background: #0000009e
-    border: $lightGray solid 1px
 
     height: 100vh
     width: 100vw
 
 
     .Modal
-        padding: 3rem 
+        padding: 1.5rem 
         background: $purple
         border-radius: 8px
         position: relative
+        height: fit-content
+        width: fit-content
 
         .closeModalButton
             position: absolute
@@ -39,15 +42,16 @@
 @media  (max-width: 440px)
     .Modal
         width: 80%
-        max-height: 80% 
+        // max-height: 80% 
 
     
 @media  (min-width: 440px) and (max-width: 840px)
     .Modal
         max-width: 70%
-        max-height: 70%
+        // max-height: 70%
     
 @media  (min-width: 841px)
     .Modal
         max-width: 70%
-        max-height: 70%
+        // max-height: 70%
+        

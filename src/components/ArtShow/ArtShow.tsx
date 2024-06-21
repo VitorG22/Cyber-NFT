@@ -22,7 +22,7 @@ export default function ({ id }: { id: string }): ReactNode {
     const [selectedCollectorIndex, setSelectedCollectorIndex] = useState(-1)
     useEffect(() => {
         setSelectedCollectorIndex(Collectors.findIndex((element) => {
-            return element.id == "AA004"
+            return element.id == 4
         }))
     }, [])
 
@@ -32,7 +32,7 @@ export default function ({ id }: { id: string }): ReactNode {
         <>
             <section id="ArtShowPage">
                 <section className="imgContainer">
-                    <img src={`../${selectedArt?.path}`} />
+                    <img src={`${selectedArt?.path}`} />
                 </section>
                 <div className="imgDataContainer">
                     {collectionSelected &&
@@ -57,7 +57,7 @@ export default function ({ id }: { id: string }): ReactNode {
                                 <p className='OwnerText'>Owner: </p>
                                 <div>
                                     <p className='ownerName'>{Collectors[selectedCollectorIndex]?.name}</p>
-                                    <div className='ownerImgContainer'><img className='ownerImg' key={"AA004"} src={`../${Collectors[selectedCollectorIndex]?.imgPath}`} /></div>
+                                    <div className='ownerImgContainer'><img className='ownerImg' key={"AA004"} src={`/${Collectors[selectedCollectorIndex]?.imgPath}`} /></div>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +86,7 @@ export default function ({ id }: { id: string }): ReactNode {
                     </section>
                 </div>
             </section>
-            <NFTCardPage title="More like this" searchBar={false} showFilter={false} filter={selectedArt?.filterSearch[1]} pathStart="../" />
+            <NFTCardPage title="More like this" searchBar={false} showFilter={false} filter={selectedArt?.filterSearch[1]} />
         </>
     )
 }

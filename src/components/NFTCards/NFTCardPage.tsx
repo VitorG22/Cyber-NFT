@@ -6,6 +6,7 @@ import { ArtArray, IArtObject } from '../../utils/ArtsArray'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faHeartBroken } from "@fortawesome/free-solid-svg-icons/faHeartBroken";
+import LightsBackground from "../others/AnimatedBackground/animatedBackground";
 const NFTCard = lazy(() => import('./NTFCard'))
 
 interface INFTCardPage {
@@ -14,21 +15,40 @@ interface INFTCardPage {
     showFilter: boolean
     searchBar: boolean
     filter?: string
-    pathStart?: string
+    profileCollectionToRender?: string[]
+    isProfileCollectionRender?: boolean
 }
 
-export default function NFTCardPage({ searchBar, imagesCount, title, showFilter, filter = "All", pathStart = '' }: INFTCardPage): ReactNode {
+export default function NFTCardPage({ searchBar, imagesCount, title, showFilter, filter = "All", profileCollectionToRender,isProfileCollectionRender }: INFTCardPage): ReactNode {
     const [selectedFilter, setSelectedFilter] = useState<string>(filter)
     const [ArtArrayForRender, setArtArrayForRender] = useState<IArtObject[]>([])
     const [searchBarValue, setSearchBarValue] = useState<string>("")
     const filters: string[] = ['All', 'Photography', 'AI Models', 'Animation', '3D Art']
 
-
     useEffect(() => {
-        console.log('iniciando Filtro')
+        if (isProfileCollectionRender) {
+            let ProfileCollectionArtObjects: IArtObject[] = [] 
+            profileCollectionToRender?.forEach((artId)=>{
+                let selectedArtObject = ArtArray.find((artObject)=>{
+                    return artObject.id == artId
+                })
+                if(selectedArtObject) ProfileCollectionArtObjects.push(selectedArtObject)
+            })
+
+            setArtArrayForRender(ProfileCollectionArtObjects)
+            return
+        }
+
+        filterArtsToRenderByInputsValues()
+
+    }, [selectedFilter, searchBarValue])
+
+
+    function filterArtsToRenderByInputsValues() {
         var filteredList = ArtArray.filter((art) => {
             return art.filterSearch.includes(selectedFilter)
         })
+
         filteredList = filteredList.slice(0, imagesCount)
         var listToSecondFilter = filteredList.slice()
 
@@ -40,19 +60,12 @@ export default function NFTCardPage({ searchBar, imagesCount, title, showFilter,
         } else {
             setArtArrayForRender(filteredList)
         }
-        console.log('finalizando Filtro')
-    }, [selectedFilter, searchBarValue])
-
-
-
-
-
-
+    }
 
 
     return (
         <main id='NFTCardPage'>
-            {/* <LightsBackground /> */}
+            <LightsBackground />
             <nav>
                 <h4>{title}</h4>
                 {searchBar &&
@@ -65,20 +78,20 @@ export default function NFTCardPage({ searchBar, imagesCount, title, showFilter,
                     <ul>
                         {filters.map((filterName) => {
                             return (
-                                <FilterButton buttonFilter={filterName} selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} />
+                                <FilterButton key={`filter_button_${filterName}`} buttonFilter={filterName} selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} />
                             )
                         })}
                     </ul>
                 }
             </nav>
             <section className='CardsContainer'>
-                    {ArtArrayForRender.length > 0 ? (
+                {
+                    ArtArrayForRender.length > 0 ? (
                         ArtArrayForRender.map((element: IArtObject): ReactNode => {
                             return (
-                                <Suspense>
-                                    <NFTCard id={element.id} pathStart={pathStart} key={element.id}/>
+                                <Suspense key={`suspense_element_for_art_${element.id}`}>
+                                    <NFTCard id={element.id} key={element.id} />
                                 </Suspense>
-
                             )
                         })
                     ) : (
@@ -87,8 +100,8 @@ export default function NFTCardPage({ searchBar, imagesCount, title, showFilter,
                             <FontAwesomeIcon icon={faHeartBroken} />
                         </div>
                     )
-                    }
-                </section>
+                }
+            </section>
         </main>
     )
 }

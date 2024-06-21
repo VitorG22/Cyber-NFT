@@ -1,22 +1,34 @@
-import { ReactNode } from 'react'
-import { Collectors, ICollectors } from '../../topCollectors/CollectorsArray'
+import { ReactNode, useEffect, useRef } from 'react'
 import './sass/collectorCardStyle.css'
+import { IUserNoPriorityData, ProfileFunctions } from '../../../scripts/usersFunction'
+import { NavLink } from 'react-router-dom'
 
-export function CollectorCard({ id, showRankPosition,showMoneyValue,pathStart = '' }: { id: string, showRankPosition: boolean, showMoneyValue:boolean, pathStart?:string }): ReactNode {
-    const selectedCollector: ICollectors | undefined = (
-        Collectors.find((collectorObject) => {
+export function CollectorCard({ id }: { id: number }): ReactNode {
+    const selectedCollector: IUserNoPriorityData | undefined = (
+        ProfileFunctions.read()?.find((collectorObject) => {
         return collectorObject.id == id
     })
 )
 
+// move a pagina até o top apos o usuario clicar no card de um colecionador
+    useEffect(()=>{
+        document.getElementById(`collectorCard${id}`)?.addEventListener("click",()=>{
+            window.scrollTo({
+                top: 0,
+                behavior:'smooth'
+            })
+        })
+    },[])
+
+
     return (
-        <li className="CollectorCard">
-            {showRankPosition && <p>{selectedCollector?.rankPosition}.</p>}
-            <div className='cardImgContainer'><img src={`${pathStart}${selectedCollector?.imgPath}`} alt="" /></div>
+        
+        <NavLink id={`collectorCard${id}`} to={`/ProfilePage/${selectedCollector?.id}`} className="CollectorCard">
+            <img className='cardBanner' src={selectedCollector?.profileBanner}/>
+            <div className='cardImgContainer'><img src={selectedCollector?.profileImage} alt="" /></div>
             <span>
                 <h4>{selectedCollector?.name}</h4>
-                {showMoneyValue && <p>${selectedCollector?.value}</p>}
             </span>
-        </li>
+        </NavLink>
     )
 }

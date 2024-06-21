@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useState } from "react";
 import './sass/navBarStyle.css'
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { useAppContext } from "../../../hooks/useAppContext";
 import { IUser } from "../../../scripts/login";
 import { toast } from "sonner";
@@ -9,19 +9,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faPercentage, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import ProfilePicture from "../profilePicture/profilePicture";
+import { UseGetUsersList } from "../../../hooks/useUserList";
 
 
 export default function NavBar(): ReactNode {
-    const [User, setUser] = useState<IUser>()
-    const { logedUserIndex } = useAppContext()
-    console.log(logedUserIndex)
-    var UsersList = localStorage.getItem("CyberNFTUsers")
-    useEffect(() => {
-        if (UsersList != null) {
-            setUser(JSON.parse(UsersList)[logedUserIndex])
-            console.log(logedUserIndex)
-        }
-    }, [logedUserIndex])
+
+    const { logedProfile } = useParams()
+    const { logedUserData } = useAppContext()
+    // var UsersList = UseGetUsersList()
+
+    // var UsersList = localStorage.getItem("CyberNFTUsers")
+    console.log(logedUserData)
+    useEffect(()=>{
+        console.log(logedUserData)
+    },[])
+    
+
 
     return (
         <nav className="navBar">
@@ -29,7 +32,7 @@ export default function NavBar(): ReactNode {
 
                 {
                     <li>
-                        <NavLink to="/Home" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}>
+                        <NavLink to={`/Home`} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}>
                             <FontAwesomeIcon icon={faHome} />
                             Home
                         </NavLink>
@@ -38,7 +41,7 @@ export default function NavBar(): ReactNode {
 
                 {
                     <li>
-                        <NavLink to="/MarketPlace" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}>
+                        <NavLink to={`/MarketPlace`} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}>
                             <FontAwesomeIcon icon={faEthereum} />
                             Market Place
                         </NavLink>
@@ -89,8 +92,9 @@ export default function NavBar(): ReactNode {
                 }
 
             </ul>
-
-                <ProfilePicture imgPath={User?.imgPath} size="size-1"/> 
+            <NavLink to={`/ProfilePage/${logedUserData?.id}`} >
+                <ProfilePicture imgPath={logedUserData?.profileImage} size="size-1" />
+            </NavLink>
             {/* <img className="profileImg" src={User?.imgPath} alt="" /> */}
 
         </nav>

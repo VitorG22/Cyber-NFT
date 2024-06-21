@@ -1,50 +1,44 @@
 import { ReactNode, useEffect, useState } from "react";
 import { ArtArray } from "../../utils/ArtsArray";
 import { Link, useNavigate } from "react-router-dom";
-import { Register } from "../../scripts/login";
+// import { Register } from "../../scripts/login";
 import { useAppContext } from "../../hooks/useAppContext";
 import DefaultProfilePicture from "../others/profilePicture/profilePicture";
 import { ProfilePictureArray } from "../../utils/ProfilePicturesArray";
 import Modal from "../others/modal/modal";
 import ProfilePicture from "../others/profilePicture/profilePicture";
+import { ProfileFunctions } from "../../scripts/usersFunction";
 
 
 export default function RegisterComponent(): ReactNode {
     var randomImgPath = ArtArray[Math.floor(Math.random() * ArtArray.length)].path
 
+
     const navigate = useNavigate()
-    const { setLogedUserIndex } = useAppContext()
+    const { setLogedUserData } = useAppContext()
     const [isProfilePictureModalOpen, setIsProfilePictureModalOpen] = useState<boolean>(false)
     const [selectedPicturePath, setSelectedPicturePath] = useState<string>(ProfilePictureArray[0])
 
-    function callToRegister(selectedPicture: string) {
-        let loginIndexReturn = Register({
-            email: (document.getElementById('emailInput') as HTMLInputElement).value,
-            name: (document.getElementById('nameInput') as HTMLInputElement).value,
-            password: (document.getElementById('passwordInput') as HTMLInputElement).value,
-            imgPath: selectedPicture
-        })
-        if (loginIndexReturn != undefined) {
-            setLogedUserIndex(loginIndexReturn)
-            navigate('/Home')
-        } else {
-            let ErrorElement = document.getElementById('EmailErrorMessage')
-            console.log( ErrorElement)
-            if(ErrorElement){
-                ErrorElement.style.display = 'flex'
-                setTimeout(() => {
-                    ErrorElement.style.display = 'none'
-                
-                }, 6000);
-            }
-        }
-    }
     console.log(selectedPicturePath)
 
     useEffect(() => {
-        var registerButton = document.getElementById('RegisterForm') as HTMLFormElement
-        registerButton?.addEventListener('submit', function (e) {
+        var registerForm = document.getElementById('RegisterForm') as HTMLFormElement
+        registerForm.addEventListener('submit', function (e) {
             e.preventDefault()
+            const registerReturn = ProfileFunctions.create({
+                ProfileName: (document.getElementById("nameInput") as HTMLInputElement).value,
+                ProfileEmail: (document.getElementById("emailInput") as HTMLInputElement).value,
+                ProfilePassword: (document.getElementById("passwordInput") as HTMLInputElement).value,
+                ProfileImage: selectedPicturePath
+
+            })
+            console.log(registerReturn)
+            if (registerReturn.loginStatus == true) {
+                setLogedUserData(registerReturn.content.userData)
+                navigate(`/Home`)
+            }
+
+            // console.log(registerReturn)
         })
     }, [])
 
@@ -54,14 +48,14 @@ export default function RegisterComponent(): ReactNode {
             {isProfilePictureModalOpen &&
                 <Modal handleFunction={setIsProfilePictureModalOpen} >
                     <div className='profilePictureModal'>
-                        {ProfilePictureArray.map((imgPath, index) => {
+                        {ProfilePictureArray.map((imgPath: string, index: number) => {
                             return <button onClick={() => setSelectedPicturePath(imgPath)} style={{ 'background': 'none' }}>
                                 <ProfilePicture
                                     selectedPicturePath={selectedPicturePath}
                                     imgPath={imgPath}
-                                    key={`imgPath${index}`} 
+                                    key={`imgPath${index}`}
                                     size="size-3"
-                                    />
+                                />
                             </button>
                         })}
                     </div>
@@ -69,7 +63,7 @@ export default function RegisterComponent(): ReactNode {
             }
             <section className="registerPageSection">
                 <h1>Register</h1>
-                <form className="registerTop" id='RegisterForm' onSubmit={() => callToRegister(selectedPicturePath)} >
+                <form className="registerTop" id='RegisterForm'>
                     <div className="NameAndPicContainer">
                         <input type="text" required id="nameInput" placeholder="Name" name="Name" className="registerPageInput" />
                         <button type='button' onClick={() => setIsProfilePictureModalOpen(true)} style={{ 'background': 'none' }}>

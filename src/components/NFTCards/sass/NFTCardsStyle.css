@@ -1,7 +1,7 @@
 #NFTCardPage {
   height: 100%;
   background: none;
-  margin: 10vh 0;
+  margin: 2vh 0;
 }
 
 @media (max-width: 440px) {

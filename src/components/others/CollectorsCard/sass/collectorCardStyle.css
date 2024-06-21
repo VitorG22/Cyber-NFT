@@ -1,11 +1,25 @@
 .CollectorCard {
-  display: grid;
+  display: flex;
   align-items: center;
-  padding: 1vw 0 1vw 2vw;
-  border-bottom: #bababa solid 1px;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.6470588235), rgba(0, 0, 0, 0.4862745098));
+  border-radius: 8px;
+  color: #bababa;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+}
+.CollectorCard:hover {
+  background-color: rgba(0, 0, 0, 0.4392156863);
 }
 .CollectorCard p {
   font-family: "Michroma", sans-serif;
+}
+.CollectorCard .cardBanner {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: -10;
 }
 .CollectorCard .cardImgContainer {
   aspect-ratio: 1/1;
@@ -27,18 +41,12 @@
   font-family: "Michroma", sans-serif;
   margin-bottom: 4%;
 }
-.CollectorCard span p {
-  font-family: "Ubuntu Mono", monospace;
-  color: #cf25d8;
-}
 
 @media (max-width: 440px) {
   .CollectorCard {
-    width: -moz-fit-content;
-    width: fit-content;
-    grid-template-columns: 1.4rem 2fr 5fr;
-    padding: 4vw;
-    gap: 6vw;
+    width: 80vw;
+    padding-left: 1rem;
+    aspect-ratio: 3/0.8;
   }
   .CollectorCard p {
     font-size: clamp(0.6rem, 3vw, 3rem);
@@ -49,16 +57,11 @@
   .CollectorCard span h4 {
     font-size: calc(clamp(0.4rem, 3vw, 2rem) * 1.2);
   }
-  .CollectorCard span p {
-    font-size: calc(clamp(0.4rem, 3vw, 2rem) * 1.5);
-  }
 }
 @media (min-width: 440px) and (max-width: 840px) {
   .CollectorCard {
-    width: -moz-fit-content;
-    width: fit-content;
-    width: 60%;
-    grid-template-columns: 3rem 2fr 5fr;
+    width: 45vw;
+    aspect-ratio: 3/1;
     padding: 4vw;
     gap: 4vw;
   }
@@ -66,20 +69,17 @@
     font-size: calc(clamp(0.6rem, 3vw, 3rem) * 0.8);
   }
   .CollectorCard .cardImgContainer {
-    width: clamp(0px, 15vw, 5rem);
+    height: 100%;
   }
   .CollectorCard span h4 {
-    font-size: clamp(0.4rem, 3vw, 2rem);
-  }
-  .CollectorCard span p {
     font-size: clamp(0.4rem, 3vw, 2rem);
   }
 }
 @media (min-width: 841px) {
   .CollectorCard {
     width: 100%;
-    grid-template-columns: 3rem 2fr 3fr;
-    padding: 2vw 4vw;
+    display: flex;
+    padding: 2vw 3vw;
     gap: 1vw;
   }
   .CollectorCard p {
@@ -89,9 +89,6 @@
     width: 3vw;
   }
   .CollectorCard span h4 {
-    font-size: calc(clamp(0.8rem, 3vw, 3rem) / 3);
-  }
-  .CollectorCard span p {
     font-size: calc(clamp(0.8rem, 3vw, 3rem) / 3);
   }
 }/*# sourceMappingURL=collectorCardStyle.css.map */

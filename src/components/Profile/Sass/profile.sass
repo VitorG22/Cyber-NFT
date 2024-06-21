@@ -1,0 +1,302 @@
+@import "../../../variaveisDeEstilo/variaveisDeEstilo"
+
+.profilePageContainer
+    padding: 0rem 3rem
+    .banner
+        margin: 0
+        .bannerBackgroundImgContainer
+            width: 100vw
+            aspect-ratio: 12/3.5
+            display: flex
+            align-items: center
+            overflow: hidden
+            .bannerBackgroundImg
+                width: 100%
+
+    .profileDataContainer
+        margin-top: 2rem
+        width: 100%
+        flex-direction: row
+        display: flex
+        justify-content: start
+        align-items: center
+        gap: 3rem
+        position: relative
+        .ProfileImgContainer
+            align-items: center
+            aspect-ratio: 1/1
+            overflow: hidden
+            display: flex
+
+            left: 5%
+            // position: absolute
+            border-radius: 100%
+            .ProfileImg
+                display: flex
+                width: 100%
+        
+        .profileArticle
+            // border: solid red 2px
+            display: flex
+            flex-direction: column
+            gap: 4px
+            .profileButtonsList
+                display: flex
+                flex-direction: row
+                list-style: none
+                gap: 5px
+                .profileButton
+                    font-size: .7rem
+                    font-family: $font-3
+                    width: fit-content
+                    background: none
+                    border: 1px solid $white
+                    padding: .3rem .6rem 
+                    color: $white
+                    border-radius: 8px
+                    gap: 6px
+            .profileName
+                font-family: $font-3
+                font-weight: 400
+                color: $white
+            .profileBio
+                font-family: $font-2
+                font-size: 1rem
+                font-weight: 200
+                color: $lightGray
+                max-height: 4rem
+                overflow-y: scroll
+
+
+.modalContentContainer
+    display: flex
+    flex-direction: column
+    gap: 1rem
+
+    padding: 1rem 
+    .modalProfileCard
+        position: relative
+        overflow: hidden
+        display: flex
+        border-radius: 8px
+        display: flex
+        justify-content: center
+        align-items: center
+        .modalProfileCardBanner
+            position: absolute 
+        .modalProfileCardDataContainer
+            display: flex
+            align-items: center
+            
+            background-image: linear-gradient(90deg, #00000080, #00000070)
+            color: $lightGray
+            z-index: 1
+            .modalProfileCardImg
+                aspect-ratio: 1/1
+                border-radius: 100%
+            .modalProfileCardArticle
+                
+                .modalProfileCardName
+                    font-family: $font-1
+                .modalProfileCardBio
+                    font-family: $font-2
+                    overflow: hidden
+    .ModalForm
+        color: white
+        display: flex
+        flex-direction: column
+        ul
+            list-style: none
+            display: flex
+            flex-direction: column
+            gap: .5rem
+            li
+                display: flex
+                flex-direction: column
+                font-family: $font-2
+                color: #ffffff88
+                gap: 3px
+                .modalInput
+                    color: $gray
+                    background: none
+                    border: solid $gray 1px
+                    border-radius: 4px
+                    font-family: $font-3                    
+                    &:focus
+                        outline: none
+                        border-color: $white
+                        color: $white
+                .modalDropAreaInput
+                    display: none
+                .modalDropArea
+                    display: flex
+                    text-align: center
+                    border: dashed #bababa50 1px
+                    color: #bababa50
+                    border-radius: 4px
+                    padding:  1rem
+                    justify-content: center
+                    align-items: center
+                    
+.modalButtonsContainer
+    display: flex 
+    // position: absolute
+    flex-direction: row
+    justify-content: end
+    .modalButton
+        border-radius: 2px
+        padding: .5rem 1rem
+        font-family: $font-3
+        // font-weight: bold
+        // background: none
+    .modalCancelButton          
+        background: none
+        color: #ffffff
+        &:hover
+            background: #ed343a
+    .modalConfirmButton
+        background: none
+        border: solid $white 1px 
+        color: #ffffff
+        &:hover
+            background: $white
+            color: $purple
+
+@media  (max-width: 440px)
+    
+    .profileDataContainer
+        .ProfileImgContainer
+            height: 4rem 
+            bottom: -2.5rem
+        .profileEditButton
+            top: -1.2rem
+        .profileArticle
+            max-width:  90%
+            grid-area: article
+            .profileName
+                font-size: calc($size-text-phone * 1.4)
+            .profileBio
+                font-size: $size-text-phone 
+                
+        
+        
+    .modalContentContainer
+        padding: 1rem 1vw 
+        .modalProfileCard
+            // height: 7.5rem
+            width: 80vw
+            aspect-ratio: 1/.3
+            .modalProfileCardDataContainer
+                width: 100%
+                height: 100%
+                padding: 1rem 3vw
+                gap: 1rem
+                
+                .modalProfileCardImg
+                    height: 3.3rem 
+                .modalProfileCardArticle
+                    .modalProfileCardName
+                        font-size: 1.3rem
+                    .modalProfileCardBio
+                        font-size: 1rem
+                        max-height: 2rem
+        .ModalForm
+            ul
+                li
+                    font-size: 1.3rem
+                    .modalInput
+                        font-size: 1.3rem
+                        padding: .5rem 1rem
+                        
+    .modalButtonsContainer
+        gap: 6px
+
+
+
+@media  (min-width: 440px) and (max-width: 840px)
+        
+    .profileDataContainer
+        padding-left: 2% 
+        .ProfileImgContainer
+            height: 4rem 
+            bottom: -2.5rem
+        .profileEditButton
+            top: -1.5rem
+        .profileArticle
+            max-width:  90%
+            margin-top: 2rem
+            .profileName
+                font-size: calc($size-text-tablet * 1.3)
+            .profileBio
+                font-size: calc($size-text-tablet * .9)
+        
+        
+    .modalContentContainer
+        .modalProfileCard
+            height: 7.5rem
+            width: 30rem
+            .modalProfileCardDataContainer
+                width: 100%
+                height: 100%
+                padding: 1rem 3rem
+                gap: 1rem
+                
+                .modalProfileCardImg
+                    height: 4.5rem 
+                .modalProfileCardArticle
+                    .modalProfileCardName
+                        font-size: 1.5rem
+                    .modalProfileCardBio
+                        font-size: 1rem
+                        max-height: 2rem
+        .ModalForm
+            ul
+                li
+                    font-size: 1.3rem
+                    .modalInput
+                        font-size: 1.3rem
+                        padding: .5rem 1rem
+                        
+    .modalButtonsContainer
+        gap: 6px
+
+
+@media  (min-width: 841px)
+    .profileDataContainer
+        .ProfileImgContainer
+            height: 8rem 
+            bottom: -2.5rem
+        .profileEditButton
+            top: -1.2rem
+        .profileArticle
+            max-width:  60%
+            .profileName
+                font-size: calc($size-text-laptop * .8)
+            .profileBio
+                font-size: $size-text-phone 
+                
+
+    .modalContentContainer
+        .modalProfileCard
+            height: 6rem
+            width: 23rem
+            .modalProfileCardDataContainer
+                width: 100%
+                height: 100%
+                padding: 1.5rem 3rem
+                gap: .5rem
+                
+                .modalProfileCardImg
+                    height: 3rem 
+                .modalProfileCardArticle
+                    .modalProfileCardBio
+                        font-size: 1rem
+                        max-height: 2rem
+        .ModalForm
+            ul
+                li
+                    .modalInput
+                        padding: .5rem 1rem
+                        
+    .modalButtonsContainer
+        gap: 4px
