@@ -1,20 +1,17 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect } from "react";
 import './sass/navBarStyle.css'
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useAppContext } from "../../../hooks/useAppContext";
-import { IUser } from "../../../scripts/login";
 import { toast } from "sonner";
 import { ToastElement } from "../toast/toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faPercentage, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import ProfilePicture from "../profilePicture/profilePicture";
-import { UseGetUsersList } from "../../../hooks/useUserList";
 
 
 export default function NavBar(): ReactNode {
 
-    const { logedProfile } = useParams()
     const { logedUserData } = useAppContext()
     // var UsersList = UseGetUsersList()
 
@@ -95,7 +92,6 @@ export default function NavBar(): ReactNode {
             <NavLink to={`/ProfilePage/${logedUserData?.id}`} >
                 <ProfilePicture imgPath={logedUserData?.profileImage} size="size-1" />
             </NavLink>
-            {/* <img className="profileImg" src={User?.imgPath} alt="" /> */}
 
         </nav>
     )

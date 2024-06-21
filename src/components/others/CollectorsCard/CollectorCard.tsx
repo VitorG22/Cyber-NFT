@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef } from 'react'
+import { ReactNode, useEffect} from 'react'
 import './sass/collectorCardStyle.css'
 import { IUserNoPriorityData, ProfileFunctions } from '../../../scripts/usersFunction'
 import { NavLink } from 'react-router-dom'

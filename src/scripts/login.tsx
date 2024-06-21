@@ -1,5 +1,5 @@
 import { UseGetUserData, UseGetUsersList, UseSetUserData } from "../hooks/useUserList"
-import { ArtArray, IArtObject } from "../utils/ArtsArray"
+import { IArtObject } from "../utils/ArtsArray"
 const defaultBannerPath = 'https://i.pinimg.com/564x/5b/49/40/5b49401dc966cd8599607b88fc557e5e.jpg'
 
 export interface IUser {

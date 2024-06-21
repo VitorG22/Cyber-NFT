@@ -6,7 +6,7 @@ import { ProfileFunctions } from '../../scripts/usersFunction';
 import { useAppContext } from '../../hooks/useAppContext';
 import Modal from '../others/modal/modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamation, faHeart, faPen, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faExclamation, faPen, faPlus } from '@fortawesome/free-solid-svg-icons';
 import DropArea from '../others/dropAreaInput/dropArea';
 
 export default function Profile(): ReactNode {
