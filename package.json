@@ -18,13 +18,18 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@react-oauth/google": "^0.12.1",
+    "@react-three/fiber": "^8.16.8",
+    "@types/three": "^0.165.0",
     "crypto-js": "^4.2.0",
+    "framer-motion": "^11.2.11",
     "jwt-decode": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
     "react-uuid": "^2.0.0",
+    "shadergradient": "^1.2.14",
     "sonner": "^1.4.41",
+    "three": "^0.165.0",
     "ts-md5": "^1.3.1"
   },
   "devDependencies": {

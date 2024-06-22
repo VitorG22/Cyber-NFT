@@ -7,8 +7,8 @@ import '../../scripts/login'
 // import { IUser, Login, Register } from "../../scripts/login";
 // import { ArtArray } from "../../utils/ArtsArray";
 import { useAppContext } from "../../hooks/useAppContext";
-import { BackGroundAnimated } from "./backgroundAnimated";
 import { ProfileFunctions } from "../../scripts/usersFunction";
+import { PurpleBackground } from "../others/AnimatedBackground/animatedBackground";
 
 
 interface IGoogleResponse {
@@ -23,36 +23,7 @@ export default function LoginComponent(): ReactNode {
     const { setLogedUserData } = useAppContext()
     const navigate = useNavigate()
 
-    // var randomImgPath = ArtArray[Math.floor(Math.random() * ArtArray.length)].path
-
-    // function callToLogin(props: IUser, isLoginFromGoogle?: boolean) {
-    //     var loginIndexReturn = Login(props)
-
-    //     if (loginIndexReturn != -1) {
-    //         setLogedUserIndex(loginIndexReturn)
-    //     } else if (isLoginFromGoogle) {
-    //         Register(props)
-    //         loginIndexReturn = Login(props)
-    //         console.log(loginIndexReturn)
-    //         if (loginIndexReturn != -1){
-    //             setLogedUserIndex(loginIndexReturn)
-    //             navigate(`/${loginIndexReturn}/Home`)
-    //         }
-    //     } 
-    // }
-
-    // useEffect(() => {
-    //     var loginForm = document.getElementById('loginForm') as HTMLFormElement
-    //     loginForm?.addEventListener('submit', function (e) {
-    //         e.preventDefault()
-    //         callToLogin({
-    //             name: "null",
-    //             email: (document.getElementById("emailInput") as HTMLInputElement).value,
-    //             password: (document.getElementById("passwordInput") as HTMLInputElement).value
-    //         })
-    //     })
-
-    // }, [])
+    
     useEffect(() => {
         const loginForm = document.getElementById('loginForm') as HTMLFormElement
         loginForm.addEventListener("submit", (event) => {
@@ -96,7 +67,7 @@ export default function LoginComponent(): ReactNode {
 
     return (
         <section className="loginPageContainer">
-            <BackGroundAnimated />
+            <PurpleBackground/>
             <section className="loginPageSection">
                 <h1>Sign in</h1>
                 <form

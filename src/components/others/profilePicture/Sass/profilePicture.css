@@ -5,9 +5,6 @@
   overflow: hidden;
   transition: ease 0.3s;
 }
-.profilePictureContainer .profilePicture {
-  width: 100%;
-}
 
 .selectedPicture {
   border: solid #46f979 1px;

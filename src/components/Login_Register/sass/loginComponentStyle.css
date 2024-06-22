@@ -11,26 +11,19 @@
   justify-content: space-evenly;
   gap: 0.5rem;
 }
-.loginPageContainer .BackGroundAnimated, .registerPageContainer .BackGroundAnimated {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-}
 .loginPageContainer h1, .registerPageContainer h1 {
   font-family: "Montserrat", sans-serif;
   font-weith: 100;
   letter-spacing: 4px;
 }
 .loginPageContainer .loginPageSection, .registerPageContainer .loginPageSection {
-  border: solid #ffffff 1px;
+  border: solid rgba(255, 255, 255, 0.2705882353) 1px;
   padding: 4rem 2rem;
   border-radius: 15px;
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
-  background: rgba(218, 215, 215, 0.0235294118);
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  filter: blur(100);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.537254902), rgba(255, 255, 255, 0.0705882353));
   gap: 10px;
   width: -moz-fit-content;
   width: fit-content;
@@ -42,9 +35,12 @@
   z-index: 10;
 }
 .loginPageContainer .registerPageSection, .registerPageContainer .registerPageSection {
+  border: solid #ffffff 1px;
+  padding: 4rem 2rem;
   border-radius: 15px;
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.537254902), rgba(255, 255, 255, 0.0705882353));
   gap: 10px;
   width: -moz-fit-content;
   width: fit-content;
@@ -86,20 +82,20 @@
   height: fit-content;
 }
 .loginPageContainer .loginPageSection .loginBottom .loginPageRegisterButton, .loginPageContainer .registerPageSection .loginBottom .loginPageRegisterButton, .registerPageContainer .loginPageSection .loginBottom .loginPageRegisterButton, .registerPageContainer .registerPageSection .loginBottom .loginPageRegisterButton {
-  color: #cf25d8;
+  color: #ffffff;
   text-align: center;
   text-decoration: none;
   width: 100%;
   padding: 11px 0;
   border-radius: 5px;
-  border: solid #cf25d8 1px;
+  border: none;
+  background: #cf25d8;
   font-family: "Montserrat", sans-serif;
   font-weight: thin;
   font-size: 0.9rem;
 }
 .loginPageContainer .loginPageSection .loginBottom .loginPageRegisterButton:hover, .loginPageContainer .registerPageSection .loginBottom .loginPageRegisterButton:hover, .registerPageContainer .loginPageSection .loginBottom .loginPageRegisterButton:hover, .registerPageContainer .registerPageSection .loginBottom .loginPageRegisterButton:hover {
-  color: #ffffff;
-  background: linear-gradient(15deg, #76137b, #cf25d8, #f651ff, #bb7956);
+  background: #b527db;
 }
 .loginPageContainer .loginPageSection .loginPageButton, .loginPageContainer .loginPageSection .registerPageButton, .loginPageContainer .registerPageSection .loginPageButton, .loginPageContainer .registerPageSection .registerPageButton, .registerPageContainer .loginPageSection .loginPageButton, .registerPageContainer .loginPageSection .registerPageButton, .registerPageContainer .registerPageSection .loginPageButton, .registerPageContainer .registerPageSection .registerPageButton {
   color: #ffffff;
@@ -107,13 +103,13 @@
   padding: 11px 0;
   font-size: 0.9rem;
   border-radius: 5px;
-  background: linear-gradient(15deg, #76137b, #cf25d8, #f651ff, #bb7956);
+  border: none;
+  background: #cf25d8;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  filter: brightness(90%);
 }
 .loginPageContainer .loginPageSection .loginPageButton:hover, .loginPageContainer .loginPageSection .registerPageButton:hover, .loginPageContainer .registerPageSection .loginPageButton:hover, .loginPageContainer .registerPageSection .registerPageButton:hover, .registerPageContainer .loginPageSection .loginPageButton:hover, .registerPageContainer .loginPageSection .registerPageButton:hover, .registerPageContainer .registerPageSection .loginPageButton:hover, .registerPageContainer .registerPageSection .registerPageButton:hover {
-  filter: brightness(100%);
+  cursor: pointer;
+  background: #b527bd;
 }
 .loginPageContainer .loginPageSection .loginPageInput, .loginPageContainer .loginPageSection .registerPageInput, .loginPageContainer .registerPageSection .loginPageInput, .loginPageContainer .registerPageSection .registerPageInput, .registerPageContainer .loginPageSection .loginPageInput, .registerPageContainer .loginPageSection .registerPageInput, .registerPageContainer .registerPageSection .loginPageInput, .registerPageContainer .registerPageSection .registerPageInput {
   color: #ffffff;
@@ -213,8 +209,7 @@
     align-items: center;
   }
   .registerPageContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     justify-content: center;
     align-items: center;
   }

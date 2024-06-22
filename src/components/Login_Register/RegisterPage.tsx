@@ -1,17 +1,15 @@
 import { ReactNode, useEffect, useState } from "react";
-import { ArtArray } from "../../utils/ArtsArray";
 import { Link, useNavigate } from "react-router-dom";
-// import { Register } from "../../scripts/login";
 import { useAppContext } from "../../hooks/useAppContext";
 import DefaultProfilePicture from "../others/profilePicture/profilePicture";
 import { ProfilePictureArray } from "../../utils/ProfilePicturesArray";
 import Modal from "../others/modal/modal";
 import ProfilePicture from "../others/profilePicture/profilePicture";
 import { ProfileFunctions } from "../../scripts/usersFunction";
+import { PurpleBackground } from "../others/AnimatedBackground/animatedBackground";
 
 
 export default function RegisterComponent(): ReactNode {
-    var randomImgPath = ArtArray[Math.floor(Math.random() * ArtArray.length)].path
 
 
     const navigate = useNavigate()
@@ -37,14 +35,13 @@ export default function RegisterComponent(): ReactNode {
                 setLogedUserData(registerReturn.content.userData)
                 navigate(`/Home`)
             }
-
-            // console.log(registerReturn)
         })
     }, [])
 
 
     return (
         <section className="registerPageContainer">
+            <PurpleBackground/>
             {isProfilePictureModalOpen &&
                 <Modal handleFunction={setIsProfilePictureModalOpen} >
                     <div className='profilePictureModal'>
@@ -78,7 +75,6 @@ export default function RegisterComponent(): ReactNode {
                 </form>
 
             </section>
-            <div className="imgContainerRegister"><img src={randomImgPath} /></div>
         </section>
     )
 }
