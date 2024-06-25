@@ -4,8 +4,7 @@
 
     display: flex
     align-items: center
-    // background: #00000095
-    background-image: linear-gradient(90deg, #000000a5, #0000007c)
+    // background-image: linear-gradient(90deg, #000000a5, #0000007c)
     border-radius: 8px
     color: $gray
     text-decoration: none
@@ -22,6 +21,9 @@
         width: 100%
         min-height: 100%
         z-index: -10
+        mask-image: radial-gradient(#000000a5, transparent)
+        
+            
 
     .cardImgContainer
         aspect-ratio: 1/1
@@ -58,7 +60,7 @@
         span
             h4
                 font-size: calc($size-text-phone * 1.2)
-       
+
 
 
 @media ( min-width: 440px ) and ( max-width: 840px)
@@ -75,12 +77,12 @@
         span
             h4
                 font-size: $size-text-phone 
-           
+        
 
 
 @media ( min-width: 841px )
     .CollectorCard
-        width: 100%
+        width: 27rem
         display: flex
         padding: 2vw 3vw
         gap: 1vw
@@ -92,4 +94,4 @@
         span
             h4
                 font-size: calc($size-text-laptop/3)
-          
+        

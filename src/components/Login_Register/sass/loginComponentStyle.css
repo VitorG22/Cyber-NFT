@@ -2,7 +2,7 @@
   flex-direction: row;
   height: 100vh;
   width: 100vw;
-  color: #ffffff;
+  color: #efefef;
 }
 .loginPageContainer .profilePictureModal, .registerPageContainer .profilePictureModal {
   display: flex;
@@ -35,7 +35,7 @@
   z-index: 10;
 }
 .loginPageContainer .registerPageSection, .registerPageContainer .registerPageSection {
-  border: solid #ffffff 1px;
+  border: solid #efefef 1px;
   padding: 4rem 2rem;
   border-radius: 15px;
   -webkit-backdrop-filter: blur(100px);
@@ -82,7 +82,7 @@
   height: fit-content;
 }
 .loginPageContainer .loginPageSection .loginBottom .loginPageRegisterButton, .loginPageContainer .registerPageSection .loginBottom .loginPageRegisterButton, .registerPageContainer .loginPageSection .loginBottom .loginPageRegisterButton, .registerPageContainer .registerPageSection .loginBottom .loginPageRegisterButton {
-  color: #ffffff;
+  color: #efefef;
   text-align: center;
   text-decoration: none;
   width: 100%;
@@ -98,7 +98,7 @@
   background: #b527db;
 }
 .loginPageContainer .loginPageSection .loginPageButton, .loginPageContainer .loginPageSection .registerPageButton, .loginPageContainer .registerPageSection .loginPageButton, .loginPageContainer .registerPageSection .registerPageButton, .registerPageContainer .loginPageSection .loginPageButton, .registerPageContainer .loginPageSection .registerPageButton, .registerPageContainer .registerPageSection .loginPageButton, .registerPageContainer .registerPageSection .registerPageButton {
-  color: #ffffff;
+  color: #efefef;
   width: 100%;
   padding: 11px 0;
   font-size: 0.9rem;
@@ -112,7 +112,7 @@
   background: #b527bd;
 }
 .loginPageContainer .loginPageSection .loginPageInput, .loginPageContainer .loginPageSection .registerPageInput, .loginPageContainer .registerPageSection .loginPageInput, .loginPageContainer .registerPageSection .registerPageInput, .registerPageContainer .loginPageSection .loginPageInput, .registerPageContainer .loginPageSection .registerPageInput, .registerPageContainer .registerPageSection .loginPageInput, .registerPageContainer .registerPageSection .registerPageInput {
-  color: #ffffff;
+  color: #efefef;
   width: 100%;
   border-radius: 5px;
   border: solid 1px rgba(255, 255, 255, 0.5960784314);

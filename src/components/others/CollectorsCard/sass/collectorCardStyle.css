@@ -1,7 +1,6 @@
 .CollectorCard {
   display: flex;
   align-items: center;
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.6470588235), rgba(0, 0, 0, 0.4862745098));
   border-radius: 8px;
   color: #bababa;
   text-decoration: none;
@@ -20,6 +19,8 @@
   width: 100%;
   min-height: 100%;
   z-index: -10;
+  -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.6470588235), transparent);
+          mask-image: radial-gradient(rgba(0, 0, 0, 0.6470588235), transparent);
 }
 .CollectorCard .cardImgContainer {
   aspect-ratio: 1/1;
@@ -77,7 +78,7 @@
 }
 @media (min-width: 841px) {
   .CollectorCard {
-    width: 100%;
+    width: 27rem;
     display: flex;
     padding: 2vw 3vw;
     gap: 1vw;

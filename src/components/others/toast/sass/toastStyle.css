@@ -5,7 +5,7 @@
   border-radius: 15px;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
-  border: solid 1px #ffffff;
+  border: solid 1px #efefef;
 }
 .Toast .closeButton {
   position: absolute;
@@ -23,7 +23,7 @@
 .Toast article h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  color: #ffffff;
+  color: #efefef;
 }
 .Toast article p {
   color: rgba(255, 255, 255, 0.5960784314);
@@ -38,7 +38,7 @@
   border: transparent solid 1px;
 }
 .Toast .undoButton:hover {
-  border: #ffffff solid 1px;
+  border: #efefef solid 1px;
 }
 .Toast .timeBar {
   width: 100%;

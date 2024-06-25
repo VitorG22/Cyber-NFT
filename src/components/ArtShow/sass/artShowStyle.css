@@ -51,7 +51,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    color: #ffffff;
+    color: #efefef;
   }
   #ArtShowPage .imgDataContainer section .CartCardTop h2 {
     font-family: "Montserrat", sans-serif;
@@ -75,7 +75,7 @@
     font-style: italic;
   }
   #ArtShowPage .imgDataContainer section .CartCardTop .ownerCard .ownerName {
-    color: #ffffff;
+    color: #efefef;
     font-family: "Montserrat", sans-serif;
     font-weight: 200;
     font-size: clamp(0.4rem, 3vw, 2rem);
@@ -104,7 +104,7 @@
     font-style: italic;
   }
   #ArtShowPage .imgDataContainer section span h5 {
-    color: #ffffff;
+    color: #efefef;
     font-family: "Montserrat", sans-serif;
     font-weight: 200;
     font-size: clamp(0.4rem, 3vw, 2rem);
@@ -126,7 +126,7 @@
   }
   #ArtShowPage .imgDataContainer section .buttonContainer p {
     font-family: "Montserrat", sans-serif;
-    color: #ffffff;
+    color: #efefef;
     font-size: clamp(0.4rem, 3vw, 2rem);
     font-weight: 100;
   }
@@ -134,7 +134,7 @@
     margin: 0 2vw;
   }
   #ArtShowPage .imgDataContainer .collectionContainer .CollectionName {
-    color: #ffffff;
+    color: #efefef;
     font-family: "Montserrat", sans-serif;
     font-weight: 100;
     font-size: clamp(0.4rem, 3vw, 2rem);
@@ -147,7 +147,7 @@
     display: flex;
     align-items: center;
     padding: 3vw 4vw;
-    border: solid #ffffff 1px;
+    border: solid #efefef 1px;
     border-radius: 20px;
     position: relative;
     overflow: scroll;
@@ -227,7 +227,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    color: #ffffff;
+    color: #efefef;
   }
   #ArtShowPage .imgDataContainer section .CartCardTop h2 {
     font-family: "Montserrat", sans-serif;
@@ -251,7 +251,7 @@
     font-style: italic;
   }
   #ArtShowPage .imgDataContainer section .CartCardTop .ownerCard .ownerName {
-    color: #ffffff;
+    color: #efefef;
     font-family: "Montserrat", sans-serif;
     font-weight: 200;
     font-size: clamp(0.4rem, 3vw, 2rem);
@@ -280,7 +280,7 @@
     font-style: italic;
   }
   #ArtShowPage .imgDataContainer section span h5 {
-    color: #ffffff;
+    color: #efefef;
     font-family: "Montserrat", sans-serif;
     font-weight: 200;
     font-size: clamp(0.4rem, 3vw, 2rem);
@@ -303,7 +303,7 @@
   }
   #ArtShowPage .imgDataContainer section .buttonContainer p {
     font-family: "Montserrat", sans-serif;
-    color: #ffffff;
+    color: #efefef;
     font-size: clamp(0.6rem, 3vw, 3rem);
     font-weight: 100;
   }
@@ -311,7 +311,7 @@
     margin: 0 2vw;
   }
   #ArtShowPage .imgDataContainer .collectionContainer .CollectionName {
-    color: #ffffff;
+    color: #efefef;
     font-family: "Montserrat", sans-serif;
     font-weight: 100;
     font-size: clamp(0.4rem, 3vw, 2rem);
@@ -324,7 +324,7 @@
     display: flex;
     align-items: center;
     padding: 3vw 4vw;
-    border: solid #ffffff 1px;
+    border: solid #efefef 1px;
     border-radius: 20px;
     position: relative;
     overflow: scroll;
@@ -404,7 +404,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    color: #ffffff;
+    color: #efefef;
   }
   #ArtShowPage .imgDataContainer section .CartCardTop h2 {
     font-family: "Montserrat", sans-serif;
@@ -429,7 +429,7 @@
   }
   #ArtShowPage .imgDataContainer section .CartCardTop .ownerCard .ownerName {
     font-family: "Montserrat", sans-serif;
-    color: #ffffff;
+    color: #efefef;
     font-size: calc(clamp(0.8rem, 3vw, 3rem) / 3);
   }
   #ArtShowPage .imgDataContainer section .CartCardTop .ownerCard div {
@@ -455,13 +455,13 @@
     font-style: italic;
   }
   #ArtShowPage .imgDataContainer section span h2 {
-    color: #ffffff;
+    color: #efefef;
     font-family: "Montserrat", sans-serif;
     font-size: clamp(0.8rem, 3vw, 3rem);
     font-weight: 500;
   }
   #ArtShowPage .imgDataContainer section span h5 {
-    color: #ffffff;
+    color: #efefef;
     font-family: "Montserrat", sans-serif;
     font-weight: 200;
     font-size: calc(clamp(0.8rem, 3vw, 3rem) / 2);
@@ -476,11 +476,11 @@
   }
   #ArtShowPage .imgDataContainer section .buttonContainer p {
     font-family: "Montserrat", sans-serif;
-    color: #ffffff;
+    color: #efefef;
     font-size: calc(clamp(0.8rem, 3vw, 3rem) / 3);
   }
   #ArtShowPage .imgDataContainer .collectionContainer .CollectionName {
-    color: #ffffff;
+    color: #efefef;
     font-family: "Montserrat", sans-serif;
     font-weight: 100;
     z-index: 4;
@@ -496,7 +496,7 @@
     flex-wrap: wrap;
     align-items: center;
     padding: 2vw;
-    border: solid #ffffff 1px;
+    border: solid #efefef 1px;
     border-radius: 20px;
     position: relative;
     overflow: scroll;

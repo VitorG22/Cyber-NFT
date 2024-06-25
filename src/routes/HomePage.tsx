@@ -16,7 +16,6 @@ export default function HomePage() {
             <NFTCardPage searchBar={false} title="ArtWorks" showFilter={true} imagesCount={10} />
             <OfferPage />
             <TopCollectors />
-            {/* <SubscribComponent /> */}
         </>
     )
 }

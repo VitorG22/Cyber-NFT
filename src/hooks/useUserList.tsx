@@ -1,4 +1,15 @@
-import { IUser } from "../scripts/login"
+interface IUserAllData {
+    id: number,
+    name: string,
+    email: string,
+    passwordHash: string,
+    profileImage: string ,
+    profileBanner: string,
+    profileBiography: string,
+    profileNftCollection: Array<string>,
+    cart: Array<string>
+}
+
 
 export function UseGetUsersList() {
     var UsersList = localStorage.getItem("CyberNFTUsers")
@@ -8,8 +19,9 @@ export function UseGetUsersList() {
 }
 
 
-export function UseGetUserData(props: { getBy: 'email' | 'index' | 'name', stringParameterValue?: string, indexParameterValue?: number }) {
-    let UsersList: IUser[] = UseGetUsersList()
+
+export function UseGetUserData(props: { getBy: 'id' | 'name'| "email", stringParameterValue?: string, idParameterValue?: number }) {
+    let UsersList: IUserAllData[] = UseGetUsersList()
     let valueToReturn = undefined
     
     console.log(props)
@@ -24,10 +36,10 @@ export function UseGetUserData(props: { getBy: 'email' | 'index' | 'name', strin
                 return UserData.name == props.stringParameterValue
             })
             break
-        case "index":
-            if (props.indexParameterValue != null) {
-                if (0 <= props.indexParameterValue && props.indexParameterValue <= UsersList.length) {
-                    valueToReturn = UsersList[props.indexParameterValue]
+        case "id":
+            if (props.idParameterValue != null) {
+                if (0 <= props.idParameterValue) {
+                    valueToReturn = UsersList.find((user)=>user.id == props.idParameterValue)
                 }
             }
             break
@@ -41,8 +53,8 @@ export function UseGetUserData(props: { getBy: 'email' | 'index' | 'name', strin
 
 
 
-export function UseSetUserData(UserData: IUser, index?: number) {
-    let UsersList: IUser[] = UseGetUsersList()
+export function UseSetUserData(UserData: IUserAllData, index?: number) {
+    let UsersList: IUserAllData[] = UseGetUsersList()
 
     // if executado caso o index corresponda a um usuario da lista
     if (index && index <= UsersList.length) {

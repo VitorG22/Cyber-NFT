@@ -11,18 +11,12 @@
         width: 100vw
         z-index: 5
         
-        // background: #00000089
         background-image: linear-gradient(90deg ,#00000089, #ffffff12)
         backdrop-filter: blur(6px)
         border: #ffffff30 1px solid
         border-top: none
 
-        div
-            width: fit-content
-            svg
-                fill: $white
-                &:hover
-                    fill: $lightGray    
+        
         img
             justify-self: flex-end
         ul
@@ -45,22 +39,39 @@
                     color: $lightGray
                     text-decoration: none
                     font-family: $font-3
-                    padding: .5vw 1vw
-                    border-radius: 15px
+                    padding: .7rem 1.4rem
+                    border-radius: 4px
                     
-                    &:hover
-                        color: $pink
                     
                 .active
                     color: $white
-        .profileImg
-            border-radius: 100%
+        .rightNavButtonsContainer
+            display: flex
+            flex-direction: row
+            gap: 1rem
+            widht: fit-content
+            align-items: center
+            .profileImg
+                border-radius: 100%
+                
 
 @media (max-width: 440px)
     .navBar
-        padding:  4vw 
+        padding:  3vw 
+        display: flex
+        flex-direction: row
+        justify-content: space-between
         border-radius: 0 0 8px 8px  
-
+        ul
+            li
+                a
+                    padding: .5rem 1rem
+                    &:active
+                        background: #ffffff12
+                        color: $white
+                    .navLinkText
+                        display: none
+                
         svg
             width: 2.5vw
         a
@@ -71,9 +82,19 @@
 
 @media  (min-width: 440px) and (max-width: 840px)
     .navBar
-        padding:  2vw 2vw
+        padding:  3vw 3vw
         border-radius: 0 0 8px 8px  
-
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        ul
+            li
+                a
+                    padding: .5rem 1rem
+                    &:active
+                        background: #ffffff12
+                        color: $white
+                
         svg
             width: 2.5vw
         a
@@ -87,7 +108,14 @@
     .navBar
         padding:  1vw 2vw
         border-radius: 0 0 8px 8px  
-
+        ul
+            li
+                a
+                    padding: .5rem 1rem
+                    &:hover
+                        background: #ffffff12
+                        color: $white
+                
         svg
             width: 1.2vw
         

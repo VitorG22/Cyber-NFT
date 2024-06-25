@@ -12,7 +12,7 @@
     gap: 3vh;
   }
   .offerPage section:nth-child(2) h5 {
-    color: #ffffff;
+    color: #efefef;
     font-family: "Montserrat", sans-serif;
     font-size: calc(clamp(0.8rem, 3vw, 3rem) * 0.8);
     font-weight: 500;
@@ -22,7 +22,7 @@
   .offerPage section:nth-child(2) h2 {
     font-family: "Michroma", sans-serif;
     font-size: clamp(0.8rem, 3vw, 3rem);
-    background: linear-gradient(0deg, #bababa, #ffffff);
+    background: linear-gradient(0deg, #bababa, #efefef);
     letter-spacing: 0.4vw;
     -webkit-background-clip: text;
             background-clip: text;
@@ -92,7 +92,7 @@
     background: #cf25d8;
     width: 100%;
     aspect-ratio: 3/3;
-    color: #ffffff;
+    color: #efefef;
   }
   .offerPage section:nth-child(3) .card2 article {
     height: 100%;
@@ -146,7 +146,7 @@
     justify-content: space-around;
   }
   .offerPage section:nth-child(2) h5 {
-    color: #ffffff;
+    color: #efefef;
     font-family: "Montserrat", sans-serif;
     font-size: clamp(0.5rem, 1.5vw, 1rem);
     font-weight: 500;
@@ -155,7 +155,7 @@
   .offerPage section:nth-child(2) h2 {
     font-family: "Michroma", sans-serif;
     font-size: clamp(0.8rem, 3vw, 3rem);
-    background: linear-gradient(0deg, #bababa, #ffffff);
+    background: linear-gradient(0deg, #bababa, #efefef);
     letter-spacing: 0.4vw;
     -webkit-background-clip: text;
             background-clip: text;
@@ -222,7 +222,7 @@
     background: #cf25d8;
     width: 100%;
     aspect-ratio: 3/3;
-    color: #ffffff;
+    color: #efefef;
   }
   .offerPage section:nth-child(3) .card2 article {
     height: 100%;
@@ -276,7 +276,7 @@
     justify-content: space-around;
   }
   .offerPage section:nth-child(2) h5 {
-    color: #ffffff;
+    color: #efefef;
     font-family: "Montserrat", sans-serif;
     font-size: clamp(0.5rem, 1.5vw, 1rem);
     font-weight: 500;
@@ -285,7 +285,7 @@
   .offerPage section:nth-child(2) h2 {
     font-family: "Michroma", sans-serif;
     font-size: clamp(0.8rem, 3vw, 3rem);
-    background: linear-gradient(0deg, #bababa, #ffffff);
+    background: linear-gradient(0deg, #bababa, #efefef);
     letter-spacing: 0.4vw;
     -webkit-background-clip: text;
             background-clip: text;
@@ -350,7 +350,7 @@
     background: #cf25d8;
     width: 26vw;
     height: 30vw;
-    color: #ffffff;
+    color: #efefef;
   }
   .offerPage section:nth-child(3) .card2 article {
     height: 100%;

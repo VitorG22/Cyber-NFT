@@ -5,23 +5,19 @@ import { useAppContext } from "../../../hooks/useAppContext";
 import { toast } from "sonner";
 import { ToastElement } from "../toast/toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faPercentage, faUser } from "@fortawesome/free-solid-svg-icons";
+import {  faHome, faPercentage, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import ProfilePicture from "../profilePicture/profilePicture";
+import Cart from "../Cart/cart";
 
 
 export default function NavBar(): ReactNode {
 
     const { logedUserData } = useAppContext()
-    // var UsersList = UseGetUsersList()
-
-    // var UsersList = localStorage.getItem("CyberNFTUsers")
     console.log(logedUserData)
-    useEffect(()=>{
+    useEffect(() => {
         console.log(logedUserData)
-    },[])
-    
-
+    }, [])
 
     return (
         <nav className="navBar">
@@ -31,7 +27,7 @@ export default function NavBar(): ReactNode {
                     <li>
                         <NavLink to={`/Home`} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}>
                             <FontAwesomeIcon icon={faHome} />
-                            Home
+                            <p className="navLinkText">Home</p>
                         </NavLink>
                     </li>
                 }
@@ -40,7 +36,7 @@ export default function NavBar(): ReactNode {
                     <li>
                         <NavLink to={`/MarketPlace`} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}>
                             <FontAwesomeIcon icon={faEthereum} />
-                            Market Place
+                            <p className="navLinkText">Market Place</p>
                         </NavLink>
                     </li>
                 }
@@ -61,7 +57,7 @@ export default function NavBar(): ReactNode {
                         )}>
                             <FontAwesomeIcon icon={faPercentage} />
 
-                            Offers
+                            <p className="navLinkText">Offers</p>
                         </a>
                         {/* </NavLink> */}
                     </li>
@@ -69,29 +65,20 @@ export default function NavBar(): ReactNode {
 
                 {
                     <li>
-                        {/* <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}> */}
-                        <a onClick={() => toast(
-                            <ToastElement
-                                title="Sorry"
-                                description='This button has no functions, maybe next time'
-                                showButton={false}
-                            />,
-                            {
-                                duration: 5000
-                            }
-
-                        )}>
+                        <NavLink to="/Collectors" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}>
                             <FontAwesomeIcon icon={faUser} />
-                            Collectors
-                        </a>
-                        {/* </NavLink> */}
+                            <p className="navLinkText">Collectors</p>
+                        </NavLink>
                     </li>
                 }
 
             </ul>
-            <NavLink to={`/ProfilePage/${logedUserData?.id}`} >
-                <ProfilePicture imgPath={logedUserData?.profileImage} size="size-1" />
-            </NavLink>
+            <div className='rightNavButtonsContainer'>
+                <NavLink to={`/ProfilePage/${logedUserData?.id}`} >
+                    <ProfilePicture imgPath={logedUserData?.profileImage} size="size-1" />
+                </NavLink>
+                <Cart/>
+            </div>
 
         </nav>
     )

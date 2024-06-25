@@ -53,16 +53,16 @@
   width: -moz-fit-content;
   width: fit-content;
   background: none;
-  border: 1px solid #ffffff;
+  border: 1px solid #efefef;
   padding: 0.3rem 0.6rem;
-  color: #ffffff;
+  color: #efefef;
   border-radius: 8px;
   gap: 6px;
 }
 .profilePageContainer .profileDataContainer .profileArticle .profileName {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #ffffff;
+  color: #efefef;
 }
 .profilePageContainer .profileDataContainer .profileArticle .profileBio {
   font-family: "Ubuntu Mono", monospace;
@@ -136,8 +136,8 @@
 }
 .modalContentContainer .ModalForm ul li .modalInput:focus {
   outline: none;
-  border-color: #ffffff;
-  color: #ffffff;
+  border-color: #efefef;
+  color: #efefef;
 }
 .modalContentContainer .ModalForm ul li .modalDropAreaInput {
   display: none;
@@ -172,11 +172,11 @@
 }
 .modalButtonsContainer .modalConfirmButton {
   background: none;
-  border: solid #ffffff 1px;
+  border: solid #efefef 1px;
   color: #ffffff;
 }
 .modalButtonsContainer .modalConfirmButton:hover {
-  background: #ffffff;
+  background: #efefef;
   color: #0d000d;
 }
 

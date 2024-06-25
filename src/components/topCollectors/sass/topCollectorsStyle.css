@@ -9,7 +9,7 @@
 #TopCollectorsPage main h2 {
   font-family: "Michroma", sans-serif;
   font-size: clamp(0.8rem, 3vw, 3rem);
-  background: linear-gradient(0deg, #bababa, #ffffff);
+  background: linear-gradient(0deg, #bababa, #efefef);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
@@ -39,7 +39,8 @@
 }
 @media (min-width: 841px) {
   #TopCollectorsPage ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }/*# sourceMappingURL=topCollectorsStyle.css.map */

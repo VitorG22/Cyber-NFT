@@ -1,0 +1,195 @@
+.cartButton {
+  color: #efefef;
+  background: none;
+  border-radius: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.backgroundLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8470588235);
+  height: 100vh;
+  width: 100vw;
+}
+
+.purchaseModalText {
+  color: #efefef;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+}
+
+.purchaseModalButtonsContainer {
+  width: 100%;
+  gap: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding-right: 1rem;
+}
+.purchaseModalButtonsContainer .purchaseModalKeepLookingButton {
+  padding: 0.5rem 1rem;
+  color: #bababa;
+  border-radius: 4px;
+  background: none;
+}
+.purchaseModalButtonsContainer .purchaseModalKeepLookingButton:hover {
+  background: rgba(255, 255, 255, 0.0705882353);
+}
+.purchaseModalButtonsContainer .purchaseModalBuyButton {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: #0d000d;
+  background: white;
+}
+
+.sideCartSectionContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  height: 100vh;
+  background: #0d000d;
+  gap: 1rem;
+}
+.sideCartSectionContainer .itemsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-self: start;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  gap: 6px;
+}
+.sideCartSectionContainer .itemsContainer .CartItemCard {
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+  background: #efefef;
+  color: #0d000d;
+  font-family: "Ubuntu Mono", monospace;
+}
+.sideCartSectionContainer .itemsContainer .CartItemCard .CartItemInfo {
+  position: relative;
+  display: grid;
+  width: 100%;
+  grid-template-areas: "name ." "collector price";
+  padding: 10px;
+}
+.sideCartSectionContainer .itemsContainer .CartItemCard .CartItemInfo .CartItemName {
+  grid-area: name;
+  align-self: start;
+  justify-self: start;
+}
+.sideCartSectionContainer .itemsContainer .CartItemCard .CartItemInfo .CartItemDeleteButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #0c0c0c;
+  background: none;
+  border-radius: 4px;
+  padding: 0.7rem;
+}
+.sideCartSectionContainer .itemsContainer .CartItemCard .CartItemInfo .CartItemOwner {
+  grid-area: collector;
+  align-self: end;
+  justify-self: start;
+}
+.sideCartSectionContainer .itemsContainer .CartItemCard .CartItemInfo .CartItemPrice {
+  grid-area: price;
+  align-self: end;
+  justify-self: end;
+}
+.sideCartSectionContainer .itemsContainer .CartItemCard .CartItemImageContainer {
+  display: flex;
+  width: 7rem;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 4px 0 0 4px;
+}
+.sideCartSectionContainer .itemsContainer .CartItemCard .CartItemImageContainer .CartItemImage {
+  width: 100%;
+}
+.sideCartSectionContainer .sideCartSectionFooter {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  width: 100%;
+}
+.sideCartSectionContainer .sideCartSectionFooter .totalPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #efefef;
+  color: #0d000d;
+  padding: 0.5rem 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4px;
+  font-family: "Ubuntu Mono", monospace;
+  gap: 2px;
+}
+.sideCartSectionContainer .sideCartSectionFooter .purchaseButton {
+  background: #efefef;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 4px;
+  color: #0d000d;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 500;
+}
+
+@media (max-width: 440px) {
+  .cartButton {
+    padding: 0.5rem;
+  }
+  .cartButton:active {
+    background: rgba(255, 255, 255, 0.0705882353);
+  }
+  .purchaseModalText {
+    padding: 1rem 0.5rem 1rem 0px;
+  }
+  .sideCartSectionContainer {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+@media (min-width: 440px) and (max-width: 840px) {
+  .cartButton {
+    padding: 0.5rem;
+  }
+  .cartButton:active {
+    background: rgba(255, 255, 255, 0.0705882353);
+  }
+  .purchaseModalText {
+    padding: 0.5rem 1rem 1rem 0px;
+  }
+  .sideCartSectionContainer {
+    width: 29rem;
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 841px) {
+  .cartButton {
+    padding: 0.7rem;
+  }
+  .cartButton:hover {
+    background: rgba(255, 255, 255, 0.0705882353);
+  }
+  .purchaseModalText {
+    padding: 0.5rem 1rem 1rem 0px;
+  }
+  .sideCartSectionContainer {
+    width: 29rem;
+    padding: 0.5rem 1rem;
+  }
+}/*# sourceMappingURL=cart.css.map */

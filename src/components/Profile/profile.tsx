@@ -41,12 +41,11 @@ export default function Profile(): ReactNode {
         ProfileFunctions.update({
             idToUpdate: logedUserData.id,
             newProfileData: {
-                id: logedUserData.id,
+                ...logedUserData,
                 name: profileNameInputValue,
                 profileBanner: `${profileBannerInputValue}`,
                 profileBiography: profileBioInputValue || "",
                 profileImage: `${profileImageInputValue}`,
-                profileNftCollection: logedUserData.profileNftCollection
             }
         })
         setIsEditModalOpen(false)

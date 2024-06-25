@@ -1,5 +1,5 @@
 .subscribSection {
-  color: #ffffff;
+  color: #efefef;
   background: #cf25d8;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@
   color: rgba(255, 255, 255, 0.5960784314);
 }
 .subscribSection div {
-  background: #ffffff;
+  background: #efefef;
   border-radius: 100px;
   display: flex;
   justify-content: space-between;

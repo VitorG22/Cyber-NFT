@@ -1,0 +1,180 @@
+@import  '../../../../variaveisDeEstilo/variaveisDeEstilo'
+
+.cartButton
+    color: $white
+    background: none
+    border-radius: 4px
+    width: fit-content
+
+.backgroundLayer
+    position: absolute
+    top: 0
+    left: 0
+    background: #000000d8
+    height: 100vh
+    width: 100vw
+
+.purchaseModalText
+    color: $white
+    font-family: $font-3
+    font-weight: 200
+
+
+.purchaseModalButtonsContainer
+    width: 100%
+    gap: 6px
+    display: flex
+    flex-direction: row
+    justify-content: end
+    padding-right: 1rem
+
+    .purchaseModalKeepLookingButton
+        padding: .5rem 1rem
+        color: $gray
+        border-radius: 4px
+        background: none
+        &:hover
+            background: #ffffff12
+    .purchaseModalBuyButton
+        padding: .5rem 1rem
+        border-radius: 4px
+        color: $purple
+        background: white
+
+
+.sideCartSectionContainer
+    position: fixed 
+    top: 0
+    right: 0
+    display: flex
+    flex-direction: column
+    align-items: start
+    justify-content: space-between
+    height: 100vh
+    background: $purple
+    gap: 1rem
+        
+    .itemsContainer
+        display: flex
+        flex-direction: column
+        width: 100%
+        height: 100%
+        justify-self: start
+        overflow: scroll
+        scroll-behavior: smooth
+        gap: 6px
+        
+        .CartItemCard
+            display: flex 
+            flex-direction: row
+            border-radius: 8px
+            background: $white
+            color: $purple
+            font-family: $font-2
+            .CartItemInfo
+                position: relative
+                display: grid
+                width: 100%
+                grid-template-areas:"name .""collector price"
+                padding: 10px
+                .CartItemName
+                    grid-area: name
+                    align-self: start                
+                    justify-self: start
+                .CartItemDeleteButton
+                    position: absolute
+                    top: 0 
+                    right: 0
+                    color: #0c0c0c
+                    background: none
+                    border-radius: 4px
+                    padding: .7rem
+
+                .CartItemOwner
+                    grid-area: collector
+                    align-self: end                
+                    justify-self: start
+                .CartItemPrice  
+                    grid-area: price
+                    align-self: end                
+                    justify-self: end
+            .CartItemImageContainer
+                display: flex
+                width: 7rem
+                justify-content: center
+                align-items: center 
+                aspect-ratio: 1/1
+                overflow: hidden
+                border-radius: 4px 0 0 4px
+
+                .CartItemImage
+                    width: 100%
+                    
+    .sideCartSectionFooter
+        display: flex
+        flex-direction: row
+        gap: 6px
+        width: 100%
+        .totalPrice
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+
+            background: $white
+            color: $purple
+            padding: .5rem 1rem
+            width: fit-content
+            border-radius: 4px
+            font-family: $font-2
+            gap: 2px
+            
+        .purchaseButton
+            background: $white
+            padding: .5rem
+            width: 100%
+            border-radius: 4px
+            color: $purple
+            font-family: $font-2
+            font-weight: 500
+
+
+@media ( max-width: 440px )
+    .cartButton
+        padding: .5rem
+        &:active
+            background: #ffffff12
+    .purchaseModalText
+        padding: 1rem .5rem 1rem 0px
+    .sideCartSectionContainer
+        width: 100%
+        padding:  1rem
+        
+        
+
+@media ( min-width: 440px ) and ( max-width: 840px)
+    .cartButton
+        padding: .5rem
+        &:active
+            background: #ffffff12
+    .purchaseModalText
+        padding: .5rem 1rem 1rem 0px
+    .sideCartSectionContainer
+        width: 29rem
+        padding: .5rem
+        
+        
+
+@media ( min-width: 841px )
+    .cartButton
+        padding: .7rem
+        &:hover
+            background: #ffffff12
+    .purchaseModalText
+        padding: .5rem 1rem 1rem 0px
+    .sideCartSectionContainer
+        width: 29rem
+        padding: .5rem 1rem
+        
+        
+

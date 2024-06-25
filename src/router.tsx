@@ -9,6 +9,7 @@ import LoginPage from './routes/LoginPage.tsx'
 import RegisterPage from './routes/RegisterPage.tsx'
 import PageEstructure from './routes/pageEstructureNavBar.tsx'
 import ProfilePage from './routes/ProfilePage.tsx'
+import CollectorsPage from './routes/CollectorsPage.tsx'
 
 
 export const router = createBrowserRouter([
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
                     {
                         path: '/ProfilePage/:ProfileId',
                         element: <ProfilePage />
+                    },
+                    {
+                        path: '/Collectors',
+                        element: <CollectorsPage />
                     }
                 ]
             },

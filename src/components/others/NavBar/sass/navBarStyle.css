@@ -14,16 +14,6 @@
   border: rgba(255, 255, 255, 0.1882352941) 1px solid;
   border-top: none;
 }
-.navBar div {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.navBar div svg {
-  fill: #ffffff;
-}
-.navBar div svg:hover {
-  fill: rgba(255, 255, 255, 0.5960784314);
-}
 .navBar img {
   justify-self: flex-end;
 }
@@ -48,23 +38,40 @@
   color: rgba(255, 255, 255, 0.5960784314);
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
-  padding: 0.5vw 1vw;
-  border-radius: 15px;
-}
-.navBar ul li a:hover {
-  color: #cf25d8;
+  padding: 0.7rem 1.4rem;
+  border-radius: 4px;
 }
 .navBar ul li .active {
-  color: #ffffff;
+  color: #efefef;
 }
-.navBar .profileImg {
+.navBar .rightNavButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  widht: fit-content;
+  align-items: center;
+}
+.navBar .rightNavButtonsContainer .profileImg {
   border-radius: 100%;
 }
 
 @media (max-width: 440px) {
   .navBar {
-    padding: 4vw;
+    padding: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     border-radius: 0 0 8px 8px;
+  }
+  .navBar ul li a {
+    padding: 0.5rem 1rem;
+  }
+  .navBar ul li a:active {
+    background: rgba(255, 255, 255, 0.0705882353);
+    color: #efefef;
+  }
+  .navBar ul li a .navLinkText {
+    display: none;
   }
   .navBar svg {
     width: 2.5vw;
@@ -78,8 +85,18 @@
 }
 @media (min-width: 440px) and (max-width: 840px) {
   .navBar {
-    padding: 2vw 2vw;
+    padding: 3vw 3vw;
     border-radius: 0 0 8px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .navBar ul li a {
+    padding: 0.5rem 1rem;
+  }
+  .navBar ul li a:active {
+    background: rgba(255, 255, 255, 0.0705882353);
+    color: #efefef;
   }
   .navBar svg {
     width: 2.5vw;
@@ -95,6 +112,13 @@
   .navBar {
     padding: 1vw 2vw;
     border-radius: 0 0 8px 8px;
+  }
+  .navBar ul li a {
+    padding: 0.5rem 1rem;
+  }
+  .navBar ul li a:hover {
+    background: rgba(255, 255, 255, 0.0705882353);
+    color: #efefef;
   }
   .navBar svg {
     width: 1.2vw;

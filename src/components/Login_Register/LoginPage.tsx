@@ -3,7 +3,7 @@ import { ReactNode, useEffect } from "react";
 import { jwtDecode } from "jwt-decode";
 import { Link, useNavigate } from "react-router-dom";
 import './sass/loginComponentStyle.css'
-import '../../scripts/login'
+// import '../../scripts/login'
 // import { IUser, Login, Register } from "../../scripts/login";
 // import { ArtArray } from "../../utils/ArtsArray";
 import { useAppContext } from "../../hooks/useAppContext";

@@ -73,8 +73,8 @@ export const CollectionArray:ICollectionArray[] = [
             'EB08',
             'FB05',
             'FB06',
-            'GB00',
-            'GB01'
+            'GB01',
+            'GB09'
         ]
     },
     {
@@ -95,7 +95,10 @@ export const CollectionArray:ICollectionArray[] = [
             'AA00',
             'AA07',
             'BA00',
-            'EB00'
+            'EB00',
+            'GB02',
+            'GB04',
+            'GB06',
         ]
     },
     {

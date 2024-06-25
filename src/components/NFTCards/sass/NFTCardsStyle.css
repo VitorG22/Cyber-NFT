@@ -9,8 +9,7 @@
     margin: 1vh 0;
   }
   #NFTCardPage nav {
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
     display: grid;
     grid-template-areas: "title searchBar searchBar searchBar" "filter filter filter filter";
     gap: 4vw;
@@ -23,7 +22,7 @@
   }
   #NFTCardPage nav .InputContainer {
     grid-area: searchBar;
-    border: #ffffff solid 1px;
+    border: #efefef solid 1px;
     width: 100%;
     padding: 2vh 4vw;
     gap: 2vw;
@@ -33,7 +32,7 @@
     align-items: center;
   }
   #NFTCardPage nav .InputContainer input {
-    color: #ffffff;
+    color: #efefef;
     border: none;
     width: 100%;
     background: none;
@@ -104,10 +103,10 @@
     transition: ease 0.2s;
     display: flex;
     flex-direction: row;
-    color: #ffffff;
+    color: #efefef;
   }
   #NFTCardPage .CardsContainer .Card:hover {
-    box-shadow: 0 0 2px #ffffff;
+    box-shadow: 0 0 2px #efefef;
   }
   #NFTCardPage .CardsContainer .Card .imgContainer {
     width: 35vw;
@@ -196,7 +195,7 @@
   }
   #NFTCardPage nav .InputContainer {
     grid-area: searchBar;
-    border: #ffffff solid 1px;
+    border: #efefef solid 1px;
     padding: 0 1vw;
     gap: 1vw;
     border-radius: 100px;
@@ -205,7 +204,7 @@
     align-items: center;
   }
   #NFTCardPage nav .InputContainer input {
-    color: #ffffff;
+    color: #efefef;
     border: none;
     width: 100%;
     background: none;
@@ -239,7 +238,7 @@
   #NFTCardPage nav ul li .NavButton {
     transition: ease 0.3s;
     background: none;
-    color: #ffffff;
+    color: #efefef;
     border-radius: 100px;
     padding: 0.5rem 1rem;
     border: rgba(255, 255, 255, 0.2431372549) solid 1px;
@@ -284,7 +283,7 @@
     align-items: center;
   }
   #NFTCardPage .CardsContainer .Card:hover img {
-    box-shadow: 0 0 2px #ffffff;
+    box-shadow: 0 0 2px #efefef;
     scale: 1.2;
   }
   #NFTCardPage .CardsContainer .Card .imgContainer {
@@ -308,7 +307,7 @@
     flex-direction: column;
     gap: 2vh;
     width: 100%;
-    color: #ffffff;
+    color: #efefef;
   }
   #NFTCardPage .CardsContainer .Card .cardInfos .cardTopTexts {
     display: flex;
@@ -370,7 +369,7 @@
     padding: 1rem;
   }
   #NFTCardPage nav .InputContainer {
-    border: #ffffff solid 1px;
+    border: #efefef solid 1px;
     width: 40%;
     padding: 0 1vw;
     gap: 1vw;
@@ -380,7 +379,7 @@
     align-items: center;
   }
   #NFTCardPage nav .InputContainer input {
-    color: #ffffff;
+    color: #efefef;
     border: none;
     width: 100%;
     background: none;
@@ -488,7 +487,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    color: #ffffff;
+    color: #efefef;
   }
   #NFTCardPage .CardsContainer .Card .cardInfos .cardTopTexts .CardTitle {
     font-family: "Michroma", sans-serif;

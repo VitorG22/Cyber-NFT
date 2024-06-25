@@ -6,7 +6,7 @@
   gap: 4vh;
 }
 .footerSection section {
-  color: #ffffff;
+  color: #efefef;
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
@@ -33,7 +33,7 @@
   text-decoration: none;
 }
 .footerSection section ul li a:hover {
-  color: #ffffff;
+  color: #efefef;
   cursor: pointer;
 }
 .footerSection footer {
@@ -58,7 +58,7 @@
   border: none;
 }
 .footerSection footer ul button:hover {
-  color: #ffffff;
+  color: #efefef;
   cursor: pointer;
 }
 .footerSection footer p {
