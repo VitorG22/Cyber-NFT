@@ -136,6 +136,8 @@
   }
   .offerPage section:nth-child(3) .card4 button {
     position: absolute;
+    top: 4%;
+    left: 4%;
   }
 }
 @media (min-width: 440px) and (max-width: 840px) {
@@ -266,6 +268,8 @@
   }
   .offerPage section:nth-child(3) .card4 button {
     position: absolute;
+    top: 4%;
+    right: 4%;
   }
 }
 @media (min-width: 841px) {
@@ -386,9 +390,15 @@
   }
   .offerPage section:nth-child(3) .card4 {
     height: 18vw;
+    width: 18vw;
     aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .offerPage section:nth-child(3) .card4 button {
     position: absolute;
+    bottom: 4%;
+    left: 4%;
   }
 }/*# sourceMappingURL=offerStyle.css.map */
