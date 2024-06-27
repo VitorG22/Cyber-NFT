@@ -5,6 +5,22 @@
     background: none
     margin: 2vh 0 
 
+.Card
+    position: relative
+.offerIcon
+    background: #00000090
+    color: $white
+    box-shadow: 1px 1px 15px #ffffff40
+    border-radius: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 1.8rem
+    width: 1.8rem
+    position: absolute
+    right: 5px
+    top: 5px
+    z-index: 10
     
 //Phone
 @media (max-width: 440px)
@@ -188,7 +204,15 @@
                             flex-direction: column                        
                             color:$gray
 
-
+                .offerIcon
+                    box-shadow: 1px 1px 10px #ffffff10
+                    height: 1.1rem
+                    width: 1.1rem
+                    font-size: .7rem
+                    position: absolute
+                    left: 5px
+                    top: 5px
+                    z-index: 10
 //Tablets
 @media  (min-width: 440px) and (max-width: 840px)
     #NFTCardPage
@@ -372,7 +396,15 @@
                             flex-direction: column                        
                             color:$gray
 
-
+                .offerIcon
+                    box-shadow: 1px 1px 10px #ffffff10
+                    height: 1.1rem
+                    width: 1.1rem
+                    font-size: .7rem
+                    position: absolute
+                    left: 5px
+                    top: 5px
+                    z-index: 10
 //Laptop
 @media  ( min-width: 841px )
     #NFTCardPage
@@ -445,6 +477,7 @@
                         filter: blur(20px)
 
         .CardsContainer
+
             display: flex
             flex-wrap: wrap
             flex-direction: row
@@ -553,3 +586,12 @@
                             display: flex
                             flex-direction: column                        
                             color:$gray
+
+                .offerIcon
+                    box-shadow: 1px 1px 15px #ffffff40
+                    height: 1.8rem
+                    width: 1.8rem
+                    position: absolute
+                    right: 5px
+                    top: 5px
+                    z-index: 10

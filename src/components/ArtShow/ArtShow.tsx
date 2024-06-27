@@ -31,6 +31,10 @@ export default function ({ id }: { id: string }): ReactNode {
         setIsArtInUserCollection(logedUserData?.profileNftCollection.includes(id) || false)
     },[id])
 
+    useEffect(()=>{
+        window.scrollTo({top:0, behavior: "smooth"})
+    },[])
+
 
     function AddItemToCart({ nftId }: { nftId: string }) {
         if (!logedUserData) { return }
@@ -96,10 +100,10 @@ export default function ({ id }: { id: string }): ReactNode {
                                 <div className="buttonContainer">
 
                                     {isArtInCart ? (
-                                        <Button classes='button1 bg-white  gap-1 text-black text-500' content="Already in cart"></Button>
+                                        <Button classes='button3 bg-white  gap-1 text-black text-500' content="Already in cart"></Button>
                                     ) : (
                                         <>
-                                            <Button classes='button1 bg-white  gap-1 text-black text-500' content="Add to Cart"
+                                            <Button classes='button3 bg-white  gap-1 text-black text-500' content="Add to Cart"
                                                 handleClickFunction={() => {
                                                     AddItemToCart({ "nftId": selectedArt.id })
                                                     toast(<ToastElement

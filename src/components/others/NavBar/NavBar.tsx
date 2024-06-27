@@ -2,8 +2,6 @@ import { ReactNode, useEffect } from "react";
 import './sass/navBarStyle.css'
 import { NavLink } from "react-router-dom";
 import { useAppContext } from "../../../hooks/useAppContext";
-import { toast } from "sonner";
-import { ToastElement } from "../toast/toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {  faHome, faPercentage, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
@@ -43,23 +41,10 @@ export default function NavBar(): ReactNode {
 
                 {
                     <li>
-                        {/* <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}> */}
-                        {/* <a onClick={()=>Toast({title:'Sorry',timer:5,description:'This button has no functions, maybe next time',showButton:false,})}> */}
-                        <a onClick={() => toast(
-                            <ToastElement
-                                title="Sorry"
-                                description='This button has no functions, maybe next time'
-                                showButton={false}
-                            />,
-                            {
-                                duration: 5000
-                            }
-                        )}>
+                        <NavLink to="/Offers" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? 'active' : ""}>
                             <FontAwesomeIcon icon={faPercentage} />
-
                             <p className="navLinkText">Offers</p>
-                        </a>
-                        {/* </NavLink> */}
+                        </NavLink> 
                     </li>
                 }
 

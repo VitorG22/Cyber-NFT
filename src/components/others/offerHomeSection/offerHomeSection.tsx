@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
-import { Button } from "../others/buttons/buttons";
+import { Button } from "../buttons/buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
-import { ArtArray } from "../../utils/ArtsArray";
+import { ArtArray } from "../../../utils/ArtsArray";
 import './sass/offerStyle.css'
-import LightsBackground from "../others/AnimatedBackground/animatedBackground";
+import LightsBackground from "../AnimatedBackground/animatedBackground";
 import { toast } from "sonner";
-import { ToastElement } from "../others/toast/toast";
+import { ToastElement } from "../toast/toast";
 
 export default function OfferPage(): ReactNode {
     return (

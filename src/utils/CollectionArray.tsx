@@ -106,7 +106,12 @@ export const CollectionArray:ICollectionArray[] = [
         id :'A009',
         ArtsInCollection : [
             'BA03',
-            'BA08'
+            'BA08',
+            'GB07',
+            'GC00',
+            'GC01',
+            'GC02',
+            
         ]
     },
 ]

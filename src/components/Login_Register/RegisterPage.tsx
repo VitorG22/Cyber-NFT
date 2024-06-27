@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { FormEvent, ReactNode, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAppContext } from "../../hooks/useAppContext";
 import DefaultProfilePicture from "../others/profilePicture/profilePicture";
@@ -19,24 +19,27 @@ export default function RegisterComponent(): ReactNode {
 
     console.log(selectedPicturePath)
 
-    useEffect(() => {
-        var registerForm = document.getElementById('RegisterForm') as HTMLFormElement
-        registerForm.addEventListener('submit', function (e) {
-            e.preventDefault()
-            const registerReturn = ProfileFunctions.create({
-                ProfileName: (document.getElementById("nameInput") as HTMLInputElement).value,
-                ProfileEmail: (document.getElementById("emailInput") as HTMLInputElement).value,
-                ProfilePassword: (document.getElementById("passwordInput") as HTMLInputElement).value,
-                ProfileImage: selectedPicturePath
+    useEffect(()=>{
+        // var registerForm = document.getElementById('RegisterForm') as HTMLFormElement
 
-            })
-            console.log(registerReturn)
-            if (registerReturn.loginStatus == true) {
-                setLogedUserData(registerReturn.content.userData)
-                navigate(`/Home`)
-            }
+    })
+    
+
+    function submitToRegistres(e:FormEvent<HTMLFormElement>) {
+        e.preventDefault()
+        const registerReturn = ProfileFunctions.create({
+            ProfileName: (document.getElementById("nameInput") as HTMLInputElement).value,
+            ProfileEmail: (document.getElementById("emailInput") as HTMLInputElement).value,
+            ProfilePassword: (document.getElementById("passwordInput") as HTMLInputElement).value,
+            ProfileImage: selectedPicturePath
+
         })
-    }, [])
+        console.log(registerReturn)
+        if (registerReturn.loginStatus == true) {
+            setLogedUserData(registerReturn.content.userData)
+            navigate(`/Home`)
+        }
+    }
 
 
     return (
@@ -60,7 +63,7 @@ export default function RegisterComponent(): ReactNode {
             }
             <section className="registerPageSection">
                 <h1>Register</h1>
-                <form className="registerTop" id='RegisterForm'>
+                <form className="registerTop" id='RegisterForm' onSubmit={(e)=> submitToRegistres(e)}>
                     <div className="NameAndPicContainer">
                         <input type="text" required id="nameInput" placeholder="Name" name="Name" className="registerPageInput" />
                         <button type='button' onClick={() => setIsProfilePictureModalOpen(true)} style={{ 'background': 'none' }}>

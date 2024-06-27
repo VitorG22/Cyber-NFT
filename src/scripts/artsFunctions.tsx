@@ -5,7 +5,7 @@ export const ArtsFunctions = {
         try{
             return ArtArray
         }catch (error){
-            return error
+            return []
         }
             
     },

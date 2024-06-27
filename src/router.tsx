@@ -10,6 +10,7 @@ import RegisterPage from './routes/RegisterPage.tsx'
 import PageEstructure from './routes/pageEstructureNavBar.tsx'
 import ProfilePage from './routes/ProfilePage.tsx'
 import CollectorsPage from './routes/CollectorsPage.tsx'
+import OffersPage from './routes/OffersPage.tsx'
 
 
 export const router = createBrowserRouter([
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
                     {
                         path: '/MarketPlace',
                         element: <MarketPlace />
+                    },
+                    {
+                        path: '/Offers',
+                        element: <OffersPage />
                     },
                     {
                         path: '/ProfilePage/:ProfileId',

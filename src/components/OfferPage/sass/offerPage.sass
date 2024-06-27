@@ -1,0 +1,586 @@
+@import '../../../variaveisDeEstilo/variaveisDeEstilo'
+
+.offerPageSection
+    display: flex
+    flex-direction: column
+    gap: 3rem
+a
+    text-decoration: none
+
+.liquifyCollection
+    display: flex
+    flex-direction: row
+    color: $white
+    width: 100vw
+    padding: 0px 1rem
+    overflow: hidden
+        
+    .liquifyCollectionImagesContainer
+
+        list-style: none
+        gap: .5rem
+        height: 90vh
+        li
+            display: flex
+            align-items: center
+            overflow: hidden
+            border-radius: 6px
+        .article
+            background: $pink
+            color: $white
+            width: 100%
+            height: 100%
+            display: flex
+            flex-direction: column
+            overflow: visible
+            align-items: start
+            padding: 1rem
+            h1
+                font-family: $font-1
+            p
+                font-family: $font-3
+                color: $lightGray
+                
+            .buttonsContainer
+                display: flex
+                gap: 6px
+                button:nth-child(1)
+                    border: solid $white 1px
+                    
+                
+                        
+                        
+
+        .liquifyCollectionImage1
+            width: 100%
+            height: 100%
+        .liquifyCollectionImage2
+            width: 100%
+            height: 100%
+        .liquifyCollectionImage4
+            width: 100%
+            height: 100%
+        .liquifyCollectionImage3
+            width: 100%
+            height: 100%
+        .liquifyCollectionImage
+            width: 100%
+            min-height: 100%
+
+.headerCollection
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 3rem
+    // position: relative
+    .headerCollectionImagesContainer
+        display: grid
+        margin: 4rem 2rem
+        grid-template-columns: 1fr 1fr
+        min-width: calc(clamp(12rem,34vw,28rem) + 10px)
+        height: calc(clamp(6rem,17vw,14rem) * 2.2 + 20px)
+        gap: 10px
+        overflow: hidden
+        mask-image: linear-gradient(8deg, transparent 10% , #00000031, transparent 90%)
+        position: relative
+        // position: absolute
+        // top: .5rem
+        // left: -.5rem
+        .headerCollectionImgBox
+            display: flex
+            justify-content: center
+            align-items: center
+            overflow: hidden
+            height: clamp(6rem,17vw,14rem)
+            // height: 14rem
+            aspect-ratio: 1/1
+            border-radius: 4px
+            position: absolute
+            top: calc(0% - 14rem)
+            left: 0
+            animation: linear headerCollectionCarroucelAnimation infinite 30s
+            .headerCollectionImg
+                width: 100%
+
+    article
+        width: 50%
+        h1
+            color: $white
+            font-family: $font-1
+        p
+            color: $lightGray
+            font-size: 1rem
+            font-family: $font-3
+
+.headerUnique
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 3rem
+    article
+        display: flex
+        flex-direction: column
+        gap: 1rem
+        text-align: center
+        align-items: center
+        h1
+            color: $white
+            font-size: 6rem
+            font-family: $font-1
+        p
+            color: $lightGray
+            font-size: 1rem
+            font-family: $font-3
+            width: 70%
+
+    .headerUniqueImagesContainer
+        display: flex
+        flex-direction: row
+        gap: 20px
+        width: fit-content
+        transform-style: preserve-3d
+        transform: perspective(1000px)
+        .headerUniqueImgBox
+            display: flex
+            justify-content: center
+            align-items: center
+            aspect-ratio: 1/1.2
+            overflow: hidden
+            border-radius: 4px
+            transition: ease .2s
+
+            .headerUniqueImg
+                width: 100%
+            &:nth-child(1)
+                filter: blur(2px)
+                transform: translate3d(0px,0px,-200px) rotateY(20deg)
+                mask-image: linear-gradient(to right, black, transparent)
+                opacity: 50%
+                &:hover
+                    filter: blur(0px)
+                    transform: translate3d(0px,0px, -200px) rotateY(0deg)
+
+                &:has(+ *:hover)
+                    filter: blur(1px)
+                &:has(+ * + *:hover)
+                    filter: blur(2px)
+                    transform: translate3d(0px,0px, -200px) rotateY(20deg)
+                &:has(+ * + * + *:hover)
+                    filter: blur(3px)
+                    transform: translate3d(0px,0px, -200px) rotateY(30deg)
+                &:has(+ * + * + * + *:hover)
+                    filter: blur(4px)
+                    transform: translate3d(0px,0px, -200px) rotateY(40deg)
+
+                &:hover + *
+                    filter: blur(1px)
+                    transform: translate3d(0px,0px, -100px) rotateY(-10deg)
+                &:hover + * + *
+                    filter: blur(2px)
+                    transform: translate3d(0px,0px, 0px) rotateY(-20deg)
+                &:hover + * + * + *
+                    filter: blur(3px)
+                    transform: translate3d(0px,0px, -100px) rotateY(-30deg)
+                &:hover + * + * + * + *
+                    filter: blur(4px)
+                    transform: translate3d(0px,0px, -200px) rotateY(-40deg)
+
+            &:nth-child(2)
+                filter: blur(1px)
+                transform: translate3d(0px,0px, -100px) rotateY(10deg)
+                mask-image: linear-gradient(to right, black, #00000060)
+                opacity: 80%
+                &:hover
+                    filter: blur(0px)
+                    transform: translate3d(0px,0px, -100px) rotateY(0deg)
+
+                &:has(+ *:hover)
+                    filter: blur(1px)
+                &:has(+ * + *:hover)
+                    filter: blur(2px)
+                    transform: translate3d(0px,0px, -100px) rotateY(20deg)
+                &:has(+ * + * + *:hover)
+                    filter: blur(3px)
+                    transform: translate3d(0px,0px, -100px) rotateY(30deg)
+
+                &:hover + *
+                    filter: blur(1px)
+                    transform: translate3d(0px,0px, 0px) rotateY(-10deg)
+                &:hover + * + *
+                    filter: blur(2px)
+                    transform: translate3d(0px,0px, -100px) rotateY(-20deg)
+                &:hover + * + * + *
+                    filter: blur(3px)
+                    transform: translate3d(0px,0px, -200px) rotateY(-30deg)
+
+            &:nth-child(3)
+                transform: translate3d(0px,0px,0px) rotateY(0deg)
+
+                &:has(+ *:hover)
+                    filter: blur(1px)
+                    transform: translate3d(0px,0px, 0px) rotateY(10deg)
+                &:has(+ * + *:hover)
+                    filter: blur(2px)
+                    transform: translate3d(0px,0px, 0px) rotateY(20deg)
+
+                &:hover + *
+                    filter: blur(1px)
+                    transform: translate3d(0px,0px, -100px) rotateY(-10deg)
+                &:hover + * + *
+                    filter: blur(2px)
+                    transform: translate3d(0px,0px, -200px) rotateY(-20deg)
+
+            &:nth-child(4)
+                filter: blur(1px)
+                transform: translate3d(0px,0px,-100px) rotateY(-10deg)
+                mask-image: linear-gradient(to left, black, #00000060)
+                opacity: 80%
+
+                &:hover
+                    filter: blur(0px)
+                    transform: translate3d(0px,0px, -100px) rotateY(0deg)
+
+                &:has(+ *:hover)
+                    filter: blur(1px)
+                    transform: translate3d(0px,0px, -100px) rotateY(10deg)
+
+                &:hover + *
+                    filter: blur(1px)
+                    transform: translate3d(0px,0px, -200px) rotateY(-10deg)
+
+            &:nth-child(5)
+                filter: blur(2px)
+                transform: translate3d(0px,0px,-200px) rotateY(-20deg)
+                mask-image: linear-gradient(to left, black, transparent)
+                opacity: 40%
+                &:hover
+                    filter: blur(0px)
+                    transform: translate3d(0px,0px,-200px) rotateY(0deg)
+
+.defaultCollection
+    margin-top: 4rem
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    gap: 2rem
+    article
+        h1
+            font-family: $font-1
+            color: $white
+    .articleInLeft
+        display: flex
+        flex-direction: column
+        align-items: end
+        text-align: end
+    .articleInRight
+        display: flex
+        flex-direction: column
+        align-items: start
+        text-align: start
+
+    .defaultCollectionImagesContainer
+        display: flex
+        flex-direction: row
+        transform-style: preserve-3d
+        transform: perspective(1000px)
+        .defaultcollectionImgBox
+            // width: 14rem
+            display: flex
+            align-items: center
+            justify-content: center
+            aspect-ratio: 1/1.2
+            overflow: hidden
+            border-radius: 6px
+            transition: .4s
+            .defaultCollectionImg
+                width: 100%
+            &:nth-child(1)
+                transform: translate3D(4rem,10px,-100px) rotateZ(-2deg)
+            // &:nth-child(2)
+            &:nth-child(3)
+                transform: translate3D(-4rem,10px,-100px) rotateZ(2deg)
+
+            &:hover
+                transform: translateZ(50px)
+
+            &:hover + *
+                transform: translateZ(25px) rotateY(10deg)
+                filter: blur(1px)
+            &:hover + * + *
+                transform: translateZ(0px) rotateY(8deg)
+                filter: blur(2px)
+
+            &:has(+ *:hover)
+                transform: translateZ(25px) rotateY(-10deg)
+                filter: blur(1px)
+            &:has(+ * + *:hover)
+                transform: translateZ(0px) rotateY(-8deg)
+                filter: blur(2px)
+
+@keyframes headerCollectionCarroucelAnimation
+    0%
+        top: calc(0% - clamp(6rem,17vw,14rem))
+        left: 0
+
+    50%
+        top: calc(100% + (1.3 * clamp(6rem,17vw,14rem)))
+        left: 0
+    50.01%
+        top: calc(0% - clamp(6rem,17vw,14rem) )
+        left: 50%
+    100%
+        top: calc(100% + (1.3 * clamp(6rem,17vw,14rem)))
+        left: 50%
+
+@media  (max-width: 440px)
+    .liquifyCollectionImagesContainer
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        grid-template-rows: repeat(6, 1fr)
+        grid-column-gap: 0px
+        grid-row-gap: 0px
+        position: relative
+        margin-bottom: 3.1rem
+        max-height: 26rem
+        
+        .article
+            grid-area: 4 / 3 / 7 / 6
+            justify-content: start
+            h1
+                font-size: 1rem
+            p
+                font-size: .7rem
+            .buttonsContainer
+                flex-direction: row
+                flex-wrap: wrap
+                justify-content: space-evenly
+                position: absolute
+                width: 100%
+                top: calc(100% + .5rem)
+                left: 0
+        .liquifyCollectionImage1
+            grid-area: 1 / 1 / 3 / 3
+        .liquifyCollectionImage2
+            grid-area: 3 / 1 / 5 / 3
+        .liquifyCollectionImage4
+            grid-area: 5 / 1 / 7 / 3
+        .liquifyCollectionImage3
+            grid-area: 1 / 3 / 4 / 6
+
+    
+    .headerCollection
+        gap: 0px
+        flex-direction: column-reverse
+        article
+            
+            width: 85%
+            h1
+                font-size: clamp(1.3rem ,4vw,3rem)
+            p
+                // width: 80%
+                font-size: .7rem
+                max-height: 15rem
+                overflow: scroll
+
+        .headerCollectionImagesContainer
+            display: none
+            rotate: 90deg
+            .headerCollectionImgBox
+                rotate: -90deg
+
+    .defaultCollection
+        display: grid
+        grid-template-areas: 'images''article'
+        overflow: hidden
+        width: 100vw
+        .articleInRight 
+            align-items: center
+        .articleInLeft
+            align-items: center
+        article
+            grid-area: article
+            h1
+                font-size: clamp(1.3rem ,4vw,3rem)
+        .defaultCollectionImagesContainer
+            grid-area: images
+            .defaultcollectionImgBox
+                width: clamp(4rem,40vw,10rem)
+                
+    .headerUnique
+        overflow: hidden
+        article
+            h1
+                font-size: clamp(2rem ,6vw,4rem)
+            p
+                font-size: .7rem
+                
+        .headerUniqueImagesContainer
+            transform: perspective(250px)
+            // width: 100vw
+            .headerUniqueImgBox
+                width: clamp(4rem, 25vw,11rem)
+
+@media  (min-width: 440px) and (max-width: 840px)
+    .liquifyCollectionImagesContainer
+        display: grid
+        grid-template-columns: repeat(6, 1fr)
+        grid-template-rows: repeat(5, 1fr)
+        grid-column-gap: 0px
+        grid-row-gap: 0px
+        max-height: 30rem 
+        margin-bottom: 3rem
+        position: relative
+        .article
+            justify-content: start
+            grid-area: 1 / 4 / 4 / 7
+            gap: 1rem
+            h1
+                font-size: clamp( 1.5rem,5vw,3rem)
+            p
+                font-size: .8rem
+            .buttonsContainer
+                flex-direction: row
+                width: 100%
+                justify-content: flex-start
+                position: absolute
+                top: calc(100% + .5rem)
+                left: 0
+        .liquifyCollectionImage1
+            grid-area: 4 / 1 / 6 / 3
+        .liquifyCollectionImage2
+            grid-area: 4 / 3 / 6 / 5
+        .liquifyCollectionImage4
+            grid-area: 4 / 5 / 6 / 7
+        .liquifyCollectionImage3
+            grid-area: 1 / 1 / 4 / 4
+            
+    .headerCollection
+        flex-direction: row
+        article
+            h1
+                font-size: clamp(1.3rem ,4vw,3rem)
+            p
+                width: 80%
+                max-height: 20rem
+                overflow: scroll
+        
+    .defaultCollection
+        display: grid
+        grid-template-areas: 'images''article'
+        
+        .articleInRight 
+            align-items: center
+        .articleInLeft
+            align-items: center
+        article
+            grid-area: article
+            h1
+                font-size: clamp(1.3rem ,6vw,6rem)
+        .defaultCollectionImagesContainer
+            grid-area: images
+            .defaultcollectionImgBox
+                width: clamp(10rem, 30vw, 20rem)
+                
+    .headerUnique
+        overflow: hidden
+        article
+            h1
+                font-size: clamp(2rem ,6vw,4rem)
+            p
+                font-size: .7rem
+                // max-height: 4rem
+                // overflow: scroll
+        .headerUniqueImagesContainer
+            transform: perspective(500px)
+            .headerUniqueImgBox
+                width: clamp(4rem, 20vw,10rem)
+
+@media  (min-width: 841px)
+    .liquifyCollectionImagesContainer
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        grid-template-rows: repeat(5, 1fr)
+        grid-column-gap: 0px
+        grid-row-gap: 0px
+        &:hover
+            cursor: none
+        .article
+            display: flex
+            justify-content: space-between
+            grid-area: 1 / 3 / 4 / 6
+            h1
+                font-size: clamp( 3rem,6vw,6rem)
+            p
+                font-size: 1.1rem
+            .buttonsContainer
+                flex-direction: row
+                button:nth-child(1)
+                    z-index: 2
+                    position: relative
+                    background: $white
+                    .blurConatiner
+                        filter: url("#gooey")
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                        border-radius: 4px
+                        z-index: -1
+                        display: flex
+                        flex-direction: row
+                        
+                        .ball
+                            height: 4rem
+                            width: 4rem
+                            position: absolute
+                            
+                            &:hover
+                                
+                                cursor: none
+                            // left: -10px
+                            // display: none
+                            background: $white
+                            border-radius: 100%
+                        .square
+                            height: 100%
+                            width: 100%
+                            background: $white
+        .liquifyCollectionImage1
+            grid-area: 4 / 4 / 7 / 5
+        .liquifyCollectionImage2
+            grid-area: 1 / 1 / 7 / 3
+        .liquifyCollectionImage4
+            grid-area: 4 / 3 / 7 / 4
+        .liquifyCollectionImage3
+            grid-area: 4 / 5 / 7 / 6
+
+    .headerCollection
+        flex-direction: row
+        article
+            h1
+                font-size: clamp(2rem ,6vw,4rem)
+            p
+                width: 80%
+        // .headerCollectionImagesContainer
+            
+    .defaultCollection
+        article
+            h1
+                font-size: clamp(2rem ,4vw,4rem)
+        .defaultCollectionImagesContainer
+            .defaultcollectionImgBox
+                width: clamp(10rem, 15vw,14rem)
+
+    .headerUnique
+        article
+            h1
+                font-size: clamp(2rem ,6vw,4rem)
+            p
+                font-size: 1rem
+        .headerUniqueImagesContainer
+            transform: perspective(1000px)
+            .headerUniqueImgBox
+                width: clamp(8rem, 12vw,12rem)

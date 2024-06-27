@@ -48,6 +48,7 @@
     width: 80vw;
     padding-left: 1rem;
     aspect-ratio: 3/0.8;
+    gap: 10px;
   }
   .CollectorCard p {
     font-size: clamp(0.6rem, 3vw, 3rem);

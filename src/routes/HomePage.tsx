@@ -1,5 +1,5 @@
 import NFTCardPage from "../components/NFTCards/NFTCardPage";
-import OfferPage from "../components/Offer/OfferPage";
+import OfferPage from "../components/others/offerHomeSection/offerHomeSection";
 import HomeComponent from "../components/homeSection/homeComponent";
 import KnowMore from "../components/knowMore/KnowMoreComponent";
 import HorizontalBar from "../components/others/horizontalBar/HorizontalBar";

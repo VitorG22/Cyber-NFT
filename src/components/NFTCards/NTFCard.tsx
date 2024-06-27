@@ -1,7 +1,9 @@
 import { ReactNode, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import searchImg from "../../scripts/searchImg";
-import { convertValue } from "../../scripts/moneyConvert"; 
+import { convertValue } from "../../scripts/moneyConvert";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPercentage } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function NFTCard({ id, pathStart = '' }: { id: string, pathStart?: string }): ReactNode {
@@ -52,6 +54,11 @@ export default function NFTCard({ id, pathStart = '' }: { id: string, pathStart?
                         {/* </Link> */}
                     </section>
                 </div>
+                {artObject?.isOffer && (
+                    <span className="offerIcon" >
+                        <FontAwesomeIcon icon={faPercentage} size="sm" />
+                    </span>
+                )}
             </div>
         </Link>
     )
