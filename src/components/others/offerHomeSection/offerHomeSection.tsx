@@ -51,7 +51,7 @@ export default function OfferPage(): ReactNode {
                     </article>
                 </div >
                 <div className='card3'>
-                    <img src={ArtArray[6].path} />
+                    <img src={ArtArray[73].path} />
                     <NavLink to='/Offers'>
                         <Button classes='button2 bg-white text-black'>
                             <FontAwesomeIcon icon={faArrowRight} />
@@ -60,7 +60,7 @@ export default function OfferPage(): ReactNode {
 
                 </div >
                 <div className='card4'>
-                    <img src={ArtArray[43].path} />
+                    <img src={ArtArray[94].path} />
                     <NavLink to='/Offers'>
                         <Button classes='button2 bg-white text-black'>
                             <FontAwesomeIcon icon={faArrowRight} />

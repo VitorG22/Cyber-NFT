@@ -134,6 +134,7 @@
     display: flex;
     overflow: hidden;
     align-items: center;
+    justify-content: center;
     border-radius: 8px;
     filter: brightness(100%) contrast(120%);
     transition: 0.2s;
@@ -321,6 +322,7 @@
     aspect-ratio: 1/1;
     display: flex;
     overflow: hidden;
+    justify-content: center;
     align-items: center;
     border-radius: 8px;
     filter: brightness(100%) contrast(120%);
@@ -506,6 +508,7 @@
     display: flex;
     overflow: hidden;
     align-items: center;
+    justify-content: center;
     border-radius: 4px;
     filter: brightness(100%) contrast(120%);
     transition: 0.2s;

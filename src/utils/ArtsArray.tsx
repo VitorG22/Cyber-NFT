@@ -922,6 +922,303 @@ export const ArtArray: IArtObject[]=[
         collectionName: "Liquify",
         collectionId: "A009"
     },
-    
-
+    {
+        ArtName: "Art 73",
+        path: "https://i.pinimg.com/564x/09/d3/23/09d3239eb61a675dc2a33709f1882f91.jpg",
+        EHT_price: 2.43,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "AI Models"
+        ],
+        id: "GC03",
+        collectionName: "Liquify",
+        collectionId: "A009"
+    },
+    {
+        ArtName: "Art 74",
+        path: "https://i.pinimg.com/736x/f0/18/90/f01890d8282bc905643c657f162255a1.jpg",
+        EHT_price: 1.30,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "AI Models"
+        ],
+        id: "GC04",
+        collectionName: "Liquify",
+        collectionId: "A009"
+    },
+    {
+        ArtName: "Art 75",
+        path: "https://i.pinimg.com/564x/2b/51/3f/2b513f40c0b9090207162efc2b29bb7b.jpg",
+        EHT_price: 0.98,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "AI Models"
+        ],
+        id: "GC05",
+        collectionName: "Liquify",
+        collectionId: "A009"
+    },
+    {
+        ArtName: "Art 76",
+        path: "https://i.pinimg.com/564x/e1/15/7e/e1157e383f9c6af59d8953d0fcf36a53.jpg",
+        EHT_price: 4.66,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "AI Models"
+        ],
+        id: "GC06",
+        collectionName: "Liquify",
+        collectionId: "A009"
+    },
+    {
+        ArtName: "Art 77",
+        path: "https://i.pinimg.com/originals/3d/20/33/3d203341e85894dcebe6819a917db2ab.gif",
+        EHT_price: 2.54,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "GC07",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName: "Art 78",
+        path: "https://i.pinimg.com/originals/0c/43/38/0c4338d8dd058c8778f6f654de739aa1.gif",
+        EHT_price: 1.22,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "GC08",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName: "Art 79",
+        path: "https://i.pinimg.com/originals/d1/7a/d8/d17ad8a0595e2b16b692b8d4772b3b8f.gif",
+        EHT_price: 3.5,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "GC09",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName: "Art 80",
+        path: "https://i.pinimg.com/originals/c8/f5/37/c8f5372e4e5b3e340050d7c9daf48db4.gif",
+        EHT_price: 12.6,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HC00",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName: "Art 81",
+        path: "https://i.pinimg.com/originals/bb/80/94/bb80944d27b353f34d8c8777ec3b2b99.gif",
+        EHT_price: 5.2,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HC01",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName: "Art 82",
+        path: "https://i.pinimg.com/originals/55/fd/ba/55fdba89b9c3c6b3dfb2021af21aa096.gif",
+        EHT_price: 8,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HC02",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName: "Art 83",
+        path: "https://i.pinimg.com/originals/db/91/a6/db91a602ec81e278b2be49fb23b12da8.gif",
+        EHT_price: 1,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HC03",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName: "Art 84",
+        path: "https://i.pinimg.com/originals/bb/c2/a3/bbc2a39b80d283dc936d426be1868e3c.gif",
+        EHT_price: 0.23,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HC04",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName: "Art 85",
+        path: "https://i.pinimg.com/originals/3f/69/8a/3f698afdfe2278af6a48b2fc5d834cd8.gif",
+        EHT_price: 1.7,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HC05",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName:'Art 86',
+        path:'https://i.pinimg.com/originals/50/74/9e/50749e7f14ef082ec0d95aabd63826c5.gif',
+        EHT_price: 1.9,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HC06",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName:'Art 87',
+        path:'https://i.pinimg.com/originals/90/a3/57/90a3579c911304eb8def40db2a25ce4f.gif',
+        EHT_price: 9.3,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HC07",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName:'Art 88',
+        path:'https://i.pinimg.com/originals/fb/38/4b/fb384b237b9866ffa4879ca906f0a178.gif',
+        EHT_price: 0.45,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HC08",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName:'Art 89',
+        path:'https://i.pinimg.com/originals/bf/af/94/bfaf942d1c3b4f6610a02c3b332dcc1a.gif',
+        EHT_price: 3.6,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HC09",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName:'Art 90',
+        path:'https://i.pinimg.com/originals/e3/be/da/e3bedab340c6acae47e0f98a0b163900.gif',
+        EHT_price: 8.3,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HI00",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName:'Art 91',
+        path:'https://i.pinimg.com/originals/ce/4c/63/ce4c6398342d142ece1bcae005d0649b.gif',
+        EHT_price: 4.2,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HI01",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName:'Art 92',
+        path:'https://i.pinimg.com/originals/8b/91/2d/8b912d7428334710ac475c0626e117c0.gif',
+        EHT_price: 1.5,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HI02",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName:'Art 93',
+        path:'https://i.pinimg.com/originals/6f/10/1e/6f101e7e3fe0f99f2a7f29019180fe42.gif',
+        EHT_price: 12,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HI03",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName:'Art 94',
+        path:'https://i.pinimg.com/originals/05/15/a0/0515a09cf1648a39cd99f952bc40a8f1.gif',
+        EHT_price: 9.7,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HI04",
+        collectionName: "",
+        collectionId: ""
+    },
+    {
+        ArtName:'Art 95',
+        path:'https://i.pinimg.com/originals/59/89/b7/5989b7149f2d899ac53c1078bdddc919.gif',
+        EHT_price: 1.43,
+        isOffer: false,
+        filterSearch: [
+            "All",
+            "Animation"
+        ],
+        id: "HI05",
+        collectionName: "",
+        collectionId: ""
+    },
 ]

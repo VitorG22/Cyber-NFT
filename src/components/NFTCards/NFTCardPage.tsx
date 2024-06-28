@@ -23,7 +23,7 @@ export default function NFTCardPage({ searchBar, imagesCount, title, showFilter,
     const [selectedFilter, setSelectedFilter] = useState<string>(filter)
     const [ArtArrayForRender, setArtArrayForRender] = useState<IArtObject[]>([])
     const [searchBarValue, setSearchBarValue] = useState<string>("")
-    const filters: string[] = ['All', 'Photography', 'AI Models', 'Animation', '3D Art']
+    const filters: string[] = ['All', 'Photography', 'AI Models', 'Animation']
 
     useEffect(() => {
         if (isProfileCollectionRender) {

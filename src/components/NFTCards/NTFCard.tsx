@@ -7,7 +7,6 @@ import { faPercentage } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function NFTCard({ id, pathStart = '' }: { id: string, pathStart?: string }): ReactNode {
-
     const [bid_ETH_USD, setBid_ETH_USD] = useState(0)
 
     async function setBid() {
@@ -30,7 +29,7 @@ export default function NFTCard({ id, pathStart = '' }: { id: string, pathStart?
         <Link to={`/ArtPreview/${artObject?.id}`} style={{ "textDecoration": 'none' }} onClick={() => scrollToTop()}>
             <div className='Card'>
                 <div className="imgContainer">
-                    <img src={`${pathStart}${artObject?.path}`} alt="" />
+                    <img src={`${pathStart}${artObject?.path}`} alt=""/>
                 </div>
                 <div className='cardInfos'>
                     <div className="cardTopTexts">
@@ -49,9 +48,7 @@ export default function NFTCard({ id, pathStart = '' }: { id: string, pathStart?
                             <span>${artObject?.EHT_price && ((artObject.EHT_price * bid_ETH_USD).toFixed(2))}</span>
                             <span>USD</span>
                         </div>
-                        {/* <Link to={`/Cyber-NFT/ArtPreview/${artObject?.id}`} style={{ "textDecoration": 'none' }}> */}
-                        {/* <Button handleClickFunction={scrollToTop} content="View" classes="button1 font-1 bg-transparent border-white text-white text-500" /> */}
-                        {/* </Link> */}
+                        
                     </section>
                 </div>
                 {artObject?.isOffer && (
