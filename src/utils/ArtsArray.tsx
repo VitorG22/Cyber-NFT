@@ -932,8 +932,8 @@ export const ArtArray: IArtObject[]=[
             "AI Models"
         ],
         id: "GC03",
-        collectionName: "Liquify",
-        collectionId: "A009"
+        collectionName: "",
+        collectionId: ""
     },
     {
         ArtName: "Art 74",
@@ -945,8 +945,8 @@ export const ArtArray: IArtObject[]=[
             "AI Models"
         ],
         id: "GC04",
-        collectionName: "Liquify",
-        collectionId: "A009"
+        collectionName: "",
+        collectionId: ""
     },
     {
         ArtName: "Art 75",
@@ -958,8 +958,8 @@ export const ArtArray: IArtObject[]=[
             "AI Models"
         ],
         id: "GC05",
-        collectionName: "Liquify",
-        collectionId: "A009"
+        collectionName: "",
+        collectionId: ""
     },
     {
         ArtName: "Art 76",
@@ -971,8 +971,8 @@ export const ArtArray: IArtObject[]=[
             "AI Models"
         ],
         id: "GC06",
-        collectionName: "Liquify",
-        collectionId: "A009"
+        collectionName: "",
+        collectionId: ""
     },
     {
         ArtName: "Art 77",
